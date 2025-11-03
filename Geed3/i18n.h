@@ -1,4 +1,3 @@
-#define HU_LPRN S(KC_8)
 #define HU_Z KC_Y
 #define HU_0 KC_GRV
 #define HU_Y KC_Z
@@ -35,6 +34,7 @@
 #define HU_DLR ALGR(KC_SCLN)
 #define HU_QST S(KC_COMM)
 #define HU_HASH ALGR(KC_X)
+#define HU_LPRN S(KC_8)
 #define HU_RPRN S(KC_9)
 #define HU_SCLN ALGR(KC_COMM)
 #define HU_DQOT S(KC_2)
