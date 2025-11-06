@@ -30,43 +30,43 @@ enum tap_dance_codes {
   DANCE_7,
 };
 
-#define DUAL_FUNC_0 LT(9, KC_F10)
-#define DUAL_FUNC_1 LT(14, KC_F23)
-#define DUAL_FUNC_2 LT(11, KC_F8)
-#define DUAL_FUNC_3 LT(8, KC_F2)
-#define DUAL_FUNC_4 LT(7, KC_5)
-#define DUAL_FUNC_5 LT(12, KC_F)
-#define DUAL_FUNC_6 LT(9, KC_I)
-#define DUAL_FUNC_7 LT(13, KC_A)
-#define DUAL_FUNC_8 LT(11, KC_O)
-#define DUAL_FUNC_9 LT(1, KC_C)
-#define DUAL_FUNC_10 LT(10, KC_9)
-#define DUAL_FUNC_11 LT(8, KC_I)
-#define DUAL_FUNC_12 LT(10, KC_5)
-#define DUAL_FUNC_13 LT(10, KC_D)
-#define DUAL_FUNC_14 LT(12, KC_4)
-#define DUAL_FUNC_15 LT(15, KC_Y)
-#define DUAL_FUNC_16 LT(10, KC_B)
-#define DUAL_FUNC_17 LT(15, KC_O)
-#define DUAL_FUNC_18 LT(1, KC_Y)
-#define DUAL_FUNC_19 LT(4, KC_D)
-#define DUAL_FUNC_20 LT(11, KC_6)
-#define DUAL_FUNC_21 LT(14, KC_S)
-#define DUAL_FUNC_22 LT(15, KC_9)
-#define DUAL_FUNC_23 LT(10, KC_A)
-#define DUAL_FUNC_24 LT(11, KC_A)
-#define DUAL_FUNC_25 LT(3, KC_H)
-#define DUAL_FUNC_26 LT(1, KC_F9)
-#define DUAL_FUNC_27 LT(4, KC_7)
-#define DUAL_FUNC_28 LT(9, KC_F24)
-#define DUAL_FUNC_29 LT(14, KC_G)
-#define DUAL_FUNC_30 LT(2, KC_F17)
-#define DUAL_FUNC_31 LT(3, KC_F4)
-#define DUAL_FUNC_32 LT(12, KC_5)
-#define DUAL_FUNC_33 LT(2, KC_A)
-#define DUAL_FUNC_34 LT(4, KC_F2)
-#define DUAL_FUNC_35 LT(9, KC_8)
-#define DUAL_FUNC_36 LT(8, KC_F14)
+#define DUAL_FUNC_0 LT(2, KC_5)
+#define DUAL_FUNC_1 LT(3, KC_P)
+#define DUAL_FUNC_2 LT(4, KC_E)
+#define DUAL_FUNC_3 LT(1, KC_F6)
+#define DUAL_FUNC_4 LT(15, KC_B)
+#define DUAL_FUNC_5 LT(11, KC_F13)
+#define DUAL_FUNC_6 LT(9, KC_W)
+#define DUAL_FUNC_7 LT(9, KC_T)
+#define DUAL_FUNC_8 LT(2, KC_1)
+#define DUAL_FUNC_9 LT(7, KC_F5)
+#define DUAL_FUNC_10 LT(5, KC_R)
+#define DUAL_FUNC_11 LT(8, KC_F19)
+#define DUAL_FUNC_12 LT(12, KC_F20)
+#define DUAL_FUNC_13 LT(1, KC_F5)
+#define DUAL_FUNC_14 LT(8, KC_F4)
+#define DUAL_FUNC_15 LT(1, KC_0)
+#define DUAL_FUNC_16 LT(6, KC_F16)
+#define DUAL_FUNC_17 LT(8, KC_F12)
+#define DUAL_FUNC_18 LT(5, KC_C)
+#define DUAL_FUNC_19 LT(14, KC_F23)
+#define DUAL_FUNC_20 LT(4, KC_F22)
+#define DUAL_FUNC_21 LT(1, KC_H)
+#define DUAL_FUNC_22 LT(8, KC_O)
+#define DUAL_FUNC_23 LT(11, KC_M)
+#define DUAL_FUNC_24 LT(2, KC_Q)
+#define DUAL_FUNC_25 LT(12, KC_1)
+#define DUAL_FUNC_26 LT(13, KC_1)
+#define DUAL_FUNC_27 LT(4, KC_F16)
+#define DUAL_FUNC_28 LT(11, KC_K)
+#define DUAL_FUNC_29 LT(9, KC_F3)
+#define DUAL_FUNC_30 LT(7, KC_L)
+#define DUAL_FUNC_31 LT(2, KC_F19)
+#define DUAL_FUNC_32 LT(6, KC_F3)
+#define DUAL_FUNC_33 LT(9, KC_L)
+#define DUAL_FUNC_34 LT(3, KC_3)
+#define DUAL_FUNC_35 LT(6, KC_F7)
+#define DUAL_FUNC_36 LT(6, KC_Q)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -140,6 +140,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [10] = LAYOUT_voyager(
+<<<<<<< HEAD
     RGB_TOG,        TOGGLE_LAYER_COLOR,RGB_MODE_FORWARD,RGB_SLD,        RGB_VAD,        RGB_VAI,                                        TO(0),          KC_NO,          TO(6),          TO(7),          LGUI(KC_L),     KC_TRANSPARENT, 
     KC_NO,          KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  LCTL(LSFT(KC_M)),KC_AUDIO_VOL_UP,KC_NO,                                          KC_NO,          AS_TOGG,        KC_NO,          KC_MS_LEFT,     KC_MS_RIGHT,    KC_NO,          
     KC_PSCR,        KC_MEDIA_PREV_TRACK,KC_MEDIA_STOP,  KC_MEDIA_PLAY_PAUSE,KC_MEDIA_NEXT_TRACK,KC_BRIGHTNESS_UP,                                QK_DYNAMIC_TAPPING_TERM_UP,KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
@@ -205,7 +206,11 @@ void keyboard_post_init_user(void) {
 const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [0] = { {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {131,65,234}, {131,65,234}, {131,65,234}, {131,65,234}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {131,65,234}, {131,65,234}, {131,65,234}, {131,65,234}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255} },
 
+<<<<<<< HEAD
     [1] = { {31,245,245}, {31,245,245}, {154,239,161}, {43,255,255}, {84,218,204}, {84,218,204}, {31,245,245}, {31,245,245}, {154,239,161}, {43,255,255}, {84,218,204}, {84,218,204}, {31,245,245}, {31,245,245}, {154,239,161}, {43,255,255}, {84,218,204}, {84,218,204}, {31,245,245}, {31,245,245}, {154,239,161}, {43,255,255}, {84,218,204}, {84,218,204}, {0,0,255}, {0,0,255}, {84,218,204}, {84,218,204}, {43,255,255}, {154,239,161}, {31,245,245}, {31,245,245}, {84,218,204}, {84,218,204}, {43,255,255}, {154,239,161}, {31,245,245}, {31,245,245}, {84,218,204}, {84,218,204}, {43,255,255}, {154,239,161}, {31,245,245}, {31,245,245}, {84,218,204}, {84,218,204}, {43,255,255}, {154,239,161}, {31,245,245}, {31,245,245}, {0,0,255}, {0,0,255} },
+=======
+    [1] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
+>>>>>>> ad12790 (merge)
 
     [2] = { {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {1,218,204}, {1,218,204}, {1,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {84,218,204}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {0,0,255}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {0,0,255}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {192,218,204}, {0,255,255}, {0,0,0}, {0,0,0} },
 

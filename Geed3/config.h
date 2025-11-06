@@ -11,7 +11,7 @@
 #define NO_AUTO_SHIFT_TAB
 #define NO_AUTO_SHIFT_SPECIAL
 #define NO_AUTO_SHIFT_NUMERIC
-#define SERIAL_NUMBER "Geed3/rbzPPw"
+#define SERIAL_NUMBER "Geed3/eaZaaE"
 #define LAYER_STATE_16BIT
 #define COMBO_COUNT 11
 
