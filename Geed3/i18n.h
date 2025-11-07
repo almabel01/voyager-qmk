@@ -5,8 +5,6 @@
 #define HU_COMM KC_COMM
 #define HU_DOT KC_DOT
 #define HU_MINS KC_SLSH
-#define KC_PC_UNDO LCTL(KC_Z)
-#define KC_PC_CUT LCTL(KC_X)
 #define KC_PC_COPY LCTL(KC_C)
 #define KC_PC_PASTE LCTL(KC_V)
 #define HU_COLN S(KC_DOT)
