@@ -70,19 +70,11 @@ enum tap_dance_codes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
-<<<<<<< HEAD
     KC_CAPS,        DUAL_FUNC_0,    DUAL_FUNC_1,    DUAL_FUNC_2,    DUAL_FUNC_3,    DUAL_FUNC_4,                                    DUAL_FUNC_5,    DUAL_FUNC_6,    DUAL_FUNC_7,    DUAL_FUNC_8,    DUAL_FUNC_9,    MO(10),         
     LT(5, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(8, KC_P),    KC_B,                                           KC_J,           LT(8, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_BSPC,        
     LT(4, KC_ESCAPE),LT(3, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(3, KC_O),    MT(MOD_RSFT, KC_ENTER),
     KC_LEFT_CTRL,   HU_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    HU_COMM,        HU_DOT,         MT(MOD_RALT, HU_MINS),DUAL_FUNC_10,   
                                                     LT(2, KC_SPACE),LT(2, KC_TAB),                                  QK_REPEAT_KEY,         LT(4, KC_BSPC)
-=======
-    LT(8, KC_CAPS), DUAL_FUNC_0,    DUAL_FUNC_1,    DUAL_FUNC_2,    DUAL_FUNC_3,    DUAL_FUNC_4,                                    DUAL_FUNC_10,   DUAL_FUNC_11,   DUAL_FUNC_12,   DUAL_FUNC_13,   DUAL_FUNC_14,   MO(9),          
-    LT(4, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(7, KC_P),    KC_B,                                           KC_J,           LT(7, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_BSPC,        
-    LT(3, KC_ESCAPE),LT(2, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(2, KC_O),    MT(MOD_RSFT, KC_ENTER),
-    DUAL_FUNC_5,    DUAL_FUNC_6,    DUAL_FUNC_7,    DUAL_FUNC_8,    DUAL_FUNC_9,    DUAL_FUNC_10,                                   MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    HU_COMM,        HU_DOT,         MT(MOD_RALT, HU_MINS),DUAL_FUNC_16,   
-                                                    LT(1, KC_SPACE),KC_TAB,                                         KC_BSPC,        LT(3, QK_REPEAT_KEY)
->>>>>>> b767f5d (conflic)
   ),
   [1] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
