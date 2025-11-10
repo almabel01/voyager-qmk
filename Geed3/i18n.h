@@ -1,5 +1,6 @@
+#define HU_CIRC ALGR(KC_3)
 #define HU_Z KC_Y
-#define HU_0 KC_GRV
+#define HU_DLR ALGR(KC_SCLN)
 #define HU_Y KC_Z
 #define HU_QUOT S(KC_1)
 #define HU_COMM KC_COMM
@@ -9,6 +10,7 @@
 #define HU_PLUS S(KC_3)
 #define HU_ASTR ALGR(KC_SLSH)
 #define HU_EQL S(KC_7)
+#define HU_0 KC_GRV
 #define HU_GRV ALGR(KC_7)
 #define HU_LESS ALGR(KC_NUBS)
 #define HU_MORE ALGR(KC_Z)
@@ -24,10 +26,8 @@
 #define HU_OE KC_0
 #define HU_ACUT ALGR(KC_9)
 #define HU_PERC S(KC_5)
-#define HU_CIRC ALGR(KC_3)
 #define HU_LCBR ALGR(KC_B)
 #define HU_RCBR ALGR(KC_N)
-#define HU_DLR ALGR(KC_SCLN)
 #define HU_QST S(KC_COMM)
 #define HU_HASH ALGR(KC_X)
 #define HU_LPRN S(KC_8)
