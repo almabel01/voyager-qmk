@@ -15,6 +15,11 @@ enum custom_keycodes {
   ST_MACRO_0,
   ST_MACRO_1,
   ST_MACRO_2,
+  ST_MACRO_3,
+  ST_MACRO_4,
+  ST_MACRO_5,
+  ST_MACRO_6,
+  ST_MACRO_7,
 };
 
 
@@ -30,54 +35,54 @@ enum tap_dance_codes {
   DANCE_7,
 };
 
-#define DUAL_FUNC_0 LT(6, KC_F18)
-#define DUAL_FUNC_1 LT(10, KC_F5)
-#define DUAL_FUNC_2 LT(9, KC_C)
-#define DUAL_FUNC_3 LT(9, KC_8)
-#define DUAL_FUNC_4 LT(6, KC_F21)
-#define DUAL_FUNC_5 LT(13, KC_I)
-#define DUAL_FUNC_6 LT(15, KC_F23)
-#define DUAL_FUNC_7 LT(5, KC_F24)
-#define DUAL_FUNC_8 LT(1, KC_F8)
-#define DUAL_FUNC_9 LT(12, KC_F17)
-#define DUAL_FUNC_10 LT(3, KC_F8)
-#define DUAL_FUNC_11 LT(12, KC_J)
-#define DUAL_FUNC_12 LT(6, KC_4)
-#define DUAL_FUNC_13 LT(4, KC_F4)
-#define DUAL_FUNC_14 LT(11, KC_6)
-#define DUAL_FUNC_15 LT(5, KC_9)
-#define DUAL_FUNC_16 LT(9, KC_E)
-#define DUAL_FUNC_17 LT(14, KC_F12)
-#define DUAL_FUNC_18 LT(10, KC_R)
-#define DUAL_FUNC_19 LT(12, KC_F23)
-#define DUAL_FUNC_20 LT(3, KC_G)
-#define DUAL_FUNC_21 LT(4, KC_8)
-#define DUAL_FUNC_22 LT(12, KC_F16)
-#define DUAL_FUNC_23 LT(11, KC_F7)
-#define DUAL_FUNC_24 LT(8, KC_F4)
-#define DUAL_FUNC_25 LT(3, KC_F2)
-#define DUAL_FUNC_26 LT(3, KC_0)
-#define DUAL_FUNC_27 LT(8, KC_F2)
-#define DUAL_FUNC_28 LT(4, KC_P)
-#define DUAL_FUNC_29 LT(4, KC_L)
-#define DUAL_FUNC_30 LT(11, KC_M)
-#define DUAL_FUNC_31 LT(4, KC_J)
-#define DUAL_FUNC_32 LT(8, KC_F17)
-#define DUAL_FUNC_33 LT(14, KC_W)
-#define DUAL_FUNC_34 LT(6, KC_R)
-#define DUAL_FUNC_35 LT(7, KC_W)
-#define DUAL_FUNC_36 LT(12, KC_F5)
-#define DUAL_FUNC_37 LT(5, KC_T)
-#define DUAL_FUNC_38 LT(8, KC_8)
-#define DUAL_FUNC_39 LT(7, KC_F21)
-#define DUAL_FUNC_40 LT(2, KC_2)
+#define DUAL_FUNC_0 LT(13, KC_F7)
+#define DUAL_FUNC_1 LT(9, KC_F4)
+#define DUAL_FUNC_2 LT(5, KC_S)
+#define DUAL_FUNC_3 LT(8, KC_F20)
+#define DUAL_FUNC_4 LT(9, KC_F6)
+#define DUAL_FUNC_5 LT(5, KC_F18)
+#define DUAL_FUNC_6 LT(11, KC_F20)
+#define DUAL_FUNC_7 LT(12, KC_F10)
+#define DUAL_FUNC_8 LT(13, KC_L)
+#define DUAL_FUNC_9 LT(9, KC_A)
+#define DUAL_FUNC_10 LT(9, KC_2)
+#define DUAL_FUNC_11 LT(5, KC_F21)
+#define DUAL_FUNC_12 LT(8, KC_Z)
+#define DUAL_FUNC_13 LT(11, KC_6)
+#define DUAL_FUNC_14 LT(4, KC_U)
+#define DUAL_FUNC_15 LT(8, KC_F3)
+#define DUAL_FUNC_16 LT(1, KC_F1)
+#define DUAL_FUNC_17 LT(12, KC_F12)
+#define DUAL_FUNC_18 LT(15, KC_F15)
+#define DUAL_FUNC_19 LT(13, KC_F4)
+#define DUAL_FUNC_20 LT(2, KC_1)
+#define DUAL_FUNC_21 LT(3, KC_F22)
+#define DUAL_FUNC_22 LT(14, KC_F5)
+#define DUAL_FUNC_23 LT(8, KC_V)
+#define DUAL_FUNC_24 LT(6, KC_6)
+#define DUAL_FUNC_25 LT(14, KC_Q)
+#define DUAL_FUNC_26 LT(11, KC_M)
+#define DUAL_FUNC_27 LT(9, KC_F13)
+#define DUAL_FUNC_28 LT(8, KC_7)
+#define DUAL_FUNC_29 LT(7, KC_L)
+#define DUAL_FUNC_30 LT(10, KC_F15)
+#define DUAL_FUNC_31 LT(15, KC_F18)
+#define DUAL_FUNC_32 LT(13, KC_F)
+#define DUAL_FUNC_33 LT(2, KC_F9)
+#define DUAL_FUNC_34 LT(6, KC_F9)
+#define DUAL_FUNC_35 LT(3, KC_F11)
+#define DUAL_FUNC_36 LT(12, KC_T)
+#define DUAL_FUNC_37 LT(8, KC_C)
+#define DUAL_FUNC_38 LT(9, KC_R)
+#define DUAL_FUNC_39 LT(3, KC_F3)
+#define DUAL_FUNC_40 LT(10, KC_U)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
     HU_CIRC,        DUAL_FUNC_0,    KC_F2,          DUAL_FUNC_1,    DUAL_FUNC_2,    DUAL_FUNC_3,                                    DUAL_FUNC_4,    DUAL_FUNC_5,    DUAL_FUNC_6,    DUAL_FUNC_7,    DUAL_FUNC_8,    DUAL_FUNC_9,    
     LT(5, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(8, KC_P),    KC_B,                                           KC_J,           LT(8, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_BSPC,        
     LT(4, KC_ESCAPE),LT(3, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(3, KC_O),    MT(MOD_RSFT, KC_ENTER),
-    KC_LEFT_CTRL,   HU_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    HU_COMM,        HU_DOT,         MT(MOD_RALT, HU_MINS),DUAL_FUNC_10,   
+    MT(MOD_LCTL, KC_ENTER),HU_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    HU_COMM,        HU_DOT,         MT(MOD_RALT, HU_MINS),DUAL_FUNC_10,   
                                                     LT(4, KC_SPACE),KC_TAB,                                         KC_F20,         LT(2, KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
@@ -139,8 +144,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [9] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, MO(10),         
     KC_TRANSPARENT, LALT(LSFT(KC_8)),LALT(LSFT(KC_Q)),LALT(LSFT(KC_D)),KC_TRANSPARENT, KC_TRANSPARENT,                                 LCTL(LSFT(KC_9)),LCTL(LSFT(KC_8)),LCTL(LSFT(KC_7)),LCTL(LSFT(KC_6)),KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, ST_MACRO_1,     ST_MACRO_2,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 LALT(LCTL(LSFT(KC_F13))),LALT(LCTL(LSFT(KC_F14))),LALT(LCTL(LSFT(KC_F15))),LALT(LCTL(LSFT(KC_F16))),KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 LALT(LCTL(LSFT(KC_F12))),KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        
+    KC_TRANSPARENT, ST_MACRO_1,     ST_MACRO_2,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 ST_MACRO_3,     ST_MACRO_4,     ST_MACRO_5,     ST_MACRO_6,     KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 ST_MACRO_7,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [10] = LAYOUT_voyager(
@@ -170,7 +175,7 @@ const uint16_t PROGMEM combo6[] = { KC_F, LT(8, KC_P), COMBO_END};
 const uint16_t PROGMEM combo7[] = { LT(8, KC_L), KC_U, COMBO_END};
 const uint16_t PROGMEM combo8[] = { KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM combo9[] = { HU_COMM, HU_DOT, COMBO_END};
-const uint16_t PROGMEM combo10[] = { DUAL_FUNC_10, KC_LEFT_CTRL, COMBO_END};
+const uint16_t PROGMEM combo10[] = { DUAL_FUNC_10, MT(MOD_LCTL, KC_ENTER), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, CW_TOGG),
@@ -636,6 +641,31 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_2:
     if (record->event.pressed) {
       SEND_STRING(SS_TAP(X_ESCAPE)SS_DELAY(100)  SS_LSFT(SS_TAP(X_DOT))SS_DELAY(100)  SS_TAP(X_W)SS_DELAY(100)  SS_TAP(X_ENTER));
+    }
+    break;
+    case ST_MACRO_3:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_B))SS_DELAY(100)  SS_LSFT(SS_TAP(X_R))SS_DELAY(100)  SS_TAP(X_COMMA)SS_DELAY(100)  SS_TAP(X_ENTER));
+    }
+    break;
+    case ST_MACRO_4:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_B))SS_DELAY(100)  SS_LSFT(SS_TAP(X_G))SS_DELAY(100)  SS_TAP(X_ENTER));
+    }
+    break;
+    case ST_MACRO_5:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_B))SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_S)SS_DELAY(100)  SS_TAP(X_T)SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_TAP(X_R)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_G)SS_DELAY(100)  SS_TAP(X_A)SS_DELAY(100)  SS_TAP(X_R)SS_DELAY(100)  SS_TAP(X_D)SS_DELAY(100)  SS_TAP(X_S)SS_DELAY(100)  SS_TAP(X_COMMA)SS_DELAY(100)  SS_TAP(X_ENTER));
+    }
+    break;
+    case ST_MACRO_6:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_M))SS_DELAY(100)  SS_TAP(X_I)SS_DELAY(100)  SS_TAP(X_T)SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_TAP(X_F)SS_DELAY(100)  SS_TAP(X_R)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_U)SS_DELAY(100)  SS_TAP(X_N)SS_DELAY(100)  SS_TAP(X_D)SS_DELAY(100)  SS_TAP(X_L)SS_DELAY(100)  SS_TAP(X_I)SS_DELAY(100)  SS_TAP(X_C)SS_DELAY(100)  SS_TAP(X_H)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_N)SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_LSFT(SS_TAP(X_G))SS_DELAY(100)  SS_TAP(X_R));
+    }
+    break;
+    case ST_MACRO_7:
+    if (record->event.pressed) {
+      SEND_STRING(SS_RALT(SS_TAP(X_X))SS_DELAY(100)  SS_RALT(SS_TAP(X_X))SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_LSFT(SS_TAP(X_T))SS_DELAY(100)  SS_TAP(X_O)SS_DELAY(100)  SS_TAP(X_P)SS_DELAY(100)  SS_TAP(X_I)SS_DELAY(100)  SS_TAP(X_C)SS_DELAY(100)  SS_TAP(X_S)SS_DELAY(100)  SS_TAP(X_ENTER)SS_DELAY(100)  SS_RALT(SS_TAP(X_X))SS_DELAY(100)  SS_RALT(SS_TAP(X_X))SS_DELAY(100)  SS_RALT(SS_TAP(X_X))SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_TAP(X_ENTER)SS_DELAY(100)  SS_RALT(SS_TAP(X_X))SS_DELAY(100)  SS_RALT(SS_TAP(X_X))SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_LSFT(SS_TAP(X_A))SS_DELAY(100)  SS_TAP(X_C)SS_DELAY(100)  SS_TAP(X_T)SS_DELAY(100)  SS_TAP(X_I)SS_DELAY(100)  SS_TAP(X_O)SS_DELAY(100)  SS_TAP(X_N));
     }
     break;
 
