@@ -5,8 +5,6 @@
 #define HU_COMM KC_COMM
 #define HU_DOT KC_DOT
 #define HU_MINS KC_SLSH
-#define KC_PC_COPY LCTL(KC_C)
-#define KC_PC_PASTE LCTL(KC_V)
 #define HU_COLN S(KC_DOT)
 #define HU_PLUS S(KC_3)
 #define HU_ASTR ALGR(KC_SLSH)
@@ -39,3 +37,4 @@
 #define HU_AT ALGR(KC_V)
 #define HU_LBRC ALGR(KC_F)
 #define HU_RBRC ALGR(KC_G)
+#define KC_PC_COPY LCTL(KC_C)
