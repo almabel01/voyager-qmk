@@ -16,3 +16,4 @@ LAYER_LOCK_ENABLE = yes
 
 # Custom QMK here
 REPEAT_KEY_ENABLE = yes
+LEADER_ENABLE = yes
