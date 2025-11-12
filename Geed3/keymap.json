@@ -1,7 +1,6 @@
 {
     "modules": [
         "zsa/oryx",
-        "zsa/defaults",
-        "getreuer/custom_shift_keys"
+        "zsa/defaults"
     ]
 }
