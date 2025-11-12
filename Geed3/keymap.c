@@ -656,7 +656,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_3:
     if (record->event.pressed) {
-      SEND_STRING("BR,\nÁbel");
+      // SEND_STRING("BR,\nÁbel");
+      SEND_STRING(SS_LSFT(SS_TAP(X_B))SS_DELAY(100)  SS_LSFT(SS_TAP(X_R))SS_DELAY(100)  SS_TAP(X_COMMA)SS_DELAY(100)  SS_TAP(X_ENTER)SS_DELAY(100)  SS_RALT(SS_TAP(X_9)) SS_LSFT(SS_TAP(X_A))SS_DELAY(100)  SS_TAP(X_B)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_L));
     }
     break;
     case ST_MACRO_4:
@@ -666,7 +667,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_5:
     if (record->event.pressed) {
-      SEND_STRING("Best regards\n");
+      SEND_STRING("Best regards,\n");
     }
     break;
     case ST_MACRO_6:
