@@ -662,7 +662,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_4:
     if (record->event.pressed) {
-      SEND_STRING("BG\n");
+      // SEND_STRING("BG\n");
+      SEND_STRING(SS_LSFT(SS_TAP(X_B))SS_DELAY(100)  SS_LSFT(SS_TAP(X_G))SS_DELAY(100)  SS_TAP(X_ENTER)SS_DELAY(100)  SS_RALT(SS_TAP(X_9)) SS_LSFT(SS_TAP(X_A))SS_DELAY(100)  SS_TAP(X_B)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_L));
     }
     break;
     case ST_MACRO_5:
@@ -672,7 +673,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_6:
     if (record->event.pressed) {
-      SEND_STRING("Mit freundlichen Grüßen\n");
+      // SEND_STRING("Mit freundlichen Grüßen\n");
+      SEND_STRING(SS_LSFT(SS_TAP(X_M))SS_DELAY(100)  SS_TAP(X_I)SS_DELAY(100)  SS_TAP(X_T)SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_TAP(X_F)SS_DELAY(100) SS_TAP(X_R)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_U)SS_DELAY(100)  SS_TAP(X_N)SS_DELAY(100) SS_TAP(X_D)SS_DELAY(100) SS_TAP(X_L)SS_DELAY(100) SS_TAP(X_I)SS_DELAY(100) SS_TAP(X_C)SS_DELAY(100) SS_TAP(X_H)SS_DELAY(100) SS_TAP(X_E)SS_DELAY(100) SS_TAP(X_N)SS_DELAY(100) SS_LFST(SS_TAP(X_G)SS_DELAY(100)) SS_TAP(X_R)SS_DELAY(100) SS_RALT(SS_TAP(KC_MINS)) SS_TAP(X_U)SS_DELAY(100) SS_RALT(SS_TAP(HU_SLSH))SS_DELAY(100) SS_TAP(X_E)SS_DELAY(100) SS_TAP(X_N));
     }
     break;
     case ST_MACRO_7:
