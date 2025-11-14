@@ -1547,6 +1547,9 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_M, KC_D)) {
         // Leader, m, d => Ctrl+Shift+9 - mark as read and delete
         tap_code16(LCTL(LSFT(KC_M)));
+    } else if (leader_sequence_three_keys(KC_M, KC_F, KC_G)) {
+        // Leader, m, f, g => Mit freundlichen Grüßen
+        SEND_STRING(SS_LSFT(SS_TAP(X_M))SS_DELAY(100)  SS_TAP(X_I)SS_DELAY(100)  SS_TAP(X_T)SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_TAP(X_F)SS_DELAY(100) SS_TAP(X_R)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_U)SS_DELAY(100)  SS_TAP(X_N)SS_DELAY(100) SS_TAP(X_D)SS_DELAY(100) SS_TAP(X_L)SS_DELAY(100) SS_TAP(X_I)SS_DELAY(100) SS_TAP(X_C)SS_DELAY(100) SS_TAP(X_H)SS_DELAY(100) SS_TAP(X_E)SS_DELAY(100) SS_TAP(X_N)SS_DELAY(100) SS_LFST(SS_TAP(X_G)SS_DELAY(100)) SS_TAP(X_R)SS_DELAY(100) SS_TAP(HU_UDIA)SS_DELAY(100) SS_TAP(HU_SS)SS_DELAY(100) SS_TAP(X_E)SS_DELAY(100) SS_TAP(X_N));
     }
 
 }
