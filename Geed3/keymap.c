@@ -1530,30 +1530,30 @@ void leader_end_user(void) {
         // Leader, b, g => BG
         SEND_STRING(SS_LSFT("B")SS_DELAY(100)  SS_LSFT("G")SS_DELAY(100)  SS_TAP(X_ENTER)SS_DELAY(100)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(100)  "B" SS_DELAY(100)  "E" SS_DELAY(100)  SS_TAP(X_L));
     } else if (leader_sequence_three_keys(KC_M, KC_F, KC_G)) {
-        send_string_with_delay("Mit freundlichen Grüßen", 100);
+        send_string_with_delay("Mit freundlichen Grüßen", 10);
     } else if (leader_sequence_three_keys(KC_M, KC_F, KC_B)) {
-        send_string_with_delay("Best regards,", 100);
+        send_string_with_delay("Best regards,", 10);
     } else if (leader_sequence_two_keys(KC_M, KC_S)) {
         // Leader, m, s => Seehr geehrte Damen und Herren,
-        send_string_with_delay("Seehr geehrte Damen und Herren,", 100);
+        send_string_with_delay("Seehr geehrte Damen und Herren,", 10);
     } else if (leader_sequence_three_keys(KC_M, KC_S, KC_E)) {
         // Leader, m, s, e => Seehr geehrte Frau
-        send_string_with_delay("Seehr geehrte Frau", 100);
+        send_string_with_delay("Seehr geehrte Frau", 10);
     } else if (leader_sequence_three_keys(KC_M, KC_S, KC_R)) {
         // Leader, m, s, r => Seehr geehrte Herr
-        send_string_with_delay("Seehr geehrte Herr", 100);
+        send_string_with_delay("Seehr geehrte Herr", 10);
     } else if (leader_sequence_three_keys(KC_M, KC_H, KC_E)) {
         // Leader, m, h, e => Seehr geehrte Frau
-        send_string_with_delay("Hallo Frau", 100);
+        send_string_with_delay("Hallo Frau", 10);
     } else if (leader_sequence_three_keys(KC_M, KC_H, KC_R)) {
         // Leader, m, h, r => Hallo Herr
-        send_string_with_delay("Hallo Herr", 100);
+        send_string_with_delay("Hallo Herr", 10);
     } else if (leader_sequence_two_keys(KC_M, KC_A)) {
         // Leader, m, a => anbei die
-        send_string_with_delay("anbei die", 100);
+        send_string_with_delay("anbei die", 10);
     } else if (leader_sequence_two_keys(KC_M, KC_R)) {
         // Leader, m, r => machines uploaded
-        send_string_with_delay("die RVU wurde hochgeladen.", 100);
+        send_string_with_delay("die RVU wurde hochgeladen.", 10);
   // git
     } else if (leader_sequence_two_keys(KC_G, KC_S)) {
         // Leader, g, s => git status
@@ -1575,10 +1575,10 @@ void leader_end_user(void) {
   // Text
     } else if (leader_sequence_two_keys(KC_T, KC_T)) {
         // Leader, t, t => Thank you
-        send_string_with_delay("Thank you,", 100);
+        send_string_with_delay("Thank you,", 10);
     } else if (leader_sequence_two_keys(KC_T, KC_X)) {
         // Leader, t, x => Thanks 
-        send_string_with_delay("Thanks", 100);
+        send_string_with_delay("Thanks", 10);
     }
 
 }
