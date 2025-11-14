@@ -1547,7 +1547,7 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_A, KC_S)) {
         // Leader, a, s => GUI+S
         tap_code16(LGUI(KC_S));
-    } else if (leader_sequence_two_keys(KC_M, KC_T, KC_E, KC_M, KC_P)) {
+    } else if (leader_sequence_five_keys(KC_M, KC_T, KC_E, KC_M, KC_P)) {
         // Leader, temp => meeting template
         SEND_STRING("## Topics\n### \n## Action items");
   // mail
@@ -1566,7 +1566,7 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_B, KC_R)) {
         // Leader, b, r => BR, 
         SEND_STRING(SS_LSFT("B")SS_DELAY(100)  SS_LSFT("R")SS_DELAY(100)  SS_TAP(X_COMMA)SS_DELAY(100)  SS_TAP(X_ENTER)SS_DELAY(100)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(100)  "B" SS_DELAY(100)  "E" SS_DELAY(100)  SS_TAP(X_L));
-    } else if (leader_sequence_three_keys(KC_B, KC_G)) {
+    } else if (leader_sequence_two_keys(KC_B, KC_G)) {
         // Leader, b, g => BG
         SEND_STRING(SS_LSFT("B")SS_DELAY(100)  SS_LSFT("G")SS_DELAY(100)  SS_TAP(X_ENTER)SS_DELAY(100)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(100)  "B" SS_DELAY(100)  "E" SS_DELAY(100)  SS_TAP(X_L));
     } else if (leader_sequence_three_keys(KC_M, KC_F, KC_G)) {
