@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
-#include "keymap_hungarian.h"
+// #include "keymap_hungarian.h"
+#include "quantum/keymap_extras/keymap_hungarian.h"
 #include "sendstring_hungarian.h"
 #include "version.h"
 #include "i18n.h"
