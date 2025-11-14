@@ -11,6 +11,7 @@
     - Q => backup json file
     - D => delete all json files in folder
     - B => go to backup folder
+    - C => git add & commit with message
 - M -- Mail
     <!-- Outlook -->
     - D => mark as read and delete
