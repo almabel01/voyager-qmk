@@ -24,6 +24,8 @@
     - S => Seehr geehrte Damen und Herren,
     - S + E => Seehr geehrte Frau
     - S + R => Seehr geehrter Herr
+    - H + E => Hallo Frau
+    - H + R => Hallo Herr
 - N -- Names
     - A => Ábel
     - K => Katharina

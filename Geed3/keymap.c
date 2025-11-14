@@ -1547,16 +1547,54 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_A, KC_S)) {
         // Leader, a, s => GUI+S
         tap_code16(LGUI(KC_S));
-    // mail
+    } else if (leader_sequence_two_keys(KC_M, KC_T, KC_E, KC_M, KC_P)) {
+        // Leader, temp => meeting template
+        SEND_STRING("## Topics\n### \n## Action items");
+  // mail
     } else if (leader_sequence_two_keys(KC_M, KC_D)) {
         // Leader, m, d => Ctrl+Shift+9 - mark as read and delete
-        tap_code16(LCTL(LSFT(KC_M)));
+        tap_code16(LCTL(LSFT(KC_9)));
+    } else if (leader_sequence_two_keys(KC_M, KC_F)) {
+        // Leader, m, f => Ctrl+Shift+7 mark as read and flag with no date
+        tap_code16(LCTL(LSFT(KC_7)));
+    } else if (leader_sequence_two_keys(KC_M, KC_L)) {
+        // Leader, m, s => Ctrl+Shift+8 - assign label
+        tap_code16(LCTL(LSFT(KC_8)));
+    } else if (leader_sequence_two_keys(KC_M, KC_M)) {
+        // Leader, m, m => mark flag done and move mail
+        tap_code16(LCTL(LSFT(KC_6)));
+    } else if (leader_sequence_two_keys(KC_B, KC_R)) {
+        // Leader, b, r => BR, 
+        SEND_STRING(SS_LSFT("B")SS_DELAY(100)  SS_LSFT("R")SS_DELAY(100)  SS_TAP(X_COMMA)SS_DELAY(100)  SS_TAP(X_ENTER)SS_DELAY(100)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(100)  "B" SS_DELAY(100)  "E" SS_DELAY(100)  SS_TAP(X_L));
+    } else if (leader_sequence_three_keys(KC_B, KC_G)) {
+        // Leader, b, g => BG
+        SEND_STRING(SS_LSFT("B")SS_DELAY(100)  SS_LSFT("G")SS_DELAY(100)  SS_TAP(X_ENTER)SS_DELAY(100)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(100)  "B" SS_DELAY(100)  "E" SS_DELAY(100)  SS_TAP(X_L));
     } else if (leader_sequence_three_keys(KC_M, KC_F, KC_G)) {
-        // Leader, m, f, g => Mit freundlichen Grüßen
-        // SEND_STRING(SS_LSFT(SS_TAP(X_M))SS_DELAY(100)  SS_TAP(X_I)SS_DELAY(100)  SS_TAP(X_T)SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_TAP(X_F)SS_DELAY(100) SS_TAP(X_R)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_U)SS_DELAY(100)  SS_TAP(X_N)SS_DELAY(100) SS_TAP(X_D)SS_DELAY(100) SS_TAP(X_L)SS_DELAY(100) SS_TAP(X_I)SS_DELAY(100) SS_TAP(X_C)SS_DELAY(100) SS_TAP(X_H)SS_DELAY(100) SS_TAP(X_E)SS_DELAY(100) SS_TAP(X_N)SS_DELAY(100) SS_LFST(SS_TAP(X_G)SS_DELAY(100)) SS_TAP(X_R)SS_DELAY(100) SS_TAP(HU_UDIA)SS_DELAY(100) SS_TAP(HU_SS)SS_DELAY(100) SS_TAP(X_E)SS_DELAY(100) SS_TAP(X_N));
-        // SEND_STRING(SS_LSFT("M") SS_DELAY(100) "I" SS_DELAY(100) "T" SS_DELAY(100) " " SS_DELAY(100) "F" SS_DELAY(100) "R" SS_DELAY(100) "E" SS_DELAY(100) "U" SS_DELAY(100) "N" SS_DELAY(100) "D" SS_DELAY(100) "L" SS_DELAY(100) "I" SS_DELAY(100) "C" SS_DELAY(100) "H" SS_DELAY(100) "E" SS_DELAY(100) "N" SS_DELAY(100) " "  SS_LSFT("G") SS_DELAY(100) "R" SS_DELAY(100) HU_UDIA SS_DELAY(100) HU_SS SS_DELAY(100) "E" SS_DELAY(100) "N");
         send_string_with_delay("Mit freundlichen Grüßen", 100);
-      // git
+    } else if (leader_sequence_three_keys(KC_M, KC_F, KC_B)) {
+        send_string_with_delay("Best regards,", 100);
+    } else if (leader_sequence_two_keys(KC_M, KC_S)) {
+        // Leader, m, s => Seehr geehrte Damen und Herren,
+        send_string_with_delay("Seehr geehrte Damen und Herren,", 100);
+    } else if (leader_sequence_three_keys(KC_M, KC_S, KC_E)) {
+        // Leader, m, s, e => Seehr geehrte Frau
+        send_string_with_delay("Seehr geehrte Frau", 100);
+    } else if (leader_sequence_three_keys(KC_M, KC_S, KC_R)) {
+        // Leader, m, s, r => Seehr geehrte Herr
+        send_string_with_delay("Seehr geehrte Herr", 100);
+    } else if (leader_sequence_three_keys(KC_M, KC_H, KC_E)) {
+        // Leader, m, h, e => Seehr geehrte Frau
+        send_string_with_delay("Hallo Frau", 100);
+    } else if (leader_sequence_three_keys(KC_M, KC_H, KC_R)) {
+        // Leader, m, h, r => Hallo Herr
+        send_string_with_delay("Hallo Herr", 100);
+    } else if (leader_sequence_two_keys(KC_M, KC_A)) {
+        // Leader, m, a => anbei die
+        send_string_with_delay("anbei die", 100);
+    } else if (leader_sequence_two_keys(KC_M, KC_R)) {
+        // Leader, m, r => machines uploaded
+        send_string_with_delay("die RVU wurde hochgeladen.", 100);
+  // git
     } else if (leader_sequence_two_keys(KC_G, KC_S)) {
         // Leader, g, s => git status
         SEND_STRING("git status"SS_TAP(X_ENTER));
@@ -1568,6 +1606,13 @@ void leader_end_user(void) {
         SEND_STRING("git commit -m \""SS_LSFT(SS_TAP(X_QUOTE))SS_DELAY(100));
         // place cursor between quotes
         tap_code16(LSFT(KC_LEFT));
+  // Text
+    } else if (leader_sequence_two_keys(KC_T, KC_T)) {
+        // Leader, t, t => Thank you
+        send_string_with_delay("Thank you,", 100);
+    } else if (leader_sequence_two_keys(KC_T, KC_X)) {
+        // Leader, t, x => Thanks 
+        send_string_with_delay("Thanks", 100);
     }
 
 }
