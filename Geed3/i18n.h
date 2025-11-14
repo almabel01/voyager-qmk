@@ -12,8 +12,8 @@
 // #define HU_EQL S(KC_7)
 // #define HU_0 KC_GRV
 // #define HU_GRV ALGR(KC_7)
-// #define HU_LESS ALGR(KC_NUBS)
-// #define HU_MORE ALGR(KC_Z)
+#define HU_LESS ALGR(KC_NUBS)
+#define HU_MORE ALGR(KC_Z)
 // #define HU_UNDS S(KC_SLSH)
 // #define HU_BSLS ALGR(KC_Q)
 // #define HU_PIPE ALGR(KC_W)
@@ -22,18 +22,18 @@
 // #define HU_SS ALGR(KC_QUOT)
 // #define HU_AMPR ALGR(KC_C)
 // #define HU_TILD ALGR(KC_1)
-// #define HU_UE KC_MINS
-// #define HU_OE KC_0
+#define HU_UE KC_MINS
+#define HU_OE KC_0
 // #define HU_ACUT ALGR(KC_9)
 // #define HU_PERC S(KC_5)
 // #define HU_LCBR ALGR(KC_B)
 // #define HU_RCBR ALGR(KC_N)
-// #define HU_QST S(KC_COMM)
+#define HU_QST S(KC_COMM)
 // #define HU_HASH ALGR(KC_X)
 // #define HU_LPRN S(KC_8)
 // #define HU_RPRN S(KC_9)
 // #define HU_SCLN ALGR(KC_COMM)
-// #define HU_DQOT S(KC_2)
+#define HU_DQOT S(KC_2)
 // #define HU_AT ALGR(KC_V)
 // #define HU_LBRC ALGR(KC_F)
 // #define HU_RBRC ALGR(KC_G)
