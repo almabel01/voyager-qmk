@@ -1256,16 +1256,16 @@ void leader_end_user(void) {
     } else if (leader_sequence_three_keys(KC_M, KC_F, KC_B)) {
       send_unicode_string("Best regards,");
     } else if (leader_sequence_two_keys(KC_M, KC_S)) {
-        // Leader, m, s => Seehr geehrte Damen und Herren,
-      send_unicode_string("Seehr geehrte Damen und Herren,");
+        // Leader, m, s => Sehr geehrte Damen und Herren,
+      send_unicode_string("Sehr geehrte Damen und Herren,");
     } else if (leader_sequence_three_keys(KC_M, KC_S, KC_E)) {
-        // Leader, m, s, e => Seehr geehrte Frau
-      send_unicode_string("Seehr geehrte Frau");
+        // Leader, m, s, e => Sehr geehrte Frau
+      send_unicode_string("Sehr geehrte Frau");
     } else if (leader_sequence_three_keys(KC_M, KC_S, KC_R)) {
-        // Leader, m, s, r => Seehr geehrte Herr
-      send_unicode_string("Seehr geehrte Herr");
+        // Leader, m, s, r => Sehr geehrte Herr
+      send_unicode_string("Sehr geehrte Herr");
     } else if (leader_sequence_three_keys(KC_M, KC_H, KC_E)) {
-        // Leader, m, h, e => Seehr geehrte Frau
+        // Leader, m, h, e => Sehr geehrte Frau
       send_unicode_string("Hallo Frau ");
     } else if (leader_sequence_three_keys(KC_M, KC_H, KC_R)) {
         // Leader, m, h, r => Hallo Herr
