@@ -633,7 +633,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_1:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_C)SS_DELAY(50)  SS_TAP(X_I)SS_DELAY(50)  SS_TAP(HU_QUOT));
+      // SEND_STRING(SS_TAP(X_C)SS_DELAY(50)  SS_TAP(X_I)SS_DELAY(50)  SS_TAP(HU_QUOT));
+      tap_code16(KC_C);
+      wait_ms(50);
+      tap_code16(KC_I);
+      wait_ms(50);
+      tap_code16(HU_QUOT);
     }
     break;
     case ST_MACRO_2:
