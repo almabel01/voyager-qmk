@@ -1268,39 +1268,30 @@ void leader_end_user(void) {
         // Leader, b, g => BG
         SEND_STRING(SS_LSFT("B")SS_DELAY(10)  SS_LSFT("G")SS_DELAY(10)  SS_TAP(X_ENTER)SS_DELAY(10)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(10)  "b" SS_DELAY(10)  "e" SS_DELAY(10)  SS_TAP(X_L));
     } else if (leader_sequence_three_keys(KC_M, KC_F, KC_G)) {
-      /* Send ASCII parts normally, then send special characters using keycodes
-       * to avoid issues with UTF-8 bytes being dropped by send_string_with_delay.
-       * 'ü' is sent as RALT(HU_UE) and 'ß' as HU_SS (defined in keymap_hungarian).
-       */
-      send_string_with_delay("Mit freundlichen Gr", 10);
-      tap_code16(RALT(HU_UE));
-      wait_ms(10);
-      tap_code16(HU_SS);
-      wait_ms(10);
-      send_string_with_delay("en", 10);
+      send_unicode_string("Mit freundlichen Grüßen");
     } else if (leader_sequence_three_keys(KC_M, KC_F, KC_B)) {
-        send_string_with_delay("Best regards,", 10);
+      send_unicode_string("Best regards,");
     } else if (leader_sequence_two_keys(KC_M, KC_S)) {
         // Leader, m, s => Seehr geehrte Damen und Herren,
-        send_string_with_delay("Seehr geehrte Damen und Herren,", 10);
+      send_unicode_string("Seehr geehrte Damen und Herren,");
     } else if (leader_sequence_three_keys(KC_M, KC_S, KC_E)) {
         // Leader, m, s, e => Seehr geehrte Frau
-        send_string_with_delay("Seehr geehrte Frau", 10);
+      send_unicode_string("Seehr geehrte Frau");
     } else if (leader_sequence_three_keys(KC_M, KC_S, KC_R)) {
         // Leader, m, s, r => Seehr geehrte Herr
-        send_string_with_delay("Seehr geehrte Herr", 10);
+      send_unicode_string("Seehr geehrte Herr");
     } else if (leader_sequence_three_keys(KC_M, KC_H, KC_E)) {
         // Leader, m, h, e => Seehr geehrte Frau
-        send_string_with_delay("Hallo Frau", 10);
+      send_unicode_string("Hallo Frau ");
     } else if (leader_sequence_three_keys(KC_M, KC_H, KC_R)) {
         // Leader, m, h, r => Hallo Herr
-        send_string_with_delay("Hallo Herr", 10);
+      send_unicode_string("Hallo Herr ");
     } else if (leader_sequence_two_keys(KC_M, KC_A)) {
         // Leader, m, a => anbei die
-        send_string_with_delay("anbei die", 10);
+      send_unicode_string("anbei die");
     } else if (leader_sequence_two_keys(KC_M, KC_R)) {
         // Leader, m, r => machines uploaded
-        send_string_with_delay("die RVU wurde hochgeladen.", 10);
+      send_unicode_string("die RVU wurde hochgeladen.");
   // git
     } else if (leader_sequence_two_keys(KC_G, KC_S)) {
         // Leader, g, s => git status
@@ -1321,11 +1312,11 @@ void leader_end_user(void) {
         SEND_STRING("git merge origin/oryx"SS_TAP(X_ENTER));
   // Text
     } else if (leader_sequence_two_keys(KC_T, KC_T)) {
-        // Leader, t, t => Thank you
-        send_string_with_delay("Thank you,", 10);
+      // Leader, t, t => Thank you
+      send_unicode_string("Thank you,");
     } else if (leader_sequence_two_keys(KC_T, KC_X)) {
-        // Leader, t, x => Thanks 
-        send_string_with_delay("Thanks", 10);
+      // Leader, t, x => Thanks 
+      send_unicode_string("Thanks");
     }
 
 }

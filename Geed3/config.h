@@ -63,5 +63,10 @@
 #undef ENABLE_RGB_MATRIX_RIVERFLOW
 
 #define LEADER_NO_TIMEOUT
+
+/* Unicode input mode: pick the mode matching your OS. 
+ * UC_LNX works for Linux (can be changed to UC_WIN or UC_MAC).
+ */
+#define UNICODE_SELECTED_MODES UC_WIN
 #define LEADER_PER_KEY_TIMING
 #define LEADER_TIMEOUT 250
