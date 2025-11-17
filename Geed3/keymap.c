@@ -31,68 +31,55 @@ enum tap_dance_codes {
   DANCE_7,
 };
 
-#define DUAL_FUNC_0 LT(2, KC_K)
-#define DUAL_FUNC_1 LT(4, KC_F1)
-#define DUAL_FUNC_2 LT(9, KC_K)
-#define DUAL_FUNC_3 LT(11, KC_F1)
-#define DUAL_FUNC_4 LT(10, KC_L)
-#define DUAL_FUNC_5 LT(3, KC_Z)
-#define DUAL_FUNC_6 LT(15, KC_F15)
-#define DUAL_FUNC_7 LT(15, KC_Y)
-#define DUAL_FUNC_8 LT(13, KC_2)
-#define DUAL_FUNC_9 LT(2, KC_E)
-#define DUAL_FUNC_10 LT(5, KC_F10)
-#define DUAL_FUNC_11 LT(12, KC_J)
-#define DUAL_FUNC_12 LT(13, KC_F19)
-#define DUAL_FUNC_13 LT(6, KC_7)
-#define DUAL_FUNC_14 LT(10, KC_F7)
-#define DUAL_FUNC_15 LT(15, KC_Z)
-#define DUAL_FUNC_16 LT(4, KC_F12)
-#define DUAL_FUNC_17 LT(4, KC_E)
-#define DUAL_FUNC_18 LT(6, KC_2)
-#define DUAL_FUNC_19 LT(8, KC_F10)
-#define DUAL_FUNC_20 LT(1, KC_O)
-#define DUAL_FUNC_21 LT(1, KC_F21)
-#define DUAL_FUNC_22 LT(5, KC_E)
-#define DUAL_FUNC_23 LT(14, KC_W)
-#define DUAL_FUNC_24 LT(13, KC_N)
-#define DUAL_FUNC_25 LT(1, KC_5)
-#define DUAL_FUNC_26 LT(9, KC_U)
-#define DUAL_FUNC_27 LT(15, KC_F9)
-#define DUAL_FUNC_28 LT(6, KC_3)
-#define DUAL_FUNC_29 LT(2, KC_W)
-#define DUAL_FUNC_30 LT(7, KC_F17)
-#define DUAL_FUNC_31 LT(9, KC_7)
-#define DUAL_FUNC_32 LT(1, KC_F4)
-#define DUAL_FUNC_33 LT(13, KC_1)
-#define DUAL_FUNC_34 LT(1, KC_L)
-#define DUAL_FUNC_35 LT(9, KC_V)
-#define DUAL_FUNC_36 LT(12, KC_F7)
-#define DUAL_FUNC_37 LT(4, KC_F6)
-#define DUAL_FUNC_38 LT(11, KC_1)
-#define DUAL_FUNC_39 LT(3, KC_N)
-#define DUAL_FUNC_40 LT(4, KC_M)
-#define DUAL_FUNC_41 LT(3, KC_I)
-#define DUAL_FUNC_42 LT(12, KC_7)
-#define DUAL_FUNC_43 LT(5, KC_X)
-#define DUAL_FUNC_44 LT(12, KC_F15)
-#define DUAL_FUNC_45 LT(12, KC_T)
-#define DUAL_FUNC_46 LT(10, KC_B)
-#define DUAL_FUNC_47 LT(3, KC_F11)
-#define DUAL_FUNC_48 LT(6, KC_F3)
-#define DUAL_FUNC_49 LT(10, KC_F17)
-#define DUAL_FUNC_50 LT(3, KC_F23)
-#define DUAL_FUNC_51 LT(9, KC_W)
-#define DUAL_FUNC_52 LT(9, KC_Q)
-#define DUAL_FUNC_53 LT(15, KC_L)
+#define DUAL_FUNC_0 LT(14, KC_F9)
+#define DUAL_FUNC_1 LT(1, KC_F10)
+#define DUAL_FUNC_2 LT(7, KC_8)
+#define DUAL_FUNC_3 LT(9, KC_Y)
+#define DUAL_FUNC_4 LT(9, KC_Q)
+#define DUAL_FUNC_5 LT(7, KC_F23)
+#define DUAL_FUNC_6 LT(6, KC_F6)
+#define DUAL_FUNC_7 LT(7, KC_Q)
+#define DUAL_FUNC_8 LT(9, KC_J)
+#define DUAL_FUNC_9 LT(12, KC_4)
+#define DUAL_FUNC_10 LT(6, KC_O)
+#define DUAL_FUNC_11 LT(9, KC_F4)
+#define DUAL_FUNC_12 LT(14, KC_M)
+#define DUAL_FUNC_13 LT(12, KC_F12)
+#define DUAL_FUNC_14 LT(10, KC_O)
+#define DUAL_FUNC_15 LT(11, KC_C)
+#define DUAL_FUNC_16 LT(2, KC_F3)
+#define DUAL_FUNC_17 LT(4, KC_F1)
+#define DUAL_FUNC_18 LT(2, KC_Q)
+#define DUAL_FUNC_19 LT(4, KC_S)
+#define DUAL_FUNC_20 LT(6, KC_2)
+#define DUAL_FUNC_21 LT(5, KC_R)
+#define DUAL_FUNC_22 LT(9, KC_4)
+#define DUAL_FUNC_23 LT(6, KC_1)
+#define DUAL_FUNC_24 LT(6, KC_F12)
+#define DUAL_FUNC_25 LT(9, KC_E)
+#define DUAL_FUNC_26 LT(14, KC_F17)
+#define DUAL_FUNC_27 LT(2, KC_F20)
+#define DUAL_FUNC_28 LT(13, KC_X)
+#define DUAL_FUNC_29 LT(4, KC_N)
+#define DUAL_FUNC_30 LT(1, KC_F5)
+#define DUAL_FUNC_31 LT(8, KC_F18)
+#define DUAL_FUNC_32 LT(13, KC_F3)
+#define DUAL_FUNC_33 LT(2, KC_V)
+#define DUAL_FUNC_34 LT(3, KC_C)
+#define DUAL_FUNC_35 LT(1, KC_F9)
+#define DUAL_FUNC_36 LT(8, KC_F15)
+#define DUAL_FUNC_37 LT(2, KC_F8)
+#define DUAL_FUNC_38 LT(13, KC_F17)
+#define DUAL_FUNC_39 LT(7, KC_F12)
+#define DUAL_FUNC_40 LT(8, KC_F3)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
-    HU_CIRC,        DUAL_FUNC_0,    DUAL_FUNC_1,    DUAL_FUNC_2,    DUAL_FUNC_3,    DUAL_FUNC_4,                                    DUAL_FUNC_7,    DUAL_FUNC_8,    DUAL_FUNC_9,    DUAL_FUNC_10,   DUAL_FUNC_11,   DUAL_FUNC_12,   
-    LT(5, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(8, KC_P),    KC_B,                                           KC_J,           LT(8, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_BSPC,        
-    LT(4, KC_ESCAPE),LT(3, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(3, KC_O),    MT(MOD_RSFT, KC_ENTER),
-    MT(MOD_LCTL, KC_ENTER),HU_Z,           KC_X,           DUAL_FUNC_5,    KC_D,           DUAL_FUNC_6,                                    MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    HU_COMM,        LT(9, HU_DOT),  MT(MOD_RALT, HU_MINS),DUAL_FUNC_13,   
-                                                    LT(4, KC_SPACE),KC_TRANSPARENT,                                 KC_TRANSPARENT, LT(2, KC_BSPC)
+    KC_APPLICATION, DUAL_FUNC_0,    DUAL_FUNC_1,    DUAL_FUNC_2,    DUAL_FUNC_3,    DUAL_FUNC_4,                                    DUAL_FUNC_7,    DUAL_FUNC_8,    DUAL_FUNC_9,    DUAL_FUNC_10,   DUAL_FUNC_11,   MO(11),         
+    LT(6, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(9, KC_P),    KC_B,                                           KC_J,           LT(9, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_BSPC,        
+    LT(5, KC_ESCAPE),LT(4, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(4, KC_O),    MT(MOD_RSFT, KC_ENTER),
+    MT(MOD_LCTL, KC_ENTER),HU_Z,           KC_X,           DUAL_FUNC_5,    KC_D,           DUAL_FUNC_6,                                    MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    HU_COMM,        LT(10, HU_DOT), MT(MOD_RALT, HU_MINS),DUAL_FUNC_12,   
+                                                    LT(5, KC_SPACE),KC_TRANSPARENT,                                 KC_TRANSPARENT, LT(2, KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -102,63 +89,70 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [2] = LAYOUT_voyager(
-    KC_NO,          DUAL_FUNC_14,   DUAL_FUNC_15,   DUAL_FUNC_16,   DUAL_FUNC_17,   DUAL_FUNC_18,                                   DUAL_FUNC_23,   DUAL_FUNC_24,   DUAL_FUNC_25,   DUAL_FUNC_26,   DUAL_FUNC_27,   MO(10),         
-    KC_NO,          HU_MINS,        KC_7,           DUAL_FUNC_19,   KC_9,           TD(DANCE_0),                                    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
-    KC_NO,          HU_PLUS,        DUAL_FUNC_20,   KC_5,           DUAL_FUNC_21,   HU_ASTR,                                        OSM(MOD_LGUI),  OSM(MOD_LSFT),  OSM(MOD_LCTL),  OSM(MOD_LALT),  LT(5, KC_ENTER),KC_TRANSPARENT, 
-    KC_NO,          HU_EQL,         KC_1,           DUAL_FUNC_22,   KC_3,           HU_0,                                           LGUI(KC_LEFT_ALT),OSM(MOD_MEH),   KC_TRANSPARENT, KC_TRANSPARENT, OSM(MOD_RALT),  QK_LLCK,        
+    KC_NO,          KC_F11,         KC_F12,         KC_F13,         KC_F14,         KC_F15,                                         KC_F16,         KC_F17,         KC_F18,         KC_F19,         KC_F20,         MO(11),         
+    KC_NO,          HU_MINS,        KC_7,           DUAL_FUNC_13,   KC_9,           TD(DANCE_0),                                    TG(3),          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
+    KC_NO,          HU_PLUS,        DUAL_FUNC_14,   KC_5,           DUAL_FUNC_15,   HU_ASTR,                                        OSM(MOD_LGUI),  OSM(MOD_LSFT),  OSM(MOD_LCTL),  OSM(MOD_LALT),  LT(6, KC_ENTER),KC_TRANSPARENT, 
+    KC_NO,          HU_EQL,         KC_1,           DUAL_FUNC_16,   KC_3,           HU_0,                                           LGUI(KC_LEFT_ALT),OSM(MOD_MEH),   KC_TRANSPARENT, KC_TRANSPARENT, OSM(MOD_RALT),  QK_LLCK,        
                                                     KC_TAB,         KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [3] = LAYOUT_voyager(
-    KC_NO,          DUAL_FUNC_28,   DUAL_FUNC_29,   DUAL_FUNC_30,   DUAL_FUNC_31,   DUAL_FUNC_32,                                   DUAL_FUNC_36,   DUAL_FUNC_37,   DUAL_FUNC_38,   DUAL_FUNC_39,   DUAL_FUNC_40,   MO(10),         
-    KC_NO,          HU_GRV,         HU_LESS,        HU_MORE,        HU_UNDS,        TD(DANCE_1),                                    HU_CIRC,        HU_LCBR,        HU_RCBR,        HU_DLR,         HU_QST,         KC_NO,          
-    KC_NO,          HU_EXLM,        DUAL_FUNC_33,   TD(DANCE_2),    DUAL_FUNC_34,   DUAL_FUNC_35,                                   DUAL_FUNC_41,   DUAL_FUNC_42,   DUAL_FUNC_43,   DUAL_FUNC_44,   HU_DQOT,        KC_NO,          
-    KC_NO,          HU_TILD,        HU_PLUS,        TD(DANCE_3),    HU_ACUT,        HU_PERC,                                        HU_AT,          HU_LBRC,        HU_RBRC,        HU_COLN,        ST_MACRO_0,     QK_LLCK,        
+    KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, MO(11),         
+    KC_NO,          KC_NO,          KC_HOME,        KC_UP,          KC_PAGE_UP,     KC_NO,                                          KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
+    KC_NO,          KC_NO,          KC_LEFT,        KC_NO,          KC_RIGHT,       KC_NO,                                          OSM(MOD_LGUI),  OSM(MOD_LSFT),  OSM(MOD_LCTL),  OSM(MOD_LALT),  LT(6, KC_ENTER),KC_TRANSPARENT, 
+    KC_NO,          KC_NO,          KC_END,         KC_DOWN,        KC_PGDN,        KC_ENTER,                                       LGUI(KC_LEFT_ALT),OSM(MOD_MEH),   KC_TRANSPARENT, KC_TRANSPARENT, OSM(MOD_RALT),  QK_LLCK,        
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [4] = LAYOUT_voyager(
-    KC_NO,          DUAL_FUNC_28,   DUAL_FUNC_29,   DUAL_FUNC_30,   DUAL_FUNC_31,   DUAL_FUNC_32,                                   DUAL_FUNC_36,   DUAL_FUNC_37,   DUAL_FUNC_38,   DUAL_FUNC_39,   DUAL_FUNC_40,   MO(10),         
-    KC_NO,          DUAL_FUNC_45,   DM_PLY1,        DM_PLY2,        KC_TAB,         KC_NO,                                          KC_PAGE_UP,     DUAL_FUNC_47,   LCTL(LSFT(KC_TAB)),LCTL(KC_TAB),   DUAL_FUNC_48,   KC_NO,          
-    KC_TAB,         LT(5, KC_ENTER),OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  OSM(MOD_LGUI),                                  KC_PGDN,        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       LT(5, KC_ENTER),
-    KC_NO,          KC_NO,          KC_NO,          KC_PC_COPY,     DUAL_FUNC_46,   KC_NO,                                          ST_MACRO_1,     DUAL_FUNC_49,   DUAL_FUNC_50,   KC_NO,          KC_NO,          QK_LLCK,        
-                                                    KC_TAB,         KC_TAB,                                         KC_DELETE,      KC_ENTER
+    KC_NO,          DUAL_FUNC_17,   DUAL_FUNC_18,   DUAL_FUNC_19,   DUAL_FUNC_20,   DUAL_FUNC_21,                                   DUAL_FUNC_25,   DUAL_FUNC_26,   DUAL_FUNC_27,   DUAL_FUNC_28,   DUAL_FUNC_29,   MO(11),         
+    KC_NO,          HU_GRV,         HU_LESS,        HU_MORE,        HU_UNDS,        TD(DANCE_1),                                    HU_CIRC,        HU_LCBR,        HU_RCBR,        HU_DLR,         HU_QST,         KC_NO,          
+    KC_NO,          HU_EXLM,        DUAL_FUNC_22,   TD(DANCE_2),    DUAL_FUNC_23,   DUAL_FUNC_24,                                   DUAL_FUNC_30,   DUAL_FUNC_31,   DUAL_FUNC_32,   DUAL_FUNC_33,   HU_DQOT,        KC_NO,          
+    KC_NO,          HU_TILD,        HU_PLUS,        TD(DANCE_3),    HU_ACUT,        HU_PERC,                                        HU_AT,          HU_LBRC,        HU_RBRC,        HU_COLN,        ST_MACRO_0,     QK_LLCK,        
+                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [5] = LAYOUT_voyager(
-    KC_NO,          KC_NO,          KC_MS_ACCEL0,   KC_MS_ACCEL1,   KC_MS_ACCEL2,   KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          MO(10),         
+    KC_NO,          DUAL_FUNC_17,   DUAL_FUNC_18,   DUAL_FUNC_19,   DUAL_FUNC_20,   DUAL_FUNC_21,                                   DUAL_FUNC_25,   DUAL_FUNC_26,   DUAL_FUNC_27,   DUAL_FUNC_28,   DUAL_FUNC_29,   MO(11),         
+    KC_NO,          DUAL_FUNC_34,   DM_PLY1,        DM_PLY2,        KC_TAB,         KC_NO,                                          KC_PAGE_UP,     DUAL_FUNC_36,   HU_CIRC,        HU_DLR,         DUAL_FUNC_37,   KC_NO,          
+    KC_TAB,         LT(6, KC_ENTER),OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  OSM(MOD_LGUI),                                  KC_PGDN,        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       LT(6, KC_ENTER),
+    KC_NO,          KC_NO,          KC_NO,          KC_PC_COPY,     DUAL_FUNC_35,   KC_NO,                                          ST_MACRO_1,     LCTL(KC_BSPC),  LCTL(KC_DELETE),KC_NO,          KC_NO,          QK_LLCK,        
+                                                    KC_TAB,         KC_TAB,                                         KC_DELETE,      KC_ENTER
+  ),
+  [6] = LAYOUT_voyager(
+    KC_NO,          KC_NO,          KC_MS_ACCEL0,   KC_MS_ACCEL1,   KC_MS_ACCEL2,   KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          MO(11),         
     KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_MS_WH_LEFT,  KC_MS_WH_DOWN,  KC_MS_WH_UP,    KC_MS_WH_RIGHT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_NO,          OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  OSM(MOD_LGUI),                                  KC_NO,          KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_UP,       KC_MS_RIGHT,    KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          QK_LLCK,        
                                                     LCTL(KC_MS_BTN1),KC_MS_BTN1,                                     KC_MS_BTN2,     KC_MS_BTN3
   ),
-  [6] = LAYOUT_voyager(
-    KC_ESCAPE,      DUAL_FUNC_28,   DUAL_FUNC_29,   DUAL_FUNC_30,   DUAL_FUNC_31,   DUAL_FUNC_32,                                   DUAL_FUNC_36,   DUAL_FUNC_37,   DUAL_FUNC_38,   DUAL_FUNC_39,   DUAL_FUNC_40,   MO(10),         
+  [7] = LAYOUT_voyager(
+    KC_ESCAPE,      DUAL_FUNC_17,   DUAL_FUNC_18,   DUAL_FUNC_19,   DUAL_FUNC_20,   DUAL_FUNC_21,                                   DUAL_FUNC_25,   DUAL_FUNC_26,   DUAL_FUNC_27,   DUAL_FUNC_28,   DUAL_FUNC_29,   MO(11),         
     KC_TAB,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_P,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_L,           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, MT(MOD_LALT, KC_BSPC),
     KC_LEFT_SHIFT,  KC_A,           KC_R,           KC_S,           KC_T,           KC_G,                                           KC_M,           KC_N,           KC_E,           KC_I,           KC_O,           KC_TRANSPARENT, 
-    KC_LEFT_CTRL,   HU_Z,           KC_TRANSPARENT, KC_C,           KC_TRANSPARENT, KC_V,                                           KC_K,           KC_H,           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, DUAL_FUNC_13,   
-                                                    MT(MOD_LSFT, KC_SPACE),KC_SPACE,                                       KC_ENTER,       KC_RIGHT_CTRL
-  ),
-  [7] = LAYOUT_voyager(
-    KC_ESCAPE,      DUAL_FUNC_28,   DUAL_FUNC_29,   DUAL_FUNC_30,   DUAL_FUNC_31,   DUAL_FUNC_32,                                   DUAL_FUNC_36,   DUAL_FUNC_37,   DUAL_FUNC_38,   DUAL_FUNC_39,   DUAL_FUNC_40,   MO(10),         
-    KC_TAB,         KC_TRANSPARENT, KC_TRANSPARENT, KC_E,           KC_R,           KC_T,                                           HU_Y,           KC_U,           KC_I,           KC_O,           KC_P,           MT(MOD_LALT, KC_BSPC),
-    KC_LEFT_SHIFT,  KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                           KC_H,           KC_J,           KC_K,           KC_L,           HU_QUOT,        KC_TRANSPARENT, 
-    KC_LEFT_CTRL,   KC_TRANSPARENT, KC_TRANSPARENT, KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, DUAL_FUNC_13,   
+    KC_LEFT_CTRL,   HU_Z,           KC_TRANSPARENT, KC_C,           KC_TRANSPARENT, KC_V,                                           KC_K,           KC_H,           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, DUAL_FUNC_12,   
                                                     MT(MOD_LSFT, KC_SPACE),KC_SPACE,                                       KC_ENTER,       KC_RIGHT_CTRL
   ),
   [8] = LAYOUT_voyager(
-    KC_NO,          LCTL(KC_1),     LCTL(KC_2),     LCTL(KC_3),     LCTL(KC_4),     LCTL(KC_5),                                     LCTL(KC_6),     LCTL(KC_7),     LCTL(KC_8),     LCTL(KC_9),     LCTL(HU_0),     MO(10),         
-    KC_NO,          DUAL_FUNC_45,   LGUI(KC_7),     LGUI(KC_8),     LGUI(KC_9),     LGUI(HU_0),                                     KC_NO,          LGUI(LCTL(KC_LEFT)),LALT(LSFT(KC_TAB)),LALT(KC_TAB),   LGUI(LCTL(KC_RIGHT)),KC_NO,          
-    KC_NO,          KC_NO,          DUAL_FUNC_51,   DUAL_FUNC_52,   DUAL_FUNC_53,   KC_NO,                                          KC_NO,          TD(DANCE_4),    TD(DANCE_5),    TD(DANCE_6),    TD(DANCE_7),    KC_NO,          
+    KC_ESCAPE,      DUAL_FUNC_17,   DUAL_FUNC_18,   DUAL_FUNC_19,   DUAL_FUNC_20,   DUAL_FUNC_21,                                   DUAL_FUNC_25,   DUAL_FUNC_26,   DUAL_FUNC_27,   DUAL_FUNC_28,   DUAL_FUNC_29,   MO(11),         
+    KC_TAB,         KC_TRANSPARENT, KC_TRANSPARENT, KC_E,           KC_R,           KC_T,                                           HU_Y,           KC_U,           KC_I,           KC_O,           KC_P,           MT(MOD_LALT, KC_BSPC),
+    KC_LEFT_SHIFT,  KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                           KC_H,           KC_J,           KC_K,           KC_L,           HU_QUOT,        KC_TRANSPARENT, 
+    KC_LEFT_CTRL,   KC_TRANSPARENT, KC_TRANSPARENT, KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, DUAL_FUNC_12,   
+                                                    MT(MOD_LSFT, KC_SPACE),KC_SPACE,                                       KC_ENTER,       KC_RIGHT_CTRL
+  ),
+  [9] = LAYOUT_voyager(
+    KC_NO,          LCTL(KC_1),     LCTL(KC_2),     LCTL(KC_3),     LCTL(KC_4),     LCTL(KC_5),                                     LCTL(KC_6),     LCTL(KC_7),     LCTL(KC_8),     LCTL(KC_9),     LCTL(HU_0),     MO(11),         
+    KC_NO,          DUAL_FUNC_34,   LGUI(KC_7),     LGUI(KC_8),     LGUI(KC_9),     LGUI(HU_0),                                     KC_NO,          LGUI(LCTL(KC_LEFT)),LALT(LSFT(KC_TAB)),LALT(KC_TAB),   LGUI(LCTL(KC_RIGHT)),KC_NO,          
+    KC_NO,          KC_NO,          DUAL_FUNC_38,   DUAL_FUNC_39,   DUAL_FUNC_40,   KC_NO,                                          KC_NO,          TD(DANCE_4),    TD(DANCE_5),    TD(DANCE_6),    TD(DANCE_7),    KC_NO,          
     KC_NO,          KC_NO,          LGUI(KC_1),     LGUI(KC_2),     LGUI(KC_3),     KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          QK_LLCK,        
                                                     LCTL(LSFT(KC_TAB)),LALT(LSFT(KC_TAB)),                                LALT(KC_TAB),   LCTL(KC_TAB)
   ),
-  [9] = LAYOUT_voyager(
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, MO(10),         
+  [10] = LAYOUT_voyager(
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, MO(11),         
     KC_TRANSPARENT, LALT(LSFT(KC_8)),LALT(LSFT(KC_Q)),LALT(LSFT(KC_D)),KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, ST_MACRO_2,     ST_MACRO_3,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
-  [10] = LAYOUT_voyager(
-    RGB_TOG,        TOGGLE_LAYER_COLOR,RGB_MODE_FORWARD,RGB_SLD,        RGB_VAD,        RGB_VAI,                                        TO(0),          KC_NO,          TO(6),          TO(7),          LGUI(KC_L),     KC_TRANSPARENT, 
+  [11] = LAYOUT_voyager(
+    RGB_TOG,        TOGGLE_LAYER_COLOR,RGB_MODE_FORWARD,RGB_SLD,        RGB_VAD,        RGB_VAI,                                        TO(0),          KC_NO,          TO(7),          TO(8),          LGUI(KC_L),     KC_TRANSPARENT, 
     KC_NO,          KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  LCTL(LSFT(KC_M)),KC_AUDIO_VOL_UP,KC_NO,                                          KC_NO,          AS_TOGG,        KC_NO,          KC_MS_LEFT,     KC_MS_RIGHT,    KC_NO,          
     KC_PSCR,        KC_MEDIA_PREV_TRACK,KC_MEDIA_STOP,  KC_MEDIA_PLAY_PAUSE,KC_MEDIA_NEXT_TRACK,KC_BRIGHTNESS_UP,                                QK_DYNAMIC_TAPPING_TERM_UP,KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
     LGUI(LSFT(KC_S)),LSFT(KC_PSCR),  DM_RSTP,        DM_REC1,        DM_REC2,        KC_BRIGHTNESS_DOWN,                                QK_DYNAMIC_TAPPING_TERM_DOWN,QK_DYNAMIC_TAPPING_TERM_PRINT,KC_NO,          KC_NO,          KC_NO,          QK_LLCK,        
@@ -177,9 +171,9 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT(
 const uint16_t PROGMEM combo0[] = { MT(MOD_LSFT, KC_T), MT(MOD_RSFT, KC_N), COMBO_END};
 const uint16_t PROGMEM combo1[] = { KC_U, HU_Y, COMBO_END};
 const uint16_t PROGMEM combo2[] = { KC_W, KC_F, COMBO_END};
-const uint16_t PROGMEM combo3[] = { KC_F, LT(8, KC_P), COMBO_END};
-const uint16_t PROGMEM combo4[] = { LT(8, KC_L), KC_U, COMBO_END};
-const uint16_t PROGMEM combo5[] = { DUAL_FUNC_13, MT(MOD_LCTL, KC_ENTER), COMBO_END};
+const uint16_t PROGMEM combo3[] = { KC_F, LT(9, KC_P), COMBO_END};
+const uint16_t PROGMEM combo4[] = { LT(9, KC_L), KC_U, COMBO_END};
+const uint16_t PROGMEM combo5[] = { DUAL_FUNC_12, MT(MOD_LCTL, KC_ENTER), COMBO_END};
 const uint16_t PROGMEM combo6[] = { DUAL_FUNC_5, KC_D, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -211,23 +205,25 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
     [1] = { {31,245,245}, {31,245,245}, {154,239,161}, {43,255,255}, {2,218,204}, {2,218,204}, {31,245,245}, {31,245,245}, {154,239,161}, {43,255,255}, {2,218,204}, {2,218,204}, {31,245,245}, {31,245,245}, {154,239,161}, {43,255,255}, {2,218,204}, {2,218,204}, {31,245,245}, {31,245,245}, {154,239,161}, {43,255,255}, {2,218,204}, {2,218,204}, {0,0,255}, {0,0,255}, {2,218,204}, {2,218,204}, {43,255,255}, {154,239,161}, {31,245,245}, {31,245,245}, {2,218,204}, {2,218,204}, {43,255,255}, {154,239,161}, {31,245,245}, {31,245,245}, {2,218,204}, {2,218,204}, {43,255,255}, {154,239,161}, {31,245,245}, {31,245,245}, {2,218,204}, {2,218,204}, {43,255,255}, {154,239,161}, {31,245,245}, {31,245,245}, {0,0,255}, {0,0,255} },
 
-    [2] = { {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {84,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
+    [2] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {2,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
 
-    [3] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,255,255}, {0,0,0}, {0,0,0} },
+    [3] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {192,240,161}, {192,240,161}, {192,240,161}, {0,0,0}, {0,0,0}, {0,0,0}, {192,240,161}, {0,0,0}, {192,240,161}, {0,0,0}, {0,0,0}, {0,0,0}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {2,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
 
-    [4] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {31,245,245}, {31,245,245}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {1,218,204}, {1,218,204}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
+    [4] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,0,0}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {84,218,204}, {0,255,255}, {0,0,0}, {0,0,0} },
 
-    [5] = { {0,0,0}, {0,0,0}, {0,0,157}, {0,0,157}, {0,0,157}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {31,218,204}, {31,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {39,218,204}, {39,218,204}, {39,218,204}, {39,218,204}, {0,0,0}, {0,0,0}, {43,255,255}, {43,255,255}, {43,255,255}, {43,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {31,218,204}, {31,218,204} },
+    [5] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {31,245,245}, {31,245,245}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {1,218,204}, {1,218,204}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
 
-    [6] = { {192,240,161}, {192,240,161}, {192,240,161}, {0,0,255}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {0,0,255}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161} },
+    [6] = { {0,0,0}, {0,0,0}, {0,0,157}, {0,0,157}, {0,0,157}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {31,218,204}, {31,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {39,218,204}, {39,218,204}, {39,218,204}, {39,218,204}, {0,0,0}, {0,0,0}, {43,255,255}, {43,255,255}, {43,255,255}, {43,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {31,218,204}, {31,218,204} },
 
-    [7] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {2,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {2,218,204}, {2,218,204}, {2,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
+    [7] = { {192,240,161}, {192,240,161}, {192,240,161}, {0,0,255}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {0,0,255}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161}, {192,240,161} },
 
-    [8] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {131,65,234}, {131,65,234}, {131,65,234}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
+    [8] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {2,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {2,218,204}, {2,218,204}, {2,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
 
-    [9] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {192,240,161}, {192,240,161}, {192,240,161}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {1,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
+    [9] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {131,65,234}, {131,65,234}, {131,65,234}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
 
-    [10] = { {1,218,204}, {131,255,255}, {192,218,204}, {1,218,204}, {31,245,245}, {0,0,255}, {0,0,0}, {46,218,204}, {1,218,204}, {1,218,204}, {84,218,204}, {0,0,0}, {0,0,255}, {131,255,255}, {131,255,255}, {131,255,255}, {131,255,255}, {0,0,255}, {0,0,255}, {0,0,255}, {1,218,204}, {1,218,204}, {1,218,204}, {31,245,245}, {0,0,255}, {192,240,161}, {0,0,255}, {0,0,0}, {192,218,204}, {0,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {131,65,234}, {0,0,0}, {43,255,255}, {43,255,255}, {0,0,0}, {31,245,245}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {31,245,245}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {1,218,204}, {154,239,161} },
+    [10] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {192,240,161}, {192,240,161}, {192,240,161}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {1,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
+
+    [11] = { {1,218,204}, {131,255,255}, {192,218,204}, {1,218,204}, {31,245,245}, {0,0,255}, {0,0,0}, {46,218,204}, {1,218,204}, {1,218,204}, {84,218,204}, {0,0,0}, {0,0,255}, {131,255,255}, {131,255,255}, {131,255,255}, {131,255,255}, {0,0,255}, {0,0,255}, {0,0,255}, {1,218,204}, {1,218,204}, {1,218,204}, {31,245,245}, {0,0,255}, {192,240,161}, {0,0,255}, {0,0,0}, {192,218,204}, {0,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {131,65,234}, {0,0,0}, {43,255,255}, {43,255,255}, {0,0,0}, {31,245,245}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {31,245,245}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {1,218,204}, {154,239,161} },
 
 };
 
@@ -285,6 +281,9 @@ bool rgb_matrix_indicators_user(void) {
         break;
       case 10:
         set_layer_color(10);
+        break;
+      case 11:
+        set_layer_color(11);
         break;
      default:
         if (rgb_matrix_get_flags() == LED_FLAG_NONE) {
@@ -653,9 +652,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DUAL_FUNC_0:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
-          register_code16(KC_APPLICATION);
+          register_code16(LALT(KC_TAB));
         } else {
-          unregister_code16(KC_APPLICATION);
+          unregister_code16(LALT(KC_TAB));
         }
       } else {
         if (record->event.pressed) {
@@ -713,9 +712,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DUAL_FUNC_4:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
-          register_code16(KC_DELETE);
+          register_code16(HU_CIRC);
         } else {
-          unregister_code16(KC_DELETE);
+          unregister_code16(HU_CIRC);
         }
       } else {
         if (record->event.pressed) {
@@ -818,9 +817,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DUAL_FUNC_11:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
-          register_code16(LALT(KC_TAB));
+          register_code16(HU_DLR);
         } else {
-          unregister_code16(LALT(KC_TAB));
+          unregister_code16(HU_DLR);
         }
       } else {
         if (record->event.pressed) {
@@ -831,23 +830,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }  
       return false;
     case DUAL_FUNC_12:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(HU_DLR);
-        } else {
-          unregister_code16(HU_DLR);
-        }
-      } else {
-        if (record->event.pressed) {
-          layer_on(10);
-        } else {
-          if (!is_layer_locked(10)) {
-          layer_off(10);
-          }
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_13:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_RIGHT_GUI);
@@ -862,82 +844,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_14:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_F1);
-        } else {
-          unregister_code16(KC_F1);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(KC_F11);
-        } else {
-          unregister_code16(KC_F11);
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_15:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_F2);
-        } else {
-          unregister_code16(KC_F2);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(KC_F12);
-        } else {
-          unregister_code16(KC_F12);
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_16:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_F3);
-        } else {
-          unregister_code16(KC_F3);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(KC_F13);
-        } else {
-          unregister_code16(KC_F13);
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_17:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_F4);
-        } else {
-          unregister_code16(KC_F4);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(KC_F14);
-        } else {
-          unregister_code16(KC_F14);
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_18:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_F5);
-        } else {
-          unregister_code16(KC_F5);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(KC_F15);
-        } else {
-          unregister_code16(KC_F15);
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_19:
+    case DUAL_FUNC_13:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_8);
@@ -952,7 +859,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_20:
+    case DUAL_FUNC_14:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_4);
@@ -967,7 +874,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_21:
+    case DUAL_FUNC_15:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_6);
@@ -982,7 +889,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_22:
+    case DUAL_FUNC_16:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_2);
@@ -997,82 +904,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_23:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_F6);
-        } else {
-          unregister_code16(KC_F6);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(KC_F16);
-        } else {
-          unregister_code16(KC_F16);
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_24:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_F7);
-        } else {
-          unregister_code16(KC_F7);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(KC_F17);
-        } else {
-          unregister_code16(KC_F17);
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_25:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_F8);
-        } else {
-          unregister_code16(KC_F8);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(KC_F18);
-        } else {
-          unregister_code16(KC_F18);
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_26:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_F9);
-        } else {
-          unregister_code16(KC_F9);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(KC_F19);
-        } else {
-          unregister_code16(KC_F19);
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_27:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_F10);
-        } else {
-          unregister_code16(KC_F10);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(KC_F20);
-        } else {
-          unregister_code16(KC_F20);
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_28:
+    case DUAL_FUNC_17:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_1);
@@ -1087,7 +919,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_29:
+    case DUAL_FUNC_18:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_2);
@@ -1102,7 +934,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_30:
+    case DUAL_FUNC_19:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_3);
@@ -1117,7 +949,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_31:
+    case DUAL_FUNC_20:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_4);
@@ -1132,7 +964,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_32:
+    case DUAL_FUNC_21:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_5);
@@ -1147,7 +979,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_33:
+    case DUAL_FUNC_22:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(HU_ASTR);
@@ -1162,7 +994,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_34:
+    case DUAL_FUNC_23:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(HU_EQL);
@@ -1177,7 +1009,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_35:
+    case DUAL_FUNC_24:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(HU_AMPR);
@@ -1192,7 +1024,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_36:
+    case DUAL_FUNC_25:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_6);
@@ -1207,7 +1039,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_37:
+    case DUAL_FUNC_26:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_7);
@@ -1222,7 +1054,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_38:
+    case DUAL_FUNC_27:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_8);
@@ -1237,7 +1069,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_39:
+    case DUAL_FUNC_28:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_9);
@@ -1252,7 +1084,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_40:
+    case DUAL_FUNC_29:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_0);
@@ -1267,7 +1099,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_41:
+    case DUAL_FUNC_30:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(HU_HASH);
@@ -1282,7 +1114,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_42:
+    case DUAL_FUNC_31:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(HU_LPRN);
@@ -1297,7 +1129,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_43:
+    case DUAL_FUNC_32:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(HU_RPRN);
@@ -1312,7 +1144,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_44:
+    case DUAL_FUNC_33:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(HU_SCLN);
@@ -1327,7 +1159,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_45:
+    case DUAL_FUNC_34:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(LCTL(KC_W));
@@ -1342,7 +1174,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_46:
+    case DUAL_FUNC_35:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(LALT(LCTL(LSFT(KC_C))));
@@ -1357,7 +1189,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_47:
+    case DUAL_FUNC_36:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_HOME);
@@ -1372,7 +1204,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_48:
+    case DUAL_FUNC_37:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(KC_END);
@@ -1387,37 +1219,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_49:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_BSPC);
-        } else {
-          unregister_code16(KC_BSPC);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(LCTL(KC_BSPC));
-        } else {
-          unregister_code16(LCTL(KC_BSPC));
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_50:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_DELETE);
-        } else {
-          unregister_code16(KC_DELETE);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(LCTL(KC_DELETE));
-        } else {
-          unregister_code16(LCTL(KC_DELETE));
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_51:
+    case DUAL_FUNC_38:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(LGUI(KC_4));
@@ -1432,7 +1234,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_52:
+    case DUAL_FUNC_39:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(LGUI(KC_5));
@@ -1447,7 +1249,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }  
       }  
       return false;
-    case DUAL_FUNC_53:
+    case DUAL_FUNC_40:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
           register_code16(LGUI(KC_6));
