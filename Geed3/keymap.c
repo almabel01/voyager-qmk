@@ -1255,11 +1255,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 void leader_end_user(void) {
     if (leader_sequence_two_keys(KC_C, KC_C)) {
         // Leader, c, c => Ctrl+C
-        SEND_STRING(SS_LCTL("c"));
-    } else if (leader_sequence_two_keys(KC_A, KC_S)) {
-        // Leader, a, s => GUI+S
-        tap_code16(LGUI(KC_S));
-    } else if (leader_sequence_five_keys(KC_M, KC_T, KC_E, KC_M, KC_P)) {
+        SEND_STRING(KC_CAPS_LOCK);
+    } else if (leader_sequence_two_keys(KC_M, KC_T)) {
         // Leader, temp => meeting template
         SEND_STRING("## Topics\n### \n## Action items");
   // mail

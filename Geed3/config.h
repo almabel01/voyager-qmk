@@ -65,8 +65,9 @@
 #define LEADER_NO_TIMEOUT
 
 /* Unicode input mode: pick the mode matching your OS. 
- * UC_LNX works for Linux (can be changed to UC_WIN or UC_MAC).
+ * UC_WINC is Windows Compose mode (Alt+Numpad alternative).
+ * Other options: UC_LNX (Linux), UC_OSX (macOS).
  */
-#define UNICODE_SELECTED_MODES UC_WIN
+#define UNICODE_SELECTED_MODES UC_WINC
 #define LEADER_PER_KEY_TIMING
 #define LEADER_TIMEOUT 250
