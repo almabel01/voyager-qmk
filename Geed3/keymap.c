@@ -1228,7 +1228,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 void leader_end_user(void) {
     if (leader_sequence_two_keys(KC_C, KC_C)) {
         // Leader, c, c => Ctrl+C
-        SEND_STRING(KC_CAPS_LOCK);
+        tap_code16(KC_CAPSLOCK);
     } else if (leader_sequence_two_keys(KC_M, KC_T)) {
         // Leader, temp => meeting template
         SEND_STRING("## Topics\n### \n## Action items");
@@ -1247,7 +1247,7 @@ void leader_end_user(void) {
         tap_code16(LCTL(LSFT(KC_6)));
     } else if (leader_sequence_two_keys(KC_B, KC_R)) {
         // Leader, b, r => BR, 
-        SEND_STRING(SS_LSFT("B")SS_DELAY(10)  SS_LSFT("R")SS_DELAY(10)  SS_TAP(X_COMMA)SS_DELAY(10)  SS_TAP(X_ENTER)SS_DELAY(10)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(10)  "b" SS_DELAY(10)  "b" SS_DELAY(10)  SS_TAP(X_L));
+        SEND_STRING(SS_LSFT("B")SS_DELAY(10)  SS_LSFT("R")SS_DELAY(10)  SS_TAP(X_COMMA)SS_DELAY(10)  SS_TAP(X_ENTER)SS_DELAY(10)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(10)  "b" SS_DELAY(10)  "e" SS_DELAY(10)  SS_TAP(X_L));
     } else if (leader_sequence_two_keys(KC_B, KC_G)) {
         // Leader, b, g => BG
         SEND_STRING(SS_LSFT("B")SS_DELAY(10)  SS_LSFT("G")SS_DELAY(10)  SS_TAP(X_ENTER)SS_DELAY(10)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(10)  "b" SS_DELAY(10)  "e" SS_DELAY(10)  SS_TAP(X_L));
@@ -1285,14 +1285,14 @@ void leader_end_user(void) {
         SEND_STRING("git push"SS_TAP(X_ENTER));
     } else if (leader_sequence_two_keys(KC_G, KC_C)) {
         // Leader, g, c => git add -A && git commit -m ""
-        SEND_STRING("git commit -m \""SS_LSFT(SS_TAP(X_QUOTE))SS_DELAY(50));
+        SEND_STRING("git commit -m \"");
         // place cursor between quotes
         tap_code16(LSFT(KC_LEFT));
     } else if (leader_sequence_two_keys(KC_G, KC_F)) {
         // Leader, g, f => git fetch
         SEND_STRING("git fetch"SS_TAP(X_ENTER));
-    } else if (leader_sequence_three_keys(KC_G, KC_M, KC_O)) {
-        // Leader, g, m, o => git merge origin/oryx
+    } else if (leader_sequence_two_keys(KC_G, KC_M)) {
+        // Leader, g, m => git merge origin/oryx
         SEND_STRING("git merge origin/oryx"SS_TAP(X_ENTER));
   // Text
     } else if (leader_sequence_two_keys(KC_T, KC_T)) {
