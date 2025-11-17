@@ -68,6 +68,6 @@
  * UC_WINC is Windows Compose mode (Alt+Numpad alternative).
  * Other options: UC_LNX (Linux), UC_OSX (macOS).
  */
-#define UNICODE_SELECTED_MODES (1 << UC_WINC)
+#define UNICODE_SELECTED_MODES UC_WINC
 #define LEADER_PER_KEY_TIMING
 #define LEADER_TIMEOUT 250
