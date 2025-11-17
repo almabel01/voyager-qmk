@@ -1228,7 +1228,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 void leader_end_user(void) {
     if (leader_sequence_two_keys(KC_C, KC_C)) {
         // Leader, c, c => Ctrl+C
-        tap_code16(KC_CAPSLOCK);
+        tap_code16(KC_CAPS_LOCK);
     } else if (leader_sequence_two_keys(KC_M, KC_T)) {
         // Leader, temp => meeting template
         SEND_STRING("## Topics\n### \n## Action items");
@@ -1285,7 +1285,11 @@ void leader_end_user(void) {
         SEND_STRING("git push"SS_TAP(X_ENTER));
     } else if (leader_sequence_two_keys(KC_G, KC_C)) {
         // Leader, g, c => git add -A && git commit -m ""
-        SEND_STRING("git commit -m \"");
+        SEND_STRING("git commit -m ");
+        add_mods(MOD_LSFT);
+        tap_code(KC_QUOTE);  // "
+        tap_code(KC_QUOTE);  // "
+        del_mods(MOD_LSFT);
         // place cursor between quotes
         tap_code16(LSFT(KC_LEFT));
     } else if (leader_sequence_two_keys(KC_G, KC_F)) {
