@@ -31,47 +31,47 @@ enum tap_dance_codes {
   DANCE_7,
 };
 
-#define DUAL_FUNC_0 LT(14, KC_F9)
-#define DUAL_FUNC_1 LT(1, KC_F10)
-#define DUAL_FUNC_2 LT(7, KC_8)
-#define DUAL_FUNC_3 LT(9, KC_Y)
-#define DUAL_FUNC_4 LT(9, KC_Q)
-#define DUAL_FUNC_5 LT(7, KC_F23)
-#define DUAL_FUNC_6 LT(6, KC_F6)
-#define DUAL_FUNC_7 LT(7, KC_Q)
-#define DUAL_FUNC_8 LT(9, KC_J)
-#define DUAL_FUNC_9 LT(12, KC_4)
-#define DUAL_FUNC_10 LT(6, KC_O)
-#define DUAL_FUNC_11 LT(9, KC_F4)
-#define DUAL_FUNC_12 LT(14, KC_M)
-#define DUAL_FUNC_13 LT(12, KC_F12)
-#define DUAL_FUNC_14 LT(10, KC_O)
-#define DUAL_FUNC_15 LT(11, KC_C)
-#define DUAL_FUNC_16 LT(2, KC_F3)
-#define DUAL_FUNC_17 LT(4, KC_F1)
-#define DUAL_FUNC_18 LT(2, KC_Q)
-#define DUAL_FUNC_19 LT(4, KC_S)
-#define DUAL_FUNC_20 LT(6, KC_2)
-#define DUAL_FUNC_21 LT(5, KC_R)
-#define DUAL_FUNC_22 LT(9, KC_4)
-#define DUAL_FUNC_23 LT(6, KC_1)
-#define DUAL_FUNC_24 LT(6, KC_F12)
-#define DUAL_FUNC_25 LT(9, KC_E)
-#define DUAL_FUNC_26 LT(14, KC_F17)
-#define DUAL_FUNC_27 LT(2, KC_F20)
-#define DUAL_FUNC_28 LT(13, KC_X)
-#define DUAL_FUNC_29 LT(4, KC_N)
-#define DUAL_FUNC_30 LT(1, KC_F5)
-#define DUAL_FUNC_31 LT(8, KC_F18)
-#define DUAL_FUNC_32 LT(13, KC_F3)
-#define DUAL_FUNC_33 LT(2, KC_V)
-#define DUAL_FUNC_34 LT(3, KC_C)
-#define DUAL_FUNC_35 LT(1, KC_F9)
-#define DUAL_FUNC_36 LT(8, KC_F15)
-#define DUAL_FUNC_37 LT(2, KC_F8)
-#define DUAL_FUNC_38 LT(13, KC_F17)
-#define DUAL_FUNC_39 LT(7, KC_F12)
-#define DUAL_FUNC_40 LT(8, KC_F3)
+#define DUAL_FUNC_0 LT(5, KC_4)
+#define DUAL_FUNC_1 LT(1, KC_X)
+#define DUAL_FUNC_2 LT(4, KC_6)
+#define DUAL_FUNC_3 LT(14, KC_X)
+#define DUAL_FUNC_4 LT(15, KC_F2)
+#define DUAL_FUNC_5 LT(2, KC_F1)
+#define DUAL_FUNC_6 LT(11, KC_F16)
+#define DUAL_FUNC_7 LT(8, KC_F12)
+#define DUAL_FUNC_8 LT(6, KC_8)
+#define DUAL_FUNC_9 LT(7, KC_F8)
+#define DUAL_FUNC_10 LT(15, KC_Z)
+#define DUAL_FUNC_11 LT(13, KC_9)
+#define DUAL_FUNC_12 LT(11, KC_X)
+#define DUAL_FUNC_13 LT(13, KC_4)
+#define DUAL_FUNC_14 LT(12, KC_J)
+#define DUAL_FUNC_15 LT(5, KC_M)
+#define DUAL_FUNC_16 LT(13, KC_5)
+#define DUAL_FUNC_17 LT(4, KC_0)
+#define DUAL_FUNC_18 LT(9, KC_H)
+#define DUAL_FUNC_19 LT(8, KC_U)
+#define DUAL_FUNC_20 LT(3, KC_Q)
+#define DUAL_FUNC_21 LT(2, KC_F23)
+#define DUAL_FUNC_22 LT(4, KC_3)
+#define DUAL_FUNC_23 LT(13, KC_H)
+#define DUAL_FUNC_24 LT(6, KC_K)
+#define DUAL_FUNC_25 LT(3, KC_7)
+#define DUAL_FUNC_26 LT(12, KC_U)
+#define DUAL_FUNC_27 LT(6, KC_I)
+#define DUAL_FUNC_28 LT(14, KC_6)
+#define DUAL_FUNC_29 LT(11, KC_3)
+#define DUAL_FUNC_30 LT(9, KC_F3)
+#define DUAL_FUNC_31 LT(7, KC_7)
+#define DUAL_FUNC_32 LT(5, KC_Q)
+#define DUAL_FUNC_33 LT(14, KC_D)
+#define DUAL_FUNC_34 LT(2, KC_H)
+#define DUAL_FUNC_35 LT(9, KC_F6)
+#define DUAL_FUNC_36 LT(4, KC_F11)
+#define DUAL_FUNC_37 LT(9, KC_K)
+#define DUAL_FUNC_38 LT(14, KC_4)
+#define DUAL_FUNC_39 LT(12, KC_S)
+#define DUAL_FUNC_40 LT(3, KC_F12)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -652,9 +652,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DUAL_FUNC_0:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
-          register_code16(LALT(KC_TAB));
+          register_code16(HU_CIRC);
         } else {
-          unregister_code16(LALT(KC_TAB));
+          unregister_code16(HU_CIRC);
         }
       } else {
         if (record->event.pressed) {
@@ -712,9 +712,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DUAL_FUNC_4:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
-          register_code16(HU_CIRC);
+          register_code16(HU_DLR);
         } else {
-          unregister_code16(HU_CIRC);
+          unregister_code16(HU_DLR);
         }
       } else {
         if (record->event.pressed) {
@@ -817,9 +817,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DUAL_FUNC_11:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
-          register_code16(HU_DLR);
+          register_code16(LALT(KC_TAB));
         } else {
-          unregister_code16(HU_DLR);
+          unregister_code16(LALT(KC_TAB));
         }
       } else {
         if (record->event.pressed) {

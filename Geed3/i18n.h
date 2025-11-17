@@ -1,6 +1,6 @@
 #define HU_CIRC ALGR(KC_3)
-#define HU_Z KC_Y
 #define HU_DLR ALGR(KC_SCLN)
+#define HU_Z KC_Y
 #define HU_Y KC_Z
 #define HU_QUOT S(KC_1)
 #define HU_COMM KC_COMM
