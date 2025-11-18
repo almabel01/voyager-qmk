@@ -1,6 +1,3 @@
-#pragma once
-#include "config_common.h"
-
 #define CHORDAL_HOLD
 #undef TAPPING_TERM
 #define TAPPING_TERM 190
