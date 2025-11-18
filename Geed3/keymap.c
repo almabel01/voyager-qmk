@@ -16,6 +16,9 @@ enum custom_keycodes {
   ST_MACRO_1,
   ST_MACRO_2,
   ST_MACRO_3,
+  ST_MACRO_4,
+  ST_MACRO_5,
+  ST_MACRO_6,
 };
 
 
@@ -31,49 +34,49 @@ enum tap_dance_codes {
   DANCE_7,
 };
 
-#define DUAL_FUNC_0 LT(9, KC_X)
-#define DUAL_FUNC_1 LT(13, KC_G)
-#define DUAL_FUNC_2 LT(12, KC_F16)
-#define DUAL_FUNC_3 LT(4, KC_9)
-#define DUAL_FUNC_4 LT(3, KC_Q)
-#define DUAL_FUNC_5 LT(12, KC_6)
-#define DUAL_FUNC_6 LT(7, KC_0)
-#define DUAL_FUNC_7 LT(7, KC_F24)
-#define DUAL_FUNC_8 LT(2, KC_6)
-#define DUAL_FUNC_9 LT(3, KC_V)
-#define DUAL_FUNC_10 LT(15, KC_F23)
-#define DUAL_FUNC_11 LT(11, KC_5)
-#define DUAL_FUNC_12 LT(12, KC_W)
-#define DUAL_FUNC_13 LT(3, KC_M)
-#define DUAL_FUNC_14 LT(7, KC_K)
-#define DUAL_FUNC_15 LT(7, KC_4)
-#define DUAL_FUNC_16 LT(7, KC_T)
-#define DUAL_FUNC_17 LT(12, KC_0)
-#define DUAL_FUNC_18 LT(1, KC_F22)
-#define DUAL_FUNC_19 LT(3, KC_F14)
-#define DUAL_FUNC_20 LT(4, KC_F11)
-#define DUAL_FUNC_21 LT(12, KC_F10)
-#define DUAL_FUNC_22 LT(7, KC_F10)
-#define DUAL_FUNC_23 LT(6, KC_Z)
-#define DUAL_FUNC_24 LT(12, KC_1)
-#define DUAL_FUNC_25 LT(7, KC_A)
-#define DUAL_FUNC_26 LT(2, KC_F3)
-#define DUAL_FUNC_27 LT(1, KC_F11)
-#define DUAL_FUNC_28 LT(4, KC_F5)
-#define DUAL_FUNC_29 LT(14, KC_9)
-#define DUAL_FUNC_30 LT(9, KC_F7)
-#define DUAL_FUNC_31 LT(1, KC_O)
-#define DUAL_FUNC_32 LT(11, KC_L)
-#define DUAL_FUNC_33 LT(8, KC_F19)
-#define DUAL_FUNC_34 LT(5, KC_I)
-#define DUAL_FUNC_35 LT(6, KC_9)
+#define DUAL_FUNC_0 LT(15, KC_N)
+#define DUAL_FUNC_1 LT(5, KC_N)
+#define DUAL_FUNC_2 LT(2, KC_A)
+#define DUAL_FUNC_3 LT(3, KC_F4)
+#define DUAL_FUNC_4 LT(9, KC_C)
+#define DUAL_FUNC_5 LT(1, KC_1)
+#define DUAL_FUNC_6 LT(1, KC_Q)
+#define DUAL_FUNC_7 LT(11, KC_F12)
+#define DUAL_FUNC_8 LT(10, KC_F)
+#define DUAL_FUNC_9 LT(3, KC_F24)
+#define DUAL_FUNC_10 LT(15, KC_7)
+#define DUAL_FUNC_11 LT(12, KC_F4)
+#define DUAL_FUNC_12 LT(9, KC_S)
+#define DUAL_FUNC_13 LT(5, KC_F9)
+#define DUAL_FUNC_14 LT(3, KC_K)
+#define DUAL_FUNC_15 LT(2, KC_J)
+#define DUAL_FUNC_16 LT(9, KC_F15)
+#define DUAL_FUNC_17 LT(4, KC_F1)
+#define DUAL_FUNC_18 LT(14, KC_U)
+#define DUAL_FUNC_19 LT(3, KC_L)
+#define DUAL_FUNC_20 LT(14, KC_6)
+#define DUAL_FUNC_21 LT(11, KC_F11)
+#define DUAL_FUNC_22 LT(12, KC_F5)
+#define DUAL_FUNC_23 LT(14, KC_7)
+#define DUAL_FUNC_24 LT(7, KC_9)
+#define DUAL_FUNC_25 LT(11, KC_4)
+#define DUAL_FUNC_26 LT(12, KC_C)
+#define DUAL_FUNC_27 LT(14, KC_F24)
+#define DUAL_FUNC_28 LT(2, KC_L)
+#define DUAL_FUNC_29 LT(9, KC_F4)
+#define DUAL_FUNC_30 LT(7, KC_5)
+#define DUAL_FUNC_31 LT(8, KC_G)
+#define DUAL_FUNC_32 LT(13, KC_F4)
+#define DUAL_FUNC_33 LT(9, KC_W)
+#define DUAL_FUNC_34 LT(3, KC_O)
+#define DUAL_FUNC_35 LT(6, KC_F18)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
-    KC_APPLICATION, DUAL_FUNC_0,    DUAL_FUNC_1,    DUAL_FUNC_2,    DUAL_FUNC_3,    DUAL_FUNC_4,                                    DUAL_FUNC_5,    DUAL_FUNC_6,    DUAL_FUNC_7,    DUAL_FUNC_8,    DUAL_FUNC_9,    MO(11),         
+    KC_CAPS,        DUAL_FUNC_0,    DUAL_FUNC_1,    DUAL_FUNC_2,    DUAL_FUNC_3,    DUAL_FUNC_4,                                    DUAL_FUNC_5,    DUAL_FUNC_6,    DUAL_FUNC_7,    DUAL_FUNC_8,    DUAL_FUNC_9,    MO(11),         
     LT(6, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(9, KC_P),    KC_B,                                           KC_J,           LT(9, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_BSPC,        
     LT(5, KC_ESCAPE),LT(4, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(4, KC_O),    MT(MOD_RSFT, KC_ENTER),
-    OSM(MOD_LCTL),  HU_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    HU_COMM,        LT(10, HU_DOT), MT(MOD_RALT, HU_MINS),DUAL_FUNC_10,   
+    OSM(MOD_LCTL),  HU_Z,           LT(10, KC_X),   KC_C,           KC_D,           KC_V,                                           MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    HU_COMM,        LT(10, HU_DOT), MT(MOD_RALT, HU_MINS),DUAL_FUNC_10,   
                                                     LT(5, KC_SPACE),KC_TRANSPARENT,                                 KC_TRANSPARENT, LT(2, KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
@@ -142,8 +145,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [10] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, MO(11),         
     KC_TRANSPARENT, LALT(LSFT(KC_8)),LALT(LSFT(KC_Q)),LALT(LSFT(KC_D)),KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, ST_MACRO_2,     ST_MACRO_3,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        
+    KC_TRANSPARENT, ST_MACRO_2,     ST_MACRO_3,     KC_TRANSPARENT, ST_MACRO_4,     KC_TRANSPARENT,                                 ST_MACRO_5,     LALT(LCTL(LSFT(KC_F16))),KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_6,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_LLCK,        
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [11] = LAYOUT_voyager(
@@ -169,6 +172,7 @@ const uint16_t PROGMEM combo2[] = { KC_W, KC_F, COMBO_END};
 const uint16_t PROGMEM combo3[] = { KC_F, LT(9, KC_P), COMBO_END};
 const uint16_t PROGMEM combo4[] = { LT(9, KC_L), KC_U, COMBO_END};
 const uint16_t PROGMEM combo5[] = { KC_C, KC_D, COMBO_END};
+const uint16_t PROGMEM combo6[] = { MT(MOD_RCTL, KC_E), MT(MOD_LCTL, KC_S), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, CW_TOGG),
@@ -177,9 +181,16 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo3, KC_TAB),
     COMBO(combo4, LSFT(KC_TAB)),
     COMBO(combo5, LALT(LCTL(LSFT(KC_C)))),
+    COMBO(combo6, KC_F24),
 };
 
 
+bool capslock_active = false;
+
+bool led_update_user(led_t led_state) {
+  capslock_active = led_state.caps_lock;
+  return true;
+}
 
 extern rgb_config_t rgb_matrix_config;
 
@@ -214,7 +225,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
     [9] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {131,65,234}, {131,65,234}, {131,65,234}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
 
-    [10] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {192,240,161}, {192,240,161}, {192,240,161}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {1,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
+    [10] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {192,240,161}, {192,240,161}, {192,240,161}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {1,218,204}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {84,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {0,0,0}, {0,0,0} },
 
     [11] = { {1,218,204}, {131,255,255}, {192,218,204}, {1,218,204}, {31,245,245}, {0,0,255}, {0,0,0}, {46,218,204}, {1,218,204}, {1,218,204}, {84,218,204}, {0,0,0}, {0,0,255}, {131,255,255}, {131,255,255}, {131,255,255}, {131,255,255}, {0,0,255}, {0,0,255}, {0,0,255}, {1,218,204}, {1,218,204}, {1,218,204}, {31,245,245}, {0,0,255}, {192,240,161}, {0,0,255}, {0,0,0}, {192,218,204}, {0,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {131,65,234}, {0,0,0}, {43,255,255}, {43,255,255}, {0,0,0}, {31,245,245}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {31,245,245}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,255,255}, {1,218,204}, {154,239,161} },
 
@@ -289,6 +300,10 @@ bool rgb_matrix_indicators_user(void) {
     }
   }
 
+  if (capslock_active && biton32(layer_state) == 0) {
+    RGB rgb = hsv_to_rgb_with_value((HSV) { 2, 218, 204 });
+    rgb_matrix_set_color( 0, rgb.r, rgb.g, rgb.b );
+  } 
   return true;
 }
 
@@ -639,6 +654,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_3:
     if (record->event.pressed) {
       SEND_STRING(SS_TAP(X_ESCAPE)SS_DELAY(100)  SS_LSFT(SS_TAP(X_DOT))SS_DELAY(100)  SS_TAP(X_W)SS_DELAY(100)  SS_TAP(X_ENTER));
+    }
+    break;
+    case ST_MACRO_4:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_T))SS_DELAY(100)  SS_TAP(X_H)SS_DELAY(100)  SS_TAP(X_A)SS_DELAY(100)  SS_TAP(X_N)SS_DELAY(100)  SS_TAP(X_K)SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_TAP(X_Y)SS_DELAY(100)  SS_TAP(X_O)SS_DELAY(100)  SS_TAP(X_U));
+    }
+    break;
+    case ST_MACRO_5:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_M)));
+    }
+    break;
+    case ST_MACRO_6:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LSFT(SS_TAP(X_S))SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_H)SS_DELAY(100)  SS_TAP(X_R)SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_TAP(X_G)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_H)SS_DELAY(100)  SS_TAP(X_R)SS_DELAY(100)  SS_TAP(X_T)SS_DELAY(100)  SS_TAP(X_E));
     }
     break;
 
