@@ -1284,7 +1284,7 @@ void leader_end_user(void) {
     } else if (leader_sequence_three_keys(KC_M, KC_F, KC_G)) {
         send_string_with_delay("Mit freundlichen Gr", 10);
         tap_code16(RALT(HU_UE));
-        tp_code16(KC_U);
+        tap_code16(KC_U);
         wait_ms(10);
         tap_code16(HU_SS);
         wait_ms(10);
