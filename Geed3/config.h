@@ -1,3 +1,6 @@
+#pragma once
+#include "config_common.h"
+
 #define CHORDAL_HOLD
 #undef TAPPING_TERM
 #define TAPPING_TERM 190
@@ -63,11 +66,5 @@
 #undef ENABLE_RGB_MATRIX_RIVERFLOW
 
 #define LEADER_NO_TIMEOUT
-
-/* Unicode input mode: pick the mode matching your OS. 
- * UC_WINC is Windows Compose mode (Alt+Numpad alternative).
- * Other options: UC_LNX (Linux), UC_OSX (macOS).
- */
-#define UNICODE_SELECTED_MODES UC_WINC
 #define LEADER_PER_KEY_TIMING
 #define LEADER_TIMEOUT 250
