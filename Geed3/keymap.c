@@ -1281,14 +1281,6 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_B, KC_G)) {
         // Leader, b, g => BG
         SEND_STRING(SS_LSFT("B")SS_DELAY(10)  SS_LSFT("G")SS_DELAY(10)  SS_TAP(X_ENTER)SS_DELAY(10)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(10)  "b" SS_DELAY(10)  "e" SS_DELAY(10)  SS_TAP(X_L));
-    } else if (leader_sequence_three_keys(KC_M, KC_F, KC_G)) {
-        send_string_with_delay("Mit freundlichen Gr", 10);
-        tap_code16(RALT(HU_UE));
-        tap_code16(KC_U);
-        wait_ms(10);
-        tap_code16(HU_SS);
-        wait_ms(10);
-        send_string_with_delay("en", 10);
     } else if (leader_sequence_three_keys(KC_M, KC_F, KC_B)) {
       SEND_STRING("Best regards,");
     } else if (leader_sequence_two_keys(KC_M, KC_S)) {
@@ -1301,7 +1293,7 @@ void leader_end_user(void) {
         // Leader, m, s, r => Sehr geehrter Herr
       SEND_STRING("Sehr geehrter Herr");
     } else if (leader_sequence_three_keys(KC_M, KC_H, KC_E)) {
-        // Leader, m, h, e => Sehr geehrte Frau
+        // Leader, m, h, e => Hallo Frau
       SEND_STRING("Hallo Frau ");
     } else if (leader_sequence_three_keys(KC_M, KC_H, KC_R)) {
         // Leader, m, h, r => Hallo Herr
@@ -1320,14 +1312,9 @@ void leader_end_user(void) {
         // Leader, g, p => git push
         SEND_STRING("git push"SS_TAP(X_ENTER));
     } else if (leader_sequence_two_keys(KC_G, KC_C)) {
-        // Leader, g, c => git add -A && git commit -m ""
-        SEND_STRING("git commit -m ");
-        add_mods(MOD_LSFT);
-        tap_code(KC_QUOTE);  // "
-        tap_code(KC_QUOTE);  // "
-        del_mods(MOD_LSFT);
-        // place cursor between quotes
-        tap_code16(LSFT(KC_LEFT));
+        // Leader, g, c => git add -A && git commit -m
+        SEND_STRING("git add -A ");
+        SEND_STRING(" git commit -m ");
     } else if (leader_sequence_two_keys(KC_G, KC_F)) {
         // Leader, g, f => git fetch
         SEND_STRING("git fetch"SS_TAP(X_ENTER));
@@ -1337,7 +1324,9 @@ void leader_end_user(void) {
   // Text
     } else if (leader_sequence_two_keys(KC_T, KC_T)) {
       // Leader, t, t => Thank you
-      SEND_STRING("Thank you,");
+      SEND_STRING("Thank ");
+      tap_code16(HU_Y);
+      SEND_STRING("ou");
     } else if (leader_sequence_two_keys(KC_T, KC_X)) {
       // Leader, t, x => Thanks 
       SEND_STRING("Thanks");
