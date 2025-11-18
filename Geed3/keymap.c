@@ -7,8 +7,8 @@
 #define MOON_LED_LEVEL LED_LEVEL
 #ifndef ZSA_SAFE_RANGE
 #define ZSA_SAFE_RANGE SAFE_RANGE
-#define HU_UDIA_STR "ü"
-#define HU_UDIA_SS SS_TAP(KC_MINS)
+// #define HU_UDIA_STR "ü"
+// #define HU_UDIA_SS SS_TAP(KC_MINS)
 #endif
 
 enum custom_keycodes {
@@ -648,7 +648,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_1:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_ESCAPE)
+      SEND_STRING(SS_TAP(X_ESCAPE));
       wait_ms(50);
       tap_code16(KC_C);
       wait_ms(50);
