@@ -65,7 +65,7 @@ enum tap_dance_codes {
 #define DUAL_FUNC_23 LT(6, KC_F15)
 #define DUAL_FUNC_24 LT(6, KC_F10)
 #define DUAL_FUNC_25 LT(12, KC_F8)
-#define DUAL_FUNC_26 LT(12, KC_R)
+#define DUAL_FUNC_26 LT(12, KC_R)t
 #define DUAL_FUNC_27 LT(5, KC_1)
 #define DUAL_FUNC_28 LT(12, KC_F9)
 
@@ -180,7 +180,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo3, KC_TAB),
     COMBO(combo4, LSFT(KC_TAB)),
     COMBO(combo5, LALT(LCTL(LSFT(KC_C)))),
-    COMBO(combo6, KC_F24),
+    COMBO(combo6, QK_LEADER),
     COMBO(combo7, KC_ENTER),
 };
 
