@@ -151,7 +151,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_TOG,        TOGGLE_LAYER_COLOR,RGB_MODE_FORWARD,RGB_SLD,        RGB_VAD,        RGB_VAI,                                        TO(0),          TO(1),          TO(7),          TO(8),          LGUI(KC_L),     KC_TRANSPARENT, 
     KC_NO,          KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  LCTL(LSFT(KC_M)),KC_AUDIO_VOL_UP,KC_NO,                                          KC_NO,          AS_TOGG,        KC_NO,          KC_MS_LEFT,     KC_MS_RIGHT,    KC_NO,          
     KC_PSCR,        KC_MEDIA_PREV_TRACK,KC_MEDIA_STOP,  KC_MEDIA_PLAY_PAUSE,KC_MEDIA_NEXT_TRACK,KC_BRIGHTNESS_UP,                                QK_DYNAMIC_TAPPING_TERM_UP,KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
-    LGUI(LSFT(KC_S)),LSFT(KC_PSCR),  DM_RSTP,        DM_REC1,        DM_REC2,        KC_BRIGHTNESS_DOWN,                                QK_DYNAMIC_TAPPING_TERM_DOWN,QK_DYNAMIC_TAPPING_TERM_PRINT,KC_NO,          KC_NO,          KC_NO,          QK_LLCK,        
+    LGUI(LSFT(KC_S)),LSFT(KC_PSCR),  DM_RSTP,        DM_REC1,        DM_REC2,        KC_BRIGHTNESS_DOWN,                                QK_DYNAMIC_TAPPING_TERM_DOWN,QK_DYNAMIC_TAPPING_TERM_PRINT,KC_NO,          KC_NO,          AC_TOGG,          QK_LLCK,        
                                                     HSV_0_0_255,    HSV_192_240_161,                                HSV_1_218_204,  HSV_154_239_161
   ),
 };
