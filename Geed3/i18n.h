@@ -34,10 +34,16 @@
 // #define HU_RPRN S(KC_9)
 // #define HU_SCLN ALGR(KC_COMM)
 #define HU_DQOT S(KC_2)
+<<<<<<< HEAD
 // #define HU_AT ALGR(KC_V)
 // #define HU_LBRC ALGR(KC_F)
 // #define HU_RBRC ALGR(KC_G)
+=======
+#define HU_AT ALGR(KC_V)
+#define HU_LBRC ALGR(KC_F)
+#define HU_RBRC ALGR(KC_G)
+#define KC_PC_UNDO LCTL(KC_Z)
+#define KC_PC_CUT LCTL(KC_X)
+>>>>>>> a973825 (✨(oryx): Keyboard layout edited.)
 #define KC_PC_COPY LCTL(KC_C)
 #define KC_PC_PASTE LCTL(KC_V)
-#define KC_PC_CUT LCTL(KC_X)
-#define KC_PC_UNDO LCTL(KC_Z)
