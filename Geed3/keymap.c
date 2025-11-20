@@ -1269,38 +1269,6 @@ void leader_end_user(void) {
 
 }
 
-// Custom autocorrect for phrases and Unicode
-bool apply_autocorrect(uint8_t backspaces, const char *str, char *typo, char *correct) {
-    // German greeting (whole word)
-    if (backspaces == 3 && strcmp(str, "mfg") == 0) {
-        send_string_with_delay_P(PSTR("Mit freundlichen Gruessen"), 0);
-        return true;
-    }
-    
-    // Shortcuts (whole words with word boundaries)
-    if (backspaces == 2 && strcmp(str, "ty") == 0) {
-        send_string_with_delay_P(PSTR("Thank you"), 0);
-        return true;
-    }
-    
-    if (backspaces == 3 && strcmp(str, "thx") == 0) {
-        send_string_with_delay_P(PSTR("Thanks"), 0);
-        return true;
-    }
-    
-    if (backspaces == 4 && strcmp(str, "cant") == 0) {
-        send_string_with_delay_P(PSTR("can't"), 0);
-        return true;
-    }
-    
-    if (backspaces == 4 && strcmp(str, "dont") == 0) {
-        send_string_with_delay_P(PSTR("don't"), 0);
-        return true;
-    }
-    
-    return false;
-}
-
 const key_override_t delete_key_override = 
     ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
 
