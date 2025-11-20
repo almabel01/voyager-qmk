@@ -1151,11 +1151,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-static rgblight_config_t saved_rgblight;
+static uint8_t saved_hue;
+static uint8_t saved_sat;
+static uint8_t saved_val;
+static uint8_t saved_mode;
 
 void leader_start_user(void) {
-    saved_rgblight = rgblight_config;
-    // Example: RGB underglow red
+    saved_hue = rgblight_get_hue();
+    saved_sat = rgblight_get_sat();
+    saved_val = rgblight_get_val();
+    saved_mode = rgblight_get_mode();
+    // Set RGB underglow to red
     rgblight_setrgb(255, 0, 0);
 
     // Or, if you want to use a side indicator LED pin:
@@ -1263,7 +1269,8 @@ void leader_end_user(void) {
       SEND_STRING("Thanks");
     }
 
-    // Finally, turn LED off
-    rgblight_setrgb(saved_rgblight.r, saved_rgblight.g, saved_rgblight.b);
+    // Finally, restore LED state
+    rgblight_sethsv(saved_hue, saved_sat, saved_val);
+    rgblight_mode(saved_mode);
 
 }
