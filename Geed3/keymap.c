@@ -1274,7 +1274,7 @@ const key_override_t delete_key_override =
 
 // Also override for the layer tap backspace key
 const key_override_t delete_key_override_lt = 
-    ko_make_with_layers_and_negmods(MOD_MASK_SHIFT, LT(1, KC_BSPC), KC_DEL, ~0, MOD_MASK_NONE);
+    ko_make_with_layers_and_negmods(MOD_MASK_SHIFT, LT(1, KC_BSPC), KC_DEL, ~0, 0);
 
 const key_override_t *key_overrides[] = {
 	&delete_key_override,
