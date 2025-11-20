@@ -1162,7 +1162,7 @@ void leader_end_user(void) {
         tap_code16(HU_LCBR);
         tap_code16(HU_RCBR);
         tap_code16(KC_LEFT);
-    } else if (leader_sequence_one_key(KC_D) {
+    } else if (leader_sequence_one_key(KC_D)){
         // Leader, d => ""
         tap_code16(HU_DQUO);
         tap_code16(HU_DQUO);
