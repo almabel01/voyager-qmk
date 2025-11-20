@@ -1151,10 +1151,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-static uint8_t saved_hue;
-static uint8_t saved_sat;
-static uint8_t saved_val;
-static uint8_t saved_mode;
 
 void leader_start_user(void) {
     // copied from gpxl-dev's config, thanks
@@ -1263,21 +1259,8 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_T, KC_X)) {
       // Leader, t, x => Thanks 
       SEND_STRING("Thanks");
-    } else if (leader_sequence_two_keys(KC_Q, KC_K)) {
-        // kebab case
-        enable_xcase_with(KC_MINS);
-    } else if (leader_sequence_two_keys(KC_Q, KC_C)) {
-        // camel case
-        enable_xcase_with(OSM(MOD_LSFT));
-    } else if (leader_sequence_two_keys(KC_Q, KC_S)) {
-        // snake case
-        enable_xcase_with(KC_UNDS);
-    } else if (leader_sequence_two_keys(KC_Q, KC_W)) {
-        // Caps Word with underscores
-        enable_caps_word();
-        enable_xcase_with(KC_UNDS);
-    }
-
+    }     
+    
     STATUS_LED_1(false);
     STATUS_LED_2(false);
     STATUS_LED_3(false);
