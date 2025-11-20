@@ -1158,15 +1158,11 @@ static uint8_t saved_val;
 static uint8_t saved_mode;
 
 void leader_start_user(void) {
-    saved_hue = rgblight_get_hue();
-    saved_sat = rgblight_get_sat();
-    saved_val = rgblight_get_val();
-    saved_mode = rgblight_get_mode();
-    // Set RGB underglow to red (hue=0, sat=255, val=255)
-    rgblight_sethsv(0, 255, 255);
-
-    // Or, if you want to use a side indicator LED pin:
-    // writePinHigh(LED_PIN);
+    // copied from gpxl-dev's config, thanks
+    STATUS_LED_1(true);
+    STATUS_LED_2(true);
+    STATUS_LED_3(true);
+    STATUS_LED_4(true);
 }
 
 void leader_end_user(void) {
@@ -1268,10 +1264,24 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_T, KC_X)) {
       // Leader, t, x => Thanks 
       SEND_STRING("Thanks");
+    } else if (leader_sequence_two_keys(KC_Q, KC_K)) {
+        // kebab case
+        enable_xcase_with(KC_MINS);
+    } else if (leader_sequence_two_keys(KC_Q, KC_C)) {
+        // camel case
+        enable_xcase_with(OSM(MOD_LSFT));
+    } else if (leader_sequence_two_keys(KC_Q, KC_S)) {
+        // snake case
+        enable_xcase_with(KC_UNDS);
+    } else if (leader_sequence_two_keys(KC_Q, KC_W)) {
+        // Caps Word with underscores
+        enable_caps_word();
+        enable_xcase_with(KC_UNDS);
     }
 
-    // Finally, restore LED state
-    rgblight_sethsv(saved_hue, saved_sat, saved_val);
-    rgblight_mode(saved_mode);
+    STATUS_LED_1(false);
+    STATUS_LED_2(false);
+    STATUS_LED_3(false);
+    STATUS_LED_4(false);
 
 }
