@@ -4,7 +4,6 @@
 #include "sendstring_hungarian.h"
 #include "version.h"
 #include "i18n.h"
-#include "rgblight.h"
 #define MOON_LED_LEVEL LED_LEVEL
 #ifndef ZSA_SAFE_RANGE
 #define ZSA_SAFE_RANGE SAFE_RANGE
