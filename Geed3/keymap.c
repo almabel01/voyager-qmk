@@ -4,6 +4,7 @@
 #include "sendstring_hungarian.h"
 #include "version.h"
 #include "i18n.h"
+#include "rgblight.h"
 #define MOON_LED_LEVEL LED_LEVEL
 #ifndef ZSA_SAFE_RANGE
 #define ZSA_SAFE_RANGE SAFE_RANGE
@@ -1161,8 +1162,8 @@ void leader_start_user(void) {
     saved_sat = rgblight_get_sat();
     saved_val = rgblight_get_val();
     saved_mode = rgblight_get_mode();
-    // Set RGB underglow to red
-    rgblight_setrgb(255, 0, 0);
+    // Set RGB underglow to red (hue=0, sat=255, val=255)
+    rgblight_sethsv(0, 255, 255);
 
     // Or, if you want to use a side indicator LED pin:
     // writePinHigh(LED_PIN);
