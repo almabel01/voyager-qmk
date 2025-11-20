@@ -1272,7 +1272,12 @@ void leader_end_user(void) {
 const key_override_t delete_key_override = 
     ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
 
+// Also override for the layer tap backspace key
+const key_override_t delete_key_override_lt = 
+    ko_make_with_layers_and_negmods(MOD_MASK_SHIFT, LT(1, KC_BSPC), KC_DEL, ~0, MOD_MASK_NONE);
+
 const key_override_t *key_overrides[] = {
 	&delete_key_override,
+	&delete_key_override_lt,
 	NULL
 };
