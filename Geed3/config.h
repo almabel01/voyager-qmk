@@ -11,9 +11,9 @@
 #define NO_AUTO_SHIFT_TAB
 #define NO_AUTO_SHIFT_SPECIAL
 #define NO_AUTO_SHIFT_NUMERIC
-#define SERIAL_NUMBER "Geed3/pjz40R"
+#define SERIAL_NUMBER "Geed3/AzdglR"
 #define LAYER_STATE_16BIT
-#define COMBO_COUNT 8
+#define COMBO_COUNT 9
 
 #define RGB_MATRIX_STARTUP_SPD 60
 
