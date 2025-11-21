@@ -6,7 +6,6 @@
 #define HU_MINS KC_SLSH
 #define HU_COLN S(KC_DOT)
 #define HU_PLUS S(KC_3)
-#define HU_ASTR ALGR(KC_SLSH)
 #define HU_EQL S(KC_7)
 #define HU_0 KC_GRV
 #define HU_GRV ALGR(KC_7)
@@ -16,6 +15,7 @@
 #define HU_BSLS ALGR(KC_Q)
 #define HU_PIPE ALGR(KC_W)
 #define HU_EXLM S(KC_4)
+#define HU_ASTR ALGR(KC_SLSH)
 #define HU_SLSH S(KC_6)
 #define HU_SS ALGR(KC_QUOT)
 #define HU_AMPR ALGR(KC_C)
