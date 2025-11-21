@@ -39,25 +39,25 @@ enum tap_dance_codes {
   DANCE_7,
 };
 
-#define DUAL_FUNC_0 LT(10, KC_T)
-#define DUAL_FUNC_1 LT(6, KC_D)
-#define DUAL_FUNC_2 LT(8, KC_Z)
-#define DUAL_FUNC_3 LT(15, KC_F6)
-#define DUAL_FUNC_4 LT(14, KC_F13)
-#define DUAL_FUNC_5 LT(13, KC_D)
-#define DUAL_FUNC_6 LT(5, KC_6)
-#define DUAL_FUNC_7 LT(10, KC_F16)
-#define DUAL_FUNC_8 LT(8, KC_J)
-#define DUAL_FUNC_9 LT(4, KC_F11)
-#define DUAL_FUNC_10 LT(12, KC_6)
-#define DUAL_FUNC_11 LT(8, KC_F24)
-#define DUAL_FUNC_12 LT(2, KC_F3)
-#define DUAL_FUNC_13 LT(4, KC_A)
-#define DUAL_FUNC_14 LT(1, KC_F20)
-#define DUAL_FUNC_15 LT(9, KC_A)
-#define DUAL_FUNC_16 LT(15, KC_S)
-#define DUAL_FUNC_17 LT(2, KC_F6)
-#define DUAL_FUNC_18 LT(13, KC_M)
+#define DUAL_FUNC_0 LT(7, KC_F6)
+#define DUAL_FUNC_1 LT(4, KC_F14)
+#define DUAL_FUNC_2 LT(13, KC_C)
+#define DUAL_FUNC_3 LT(8, KC_M)
+#define DUAL_FUNC_4 LT(3, KC_7)
+#define DUAL_FUNC_5 LT(11, KC_P)
+#define DUAL_FUNC_6 LT(8, KC_D)
+#define DUAL_FUNC_7 LT(4, KC_J)
+#define DUAL_FUNC_8 LT(11, KC_K)
+#define DUAL_FUNC_9 LT(9, KC_X)
+#define DUAL_FUNC_10 LT(9, KC_F14)
+#define DUAL_FUNC_11 LT(9, KC_W)
+#define DUAL_FUNC_12 LT(13, KC_9)
+#define DUAL_FUNC_13 LT(10, KC_I)
+#define DUAL_FUNC_14 LT(14, KC_Y)
+#define DUAL_FUNC_15 LT(10, KC_Y)
+#define DUAL_FUNC_16 LT(4, KC_F11)
+#define DUAL_FUNC_17 LT(15, KC_F24)
+#define DUAL_FUNC_18 LT(7, KC_F12)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -154,6 +154,7 @@ const uint16_t PROGMEM combo3[] = { MT(MOD_RCTL, KC_E), MT(MOD_LCTL, KC_S), COMB
 const uint16_t PROGMEM combo4[] = { LT(4, KC_SPACE), LT(1, KC_BSPC), COMBO_END};
 const uint16_t PROGMEM combo5[] = { KC_W, KC_F, COMBO_END};
 const uint16_t PROGMEM combo6[] = { KC_DOWN, KC_UP, COMBO_END};
+const uint16_t PROGMEM combo7[] = { KC_C, LT(3, KC_D), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, CW_TOGG),
@@ -163,6 +164,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo4, KC_ENTER),
     COMBO(combo5, OSL(9)),
     COMBO(combo6, KC_TAB),
+    COMBO(combo7, LALT(LCTL(LSFT(KC_C)))),
 };
 
 
