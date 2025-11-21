@@ -1118,8 +1118,13 @@ const key_override_t delete_key_override =
 const key_override_t delete_key_override_lt = 
     ko_make_with_layers_and_negmods(MOD_MASK_SHIFT, LT(1, KC_BSPC), KC_DEL, ~0, 0);
 
+// Shift + Repeat Key = Alt Repeat Key
+const key_override_t alt_repeat_key_override = 
+    ko_make_basic(MOD_MASK_SHIFT, QK_REPEAT_KEY, QK_ALT_REPEAT_KEY);
+
 const key_override_t *key_overrides[] = {
 	&delete_key_override,
 	&delete_key_override_lt,
+	&alt_repeat_key_override,
 	NULL
 };
