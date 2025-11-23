@@ -8,7 +8,7 @@
 #define RGB_MATRIX_TIMEOUT 300000
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define SERIAL_NUMBER "Geed3/AzdDy0"
+#define SERIAL_NUMBER "Geed3/Jaz7Om"
 #define LAYER_STATE_16BIT
 #define COMBO_COUNT 9
 
