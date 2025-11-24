@@ -1,4 +1,5 @@
 #define HU_Z KC_Y
+#define HU_0 KC_GRV
 #define HU_Y KC_Z
 #define HU_QUOT S(KC_1)
 #define HU_COMM KC_COMM
@@ -7,7 +8,6 @@
 #define HU_COLN S(KC_DOT)
 #define HU_PLUS S(KC_3)
 #define HU_EQL S(KC_7)
-#define HU_0 KC_GRV
 #define HU_GRV ALGR(KC_7)
 #define HU_LESS ALGR(KC_NUBS)
 #define HU_MORE ALGR(KC_Z)
