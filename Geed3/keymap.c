@@ -39,25 +39,25 @@ enum tap_dance_codes {
   DANCE_7,
 };
 
-#define DUAL_FUNC_0 LT(14, KC_F8)
-#define DUAL_FUNC_1 LT(15, KC_C)
-#define DUAL_FUNC_2 LT(7, KC_O)
-#define DUAL_FUNC_3 LT(1, KC_W)
-#define DUAL_FUNC_4 LT(8, KC_Y)
-#define DUAL_FUNC_5 LT(2, KC_Y)
-#define DUAL_FUNC_6 LT(6, KC_Y)
-#define DUAL_FUNC_7 LT(7, KC_9)
-#define DUAL_FUNC_8 LT(5, KC_Y)
-#define DUAL_FUNC_9 LT(6, KC_8)
-#define DUAL_FUNC_10 LT(3, KC_J)
-#define DUAL_FUNC_11 LT(2, KC_T)
-#define DUAL_FUNC_12 LT(2, KC_F4)
-#define DUAL_FUNC_13 LT(11, KC_F3)
-#define DUAL_FUNC_14 LT(10, KC_F6)
-#define DUAL_FUNC_15 LT(8, KC_F3)
-#define DUAL_FUNC_16 LT(4, KC_F4)
-#define DUAL_FUNC_17 LT(12, KC_T)
-#define DUAL_FUNC_18 LT(5, KC_S)
+#define DUAL_FUNC_0 LT(13, KC_F8)
+#define DUAL_FUNC_1 LT(14, KC_F20)
+#define DUAL_FUNC_2 LT(8, KC_F6)
+#define DUAL_FUNC_3 LT(2, KC_M)
+#define DUAL_FUNC_4 LT(4, KC_6)
+#define DUAL_FUNC_5 LT(7, KC_H)
+#define DUAL_FUNC_6 LT(9, KC_D)
+#define DUAL_FUNC_7 LT(7, KC_F23)
+#define DUAL_FUNC_8 LT(6, KC_4)
+#define DUAL_FUNC_9 LT(14, KC_2)
+#define DUAL_FUNC_10 LT(1, KC_7)
+#define DUAL_FUNC_11 LT(12, KC_F10)
+#define DUAL_FUNC_12 LT(10, KC_8)
+#define DUAL_FUNC_13 LT(6, KC_F16)
+#define DUAL_FUNC_14 LT(13, KC_Y)
+#define DUAL_FUNC_15 LT(10, KC_Z)
+#define DUAL_FUNC_16 LT(7, KC_R)
+#define DUAL_FUNC_17 LT(4, KC_F16)
+#define DUAL_FUNC_18 LT(10, KC_C)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,          KC_KP_MINUS,    KC_7,           KC_8,           KC_9,           TD(DANCE_0),                                    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
     OSM(MOD_MEH),   KC_KP_PLUS,     KC_4,           KC_5,           KC_6,           KC_KP_ASTERISK,                                 OSM(MOD_LGUI),  OSM(MOD_LSFT),  OSM(MOD_LCTL),  OSM(MOD_LALT),  KC_ENTER,       KC_TRANSPARENT, 
     KC_NO,          KC_KP_EQUAL,    KC_1,           KC_2,           KC_3,           KC_NO,                                          LGUI(KC_LEFT_ALT),KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, OSM(MOD_RALT),  QK_LLCK,        
-                                                    HU_0,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+                                                    HU_0,           LSFT(KC_ENTER),                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [3] = LAYOUT_voyager(
     KC_NO,          DUAL_FUNC_0,    DUAL_FUNC_1,    DUAL_FUNC_2,    DUAL_FUNC_3,    DUAL_FUNC_4,                                    DUAL_FUNC_5,    DUAL_FUNC_6,    DUAL_FUNC_7,    DUAL_FUNC_8,    DUAL_FUNC_13,   MO(8),          
@@ -90,15 +90,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [4] = LAYOUT_voyager(
     KC_NO,          DUAL_FUNC_0,    DUAL_FUNC_1,    DUAL_FUNC_2,    DUAL_FUNC_3,    DUAL_FUNC_4,                                    DUAL_FUNC_5,    DUAL_FUNC_6,    DUAL_FUNC_7,    DUAL_FUNC_8,    DUAL_FUNC_13,   MO(8),          
-    KC_NO,          KC_NO,          DM_PLY1,        DM_PLY2,        KC_TAB,         KC_NO,                                          LCTL(LSFT(HU_Z)),KC_PC_PASTE,    KC_PC_COPY,     KC_PC_CUT,      KC_PC_UNDO,     KC_NO,          
-    KC_NO,          LT(5, KC_ENTER),OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  OSM(MOD_LGUI),                                  CW_TOGG,        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       LT(5, KC_ENTER),
+    KC_NO,          KC_NO,          DM_PLY1,        DM_PLY2,        KC_NO,          KC_NO,                                          LCTL(LSFT(HU_Z)),KC_PC_PASTE,    KC_PC_COPY,     KC_PC_CUT,      KC_PC_UNDO,     KC_NO,          
+    KC_NO,          KC_ENTER,       OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  OSM(MOD_LGUI),                                  CW_TOGG,        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       KC_NO,          
     KC_NO,          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     DUAL_FUNC_17,   KC_PC_PASTE,                                    ST_MACRO_1,     KC_HOME,        KC_PGDN,        KC_PAGE_UP,     KC_END,         QK_LLCK,        
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 QK_ALT_REPEAT_KEY, KC_DELETE
   ),
   [5] = LAYOUT_voyager(
     KC_NO,          KC_NO,          KC_MS_ACCEL0,   KC_MS_ACCEL1,   KC_MS_ACCEL2,   KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          MO(8),          
     KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          LCTL(LSFT(HU_Z)),KC_PC_PASTE,    KC_PC_COPY,     KC_PC_CUT,      KC_PC_UNDO,     KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_NO,          OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  OSM(MOD_LGUI),                                  KC_NO,          KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_UP,       KC_MS_RIGHT,    KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_NO,          OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  OSM(MOD_LGUI),                                  LSFT(KC_ENTER), KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_UP,       KC_MS_RIGHT,    KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_MS_BTN3,                                     KC_MS_BTN3,     KC_MS_WH_LEFT,  KC_MS_WH_DOWN,  KC_MS_WH_UP,    KC_MS_WH_RIGHT, QK_LLCK,        
                                                     KC_MS_BTN1,     KC_MS_BTN2,                                     KC_MS_BTN1,     KC_MS_BTN2
   ),
