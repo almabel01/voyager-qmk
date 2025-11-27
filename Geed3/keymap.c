@@ -576,7 +576,25 @@ tap_dance_action_t tap_dance_actions[] = {
         [DANCE_7] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_7, dance_7_finished, dance_7_reset),
 };
 
+bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
+                            uint8_t* remembered_mods) {
+  if (keycode == LT_SHIFT) { return false; }
+  return true;
+}
+
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+    case LT_SHIFT:  // Shift on hold, Repeat Key on tap.
+      if (record->tap.count) {  // On tap.
+        repeat_key_invoke(&record->event);  // Repeat the last key.
+        return false;  // Skip default handling.
+      }
+      break;
+
+    // Other macros...
+  }
+  return true;  // Continue default handling.
   switch (keycode) {
   case QK_MODS ... QK_MODS_MAX: 
     // Mouse keys with modifiers work inconsistently across operating systems, this makes sure that modifiers are always
@@ -974,27 +992,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 
-bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
-                            uint8_t* remembered_mods) {
-  if (keycode == LT_SHIFT) { return false; }
-  return true;
-}
-
-bool process_record_user(uint16_t keycode, keyrecord_t* record) {
-  switch (keycode) {
-    case LT_SHIFT:  // Shift on hold, Repeat Key on tap.
-      if (record->tap.count) {  // On tap.
-        repeat_key_invoke(&record->event);  // Repeat the last key.
-        return false;  // Skip default handling.
-      }
-      break;
-
-    // Other macros...
-  }
-  return true;  // Continue default handling.
-}
-
-
 void leader_start_user(void) {
     // copied from gpxl-dev's config, thanks
     STATUS_LED_1(true);
@@ -1116,9 +1113,9 @@ void leader_end_user(void) {
         // Leader, i, n => INSERT INTO ;
         SEND_STRING("IN ");
         tap_code16(HU_LPRN);
-        SS_TAP(X_ENTER);
+        SEND_STRING(SS_TAP(X_ENTER));
         tap_code16(HU_RPRN);
-        SS_TAP(UP_ARROW);
+        SEND_STRING(SS_TAP(KC_UP));
     }
     
     STATUS_LED_1(false);
