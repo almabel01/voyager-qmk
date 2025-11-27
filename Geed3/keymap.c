@@ -1115,7 +1115,7 @@ void leader_end_user(void) {
         tap_code16(HU_LPRN);
         SEND_STRING(SS_TAP(X_ENTER));
         tap_code16(HU_RPRN);
-        SEND_STRING(SS_TAP(KC_UP));
+        SEND_STRING(SS_TAP(X_UP));
     }
     
     STATUS_LED_1(false);
