@@ -58,6 +58,7 @@ enum tap_dance_codes {
 #define DUAL_FUNC_16 LT(15, KC_2)
 #define DUAL_FUNC_17 LT(3, KC_Q)
 #define DUAL_FUNC_18 LT(13, KC_F19)
+#define LT_SHIFT LT(MOD_LSFT, KC_0)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -65,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LT(5, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(6, KC_P),    KC_B,                                           KC_J,           LT(6, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_BSPC,        
     MEH_T(KC_ESCAPE),LT(3, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(3, KC_O),    MT(MOD_RSFT, KC_ENTER),
     OSM(MOD_LCTL),  HU_Z,           KC_X,           KC_C,           LT(3, KC_D),    MT(MOD_LALT | MOD_LGUI, KC_V),                                MT(MOD_LALT | MOD_LGUI, KC_K),LT(3, KC_H),    HU_COMM,        HU_DOT,         MT(MOD_RALT, HU_MINS),DUAL_FUNC_10,   
-                                                    LT(4, KC_SPACE),LT(5, KC_TAB),                                  KC_TRANSPARENT, LT(2, KC_BSPC)
+                                                    LT(4, KC_SPACE),LT(5, KC_TAB),                                  LT_SHIFT, LT(2, KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
     CW_TOGG,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -970,6 +971,27 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       return false;
   }
   return true;
+}
+
+
+bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
+                            uint8_t* remembered_mods) {
+  if (keycode == LT_SHIFT) { return false; }
+  return true;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+  switch (keycode) {
+    case LT_SHIFT:  // Shift on hold, Repeat Key on tap.
+      if (record->tap.count) {  // On tap.
+        repeat_key_invoke(&record->event);  // Repeat the last key.
+        return false;  // Skip default handling.
+      }
+      break;
+
+    // Other macros...
+  }
+  return true;  // Continue default handling.
 }
 
 
