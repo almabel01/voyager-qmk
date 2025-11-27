@@ -584,13 +584,13 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
 
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-    case LT_SHIFT:  // Shift on hold, Repeat Key on tap.
-      if (record->tap.count) {  // On tap.
-        repeat_key_invoke(&record->event);  // Repeat the last key.
-        return false;  // Skip default handling.
-      }
-      break;
+  switch (keycode) {
+  case LT_SHIFT:  // Shift on hold, Repeat Key on tap.
+    if (record->tap.count) {  // On tap.
+      repeat_key_invoke(&record->event);  // Repeat the last key.
+      return false;  // Skip default handling.
+    }
+    break;
 
     // Other macros...
   }
