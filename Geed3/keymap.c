@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LT(5, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(6, KC_P),    KC_B,                                           KC_J,           LT(6, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_BSPC,        
     MEH_T(KC_ESCAPE),LT(3, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(3, KC_O),    MT(MOD_RSFT, KC_ENTER),
     OSM(MOD_LCTL),  HU_Z,           KC_X,           KC_C,           LT(3, KC_D),    MT(MOD_LALT | MOD_LGUI, KC_V),                                MT(MOD_LALT | MOD_LGUI, KC_K),LT(3, KC_H),    HU_COMM,        HU_DOT,         MT(MOD_RALT, HU_MINS),DUAL_FUNC_10,   
-                                                    LT(4, KC_SPACE),LT(5, KC_TAB),                                  LT_SHIFT, LT(2, KC_BSPC)
+                                                    LT(4, KC_SPACE),MT(MOD_LSFT, KC_TAB),                                LT_SHIFT,LT(2, KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
     CW_TOGG,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -1102,7 +1102,24 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_T, KC_X)) {
       // Leader, t, x => Thanks 
       SEND_STRING("Thanks");
-    }     
+  // SQL
+    } else if (leader_sequence_two_keys(KC_S, KC_E)) {
+        // Leader, s, e => SELECT * FROM ;
+        SEND_STRING("SELECT * FROM ");
+    } else if (leader_sequence_two_keys(KC_F, KC_F)) {
+        // Leader, f, f => FROM ;
+        SEND_STRING("FROM ");
+    } else if (leader_sequence_two_keys(KC_W, KC_W)) {
+        // Leader, w, w => WHERE ;
+        SEND_STRING("WHERE ");
+    } else if (leader_sequence_two_keys(KC_I, KC_N)) {
+        // Leader, i, n => INSERT INTO ;
+        SEND_STRING("IN ");
+        tap_code16(HU_LPRN);
+        SS_TAP(X_ENTER);
+        tap_code16(HU_RPRN);
+        SS_TAP(UP_ARROW);
+    }
     
     STATUS_LED_1(false);
     STATUS_LED_2(false);
