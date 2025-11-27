@@ -58,6 +58,7 @@ enum tap_dance_codes {
 #define DUAL_FUNC_16 LT(15, KC_2)
 #define DUAL_FUNC_17 LT(3, KC_Q)
 #define DUAL_FUNC_18 LT(13, KC_F19)
+#define LT_SHIFT LT(MOD_LSFT, KC_0)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -65,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LT(5, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(6, KC_P),    KC_B,                                           KC_J,           LT(6, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_BSPC,        
     MEH_T(KC_ESCAPE),LT(3, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(3, KC_O),    MT(MOD_RSFT, KC_ENTER),
     OSM(MOD_LCTL),  HU_Z,           KC_X,           KC_C,           LT(3, KC_D),    MT(MOD_LALT | MOD_LGUI, KC_V),                                MT(MOD_LALT | MOD_LGUI, KC_K),LT(3, KC_H),    HU_COMM,        HU_DOT,         MT(MOD_RALT, HU_MINS),DUAL_FUNC_10,   
-                                                    LT(4, KC_SPACE),LT(5, KC_TAB),                                  KC_TRANSPARENT, LT(2, KC_BSPC)
+                                                    LT(4, KC_SPACE),MT(MOD_LSFT, KC_TAB),                                LT_SHIFT ,LT(2, KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
     CW_TOGG,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -629,7 +630,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_5:
     if (record->event.pressed) {
-      // SEND_STRING(SS_LSFT(SS_TAP(X_T))SS_DELAY(100)  SS_TAP(X_H)SS_DELAY(100)  SS_TAP(X_A)SS_DELAY(100)  SS_TAP(X_N)SS_DELAY(100)  SS_TAP(X_K)SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_TAP(X_Y)SS_DELAY(100)  SS_TAP(X_O)SS_DELAY(100)  SS_TAP(X_U));
       SEND_STRING("Thank ");
       tap_code16(HU_Y);
       SEND_STRING("ou");
@@ -637,19 +637,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_6:
     if (record->event.pressed) {
-      // SEND_STRING(SS_LSFT(SS_TAP(X_B))SS_DELAY(100)  SS_LSFT(SS_TAP(X_G))SS_DELAY(100)  SS_TAP(X_ENTER));
       SEND_STRING(SS_LSFT("B")SS_DELAY(10)  SS_LSFT("G")SS_DELAY(10)  SS_TAP(X_ENTER)SS_DELAY(10)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(10)  "b" SS_DELAY(10)  "e" SS_DELAY(10)  SS_TAP(X_L));
     }
     break;
     case ST_MACRO_7:
     if (record->event.pressed) {
-      // SEND_STRING(SS_LSFT(SS_TAP(X_T))SS_DELAY(100)  SS_TAP(X_H)SS_DELAY(100)  SS_TAP(X_A)SS_DELAY(100)  SS_TAP(X_N)SS_DELAY(100)  SS_TAP(X_K)SS_DELAY(100)  SS_TAP(X_S));
       SEND_STRING("Thanks");
     }
     break;
     case ST_MACRO_8:
     if (record->event.pressed) {
-      // SEND_STRING(SS_LSFT(SS_TAP(X_S))SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_H)SS_DELAY(100)  SS_TAP(X_R)SS_DELAY(100)  SS_TAP(X_SPACE)SS_DELAY(100)  SS_TAP(X_G)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_E)SS_DELAY(100)  SS_TAP(X_H)SS_DELAY(100)  SS_TAP(X_R)SS_DELAY(100)  SS_TAP(X_T)SS_DELAY(100)  SS_TAP(X_E));
       SEND_STRING("Sehr geehrte");
     }
     break;
@@ -981,6 +978,26 @@ void leader_start_user(void) {
     STATUS_LED_4(true);
 }
 
+bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
+                            uint8_t* remembered_mods) {
+  if (keycode == LT_SHIFT) { return false; }
+  return true;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+  switch (keycode) {
+    case LT_SHIFT:  // Shift on hold, Repeat Key on tap.
+      if (record->tap.count) {  // On tap.
+        repeat_key_invoke(&record->event);  // Repeat the last key.
+        return false;  // Skip default handling.
+      }
+      break;
+
+    // Other macros...
+  }
+  return true;  // Continue default handling.
+}
+
 void leader_end_user(void) {
     if (leader_sequence_one_key(KC_A)) {
         // Leader, a => <>
@@ -1080,7 +1097,24 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_T, KC_X)) {
       // Leader, t, x => Thanks 
       SEND_STRING("Thanks");
-    }     
+  // SQL
+    } else if (leader_sequence_two_keys(KC_S, KC_E)) {
+        // Leader, s, e => SELECT * FROM ;
+        SEND_STRING("SELECT * FROM ");
+    } else if (leader_sequence_two_keys(KC_F, KC_F)) {
+        // Leader, f, f => FROM ;
+        SEND_STRING("FROM ");
+    } else if (leader_sequence_two_keys(KC_W, KC_W)) {
+        // Leader, w, w => WHERE ;
+        SEND_STRING("WHERE ");
+    } else if (leader_sequence_two_keys(KC_I, KC_N)) {
+        // Leader, i, n => INSERT INTO ;
+        SEND_STRING("IN ");
+        tap_code16(HU_LPRN);
+        SS_TAP(X_ENTER);
+        tap_code16(HU_RPRN);
+        SS_TAP(UP_ARROW);
+    }
     
     STATUS_LED_1(false);
     STATUS_LED_2(false);
