@@ -1,5 +1,9 @@
+#define HU_ACUT ALGR(KC_9)
+#define HU_SS ALGR(KC_QUOT)
 #define HU_Z KC_Y
 #define HU_0 KC_GRV
+#define HU_UE KC_MINS
+#define HU_OE KC_0
 #define HU_Y KC_Z
 #define HU_QUOT S(KC_1)
 #define HU_COMM KC_COMM
@@ -15,14 +19,10 @@
 #define HU_EXLM S(KC_4)
 #define HU_ASTR ALGR(KC_SLSH)
 #define HU_SLSH S(KC_6)
-#define HU_SS ALGR(KC_QUOT)
 #define HU_EQL S(KC_7)
 #define HU_AMPR ALGR(KC_C)
 #define HU_TILD ALGR(KC_1)
 #define HU_PLUS S(KC_3)
-#define HU_UE KC_MINS
-#define HU_OE KC_0
-#define HU_ACUT ALGR(KC_9)
 #define HU_PERC S(KC_5)
 #define HU_CIRC ALGR(KC_3)
 #define HU_LCBR ALGR(KC_B)
@@ -37,7 +37,7 @@
 #define HU_AT ALGR(KC_V)
 #define HU_LBRC ALGR(KC_F)
 #define HU_RBRC ALGR(KC_G)
-#define KC_PC_UNDO LCTL(KC_Z)
-#define KC_PC_CUT LCTL(KC_X)
-#define KC_PC_COPY LCTL(KC_C)
 #define KC_PC_PASTE LCTL(KC_V)
+#define KC_PC_COPY LCTL(KC_C)
+#define KC_PC_CUT LCTL(KC_X)
+#define KC_PC_UNDO LCTL(KC_Z)
