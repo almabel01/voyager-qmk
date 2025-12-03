@@ -813,4 +813,5 @@ const key_override_t *key_overrides[] = {
 	&delete_key_override,
 	&delete_key_override_lt,
 	NULL
+  // connent here for merging
 };
