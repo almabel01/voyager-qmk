@@ -719,7 +719,7 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_M, KC_M)) {
         // Leader, m, m => mark flag done and move mail
         tap_code16(LCTL(LSFT(KC_6)));
-    } else if (leader_sequence_two_keys(KC_B, KC_R)) {
+    } else if (leader_sequence_two_keys(KC_B, KC_B)) {
         // Leader, b, r => BR, 
         SEND_STRING(SS_LSFT("B")SS_DELAY(10)  SS_LSFT("R")SS_DELAY(10)  SS_TAP(X_COMMA)SS_DELAY(10)  SS_TAP(X_ENTER)SS_DELAY(10)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(10)  "b" SS_DELAY(10)  "e" SS_DELAY(10)  SS_TAP(X_L));
     } else if (leader_sequence_two_keys(KC_B, KC_G)) {
