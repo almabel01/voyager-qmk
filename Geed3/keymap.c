@@ -36,20 +36,20 @@ enum tap_dance_codes {
   DANCE_3,
 };
 
-#define DUAL_FUNC_0 LT(3, KC_W)
-#define DUAL_FUNC_1 LT(7, KC_F20)
-#define DUAL_FUNC_2 LT(12, KC_F1)
-#define DUAL_FUNC_3 LT(15, KC_F24)
-#define DUAL_FUNC_4 LT(3, KC_F19)
-#define DUAL_FUNC_5 LT(4, KC_F2)
-#define DUAL_FUNC_6 LT(4, KC_S)
-#define DUAL_FUNC_7 LT(4, KC_U)
+#define DUAL_FUNC_0 LT(14, KC_C)
+#define DUAL_FUNC_1 LT(8, KC_B)
+#define DUAL_FUNC_2 LT(7, KC_F23)
+#define DUAL_FUNC_3 LT(3, KC_V)
+#define DUAL_FUNC_4 LT(6, KC_F5)
+#define DUAL_FUNC_5 LT(13, KC_F8)
+#define DUAL_FUNC_6 LT(14, KC_E)
+#define DUAL_FUNC_7 LT(10, KC_2)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
     KC_F5,          KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           HU_0,           MO(8),          
-    LT(5, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(6, KC_P),    KC_B,                                           KC_J,           LT(6, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_BSPC,        
+    LT(5, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(6, KC_P),    KC_B,                                           KC_J,           LT(6, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_DELETE,      
     MT(MOD_LCTL, KC_ESCAPE),LT(3, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(3, KC_O),    MT(MOD_LCTL, KC_ENTER),
     DUAL_FUNC_0,    MT(MOD_RALT, HU_Z),KC_X,           KC_C,           MEH_T(KC_D),    MT(MOD_LALT | MOD_LGUI, KC_V),                                MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    KC_COMMA,       KC_DOT,         MT(MOD_RALT, HU_MINS),DUAL_FUNC_1,    
                                                     LT(4, KC_SPACE),LT(1, KC_TAB),                                  QK_REPEAT_KEY,         LT(2, KC_BSPC)
@@ -131,6 +131,12 @@ const uint16_t PROGMEM combo7[] = { LT(4, KC_SPACE), LT(2, KC_BSPC), COMBO_END};
 const uint16_t PROGMEM combo8[] = { KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM combo9[] = { KC_C, MEH_T(KC_D), COMBO_END};
 const uint16_t PROGMEM combo10[] = { MT(MOD_LALT | MOD_LGUI, KC_V), MEH_T(KC_D), COMBO_END};
+const uint16_t PROGMEM combo11[] = { MT(MOD_LSFT, KC_T), MT(MOD_LGUI, KC_G), COMBO_END};
+const uint16_t PROGMEM combo12[] = { MT(MOD_RGUI, KC_M), MT(MOD_RSFT, KC_N), COMBO_END};
+const uint16_t PROGMEM combo13[] = { MT(MOD_LCTL, KC_ESCAPE), LT(3, KC_A), COMBO_END};
+const uint16_t PROGMEM combo14[] = { LT(3, KC_A), MT(MOD_LALT, KC_R), COMBO_END};
+const uint16_t PROGMEM combo15[] = { MT(MOD_LALT, KC_R), MT(MOD_LCTL, KC_S), COMBO_END};
+const uint16_t PROGMEM combo16[] = { MT(MOD_RCTL, KC_E), MT(MOD_LALT, KC_I), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, CW_TOGG),
@@ -144,6 +150,12 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo8, LCTL(KC_C)),
     COMBO(combo9, LALT(LCTL(LSFT(KC_C)))),
     COMBO(combo10, LCTL(KC_V)),
+    COMBO(combo11, OSL(1)),
+    COMBO(combo12, OSL(2)),
+    COMBO(combo13, OSL(4)),
+    COMBO(combo14, OSL(5)),
+    COMBO(combo15, OSL(6)),
+    COMBO(combo16, OSL(6)),
 };
 
 
