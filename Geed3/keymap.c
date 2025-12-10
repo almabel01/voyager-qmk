@@ -37,16 +37,6 @@ enum tap_dance_codes {
   DANCE_4,
 };
 
-<<<<<<< HEAD
-#define DUAL_FUNC_0 LT(14, KC_C)
-#define DUAL_FUNC_1 LT(8, KC_B)
-#define DUAL_FUNC_2 LT(7, KC_F23)
-#define DUAL_FUNC_3 LT(3, KC_V)
-#define DUAL_FUNC_4 LT(6, KC_F5)
-#define DUAL_FUNC_5 LT(13, KC_F8)
-#define DUAL_FUNC_6 LT(14, KC_E)
-#define DUAL_FUNC_7 LT(10, KC_2)
-=======
 #define DUAL_FUNC_0 LT(3, KC_F11)
 #define DUAL_FUNC_1 LT(6, KC_F6)
 #define DUAL_FUNC_2 LT(2, KC_P)
@@ -55,7 +45,6 @@ enum tap_dance_codes {
 #define DUAL_FUNC_5 LT(12, KC_F1)
 #define DUAL_FUNC_6 LT(6, KC_R)
 #define DUAL_FUNC_7 LT(12, KC_Z)
->>>>>>> 05c749d (✨(oryx): Keyboard layout edited.)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -63,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LT(5, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(6, KC_P),    KC_B,                                           KC_J,           LT(6, KC_L),    KC_U,           HU_Y,           HU_QUOT,        KC_DELETE,      
     MT(MOD_LCTL, KC_ESCAPE),LT(3, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(3, KC_O),    MT(MOD_LCTL, KC_ENTER),
     DUAL_FUNC_0,    MT(MOD_RALT, HU_Z),KC_X,           KC_C,           MEH_T(KC_D),    MT(MOD_LALT | MOD_LGUI, KC_V),                                MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    KC_COMMA,       KC_DOT,         MT(MOD_RALT, HU_MINS),DUAL_FUNC_1,    
-                                                    LT(4, KC_SPACE),LT(1, KC_TAB),                                  KC_F24,         LT(2, KC_BSPC)
+                                                    LT(4, KC_SPACE),LT(1, KC_TAB),                                  QK_REPEAT_KEY,         LT(2, KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
     QK_LLCK,        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          MO(10),         
