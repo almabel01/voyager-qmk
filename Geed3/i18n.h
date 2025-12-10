@@ -49,4 +49,5 @@
 #define HU_AA KC_QUOT
 #define HU_EE KC_SCLN
 #define HU_II KC_NUBS
+#define HU_OO KC_EQL
 #define HU_OEE KC_LBRC
