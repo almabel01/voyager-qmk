@@ -813,7 +813,7 @@ void leader_end_user(void) {
         // Leader, m, g => Mit freundlichen Grüßen
         SEND_STRING("Mit freundlichen Gr");
         wait_ms(50);
-        tap_code16(RALT(HU_UE));
+        tap_code16(HU_UE);
         wait_ms(50);
         tap_code16(HU_SS);
         wait_ms(50);
