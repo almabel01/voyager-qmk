@@ -810,14 +810,14 @@ void leader_end_user(void) {
         SEND_STRING("## Topics\n### \n## Action items");
   // mail
     } else if (leader_sequence_two_keys(KC_M, KC_G)) {
-        // Leader, m, g => Mit frundlichen Grüßen
+        // Leader, m, g => Mit freundlichen Grüßen
         SEND_STRING("Mit freundlichen Gr");
-        wait_ms(10);
+        wait_ms(50);
         tap_code16(RALT(HU_UE));
-        wait_ms(10);
+        wait_ms(50);
         tap_code16(HU_SS);
-        wait_ms(10);
-        SEND_STRING("en,");
+        wait_ms(50);
+        SEND_STRING("en");
     } else if (leader_sequence_two_keys(KC_M, KC_D)) {
         // Leader, m, d => Ctrl+Shift+9 - mark as read and delete
         tap_code16(LCTL(LSFT(KC_9)));
