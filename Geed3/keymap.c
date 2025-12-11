@@ -37,15 +37,15 @@ enum tap_dance_codes {
   DANCE_4,
 };
 
-#define DUAL_FUNC_0 LT(5, KC_Z)
-#define DUAL_FUNC_1 LT(11, KC_F11)
-#define DUAL_FUNC_2 LT(7, KC_Y)
-#define DUAL_FUNC_3 LT(4, KC_B)
-#define DUAL_FUNC_4 LT(13, KC_Q)
-#define DUAL_FUNC_5 LT(5, KC_F)
-#define DUAL_FUNC_6 LT(15, KC_W)
-#define DUAL_FUNC_7 LT(12, KC_T)
-#define DUAL_FUNC_8 LT(8, KC_J)
+#define DUAL_FUNC_0 LT(11, KC_F17)
+#define DUAL_FUNC_1 LT(10, KC_F18)
+#define DUAL_FUNC_2 LT(5, KC_B)
+#define DUAL_FUNC_3 LT(1, KC_A)
+#define DUAL_FUNC_4 LT(13, KC_F1)
+#define DUAL_FUNC_5 LT(13, KC_F9)
+#define DUAL_FUNC_6 LT(7, KC_F13)
+#define DUAL_FUNC_7 LT(4, KC_F7)
+#define DUAL_FUNC_8 LT(1, KC_F3)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -627,9 +627,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DUAL_FUNC_2:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
-          register_code16(LGUI(KC_S));
+          register_code16(RGUI(KC_S));
         } else {
-          unregister_code16(LGUI(KC_S));
+          unregister_code16(RGUI(KC_S));
         }
       } else {
         if (record->event.pressed) {
