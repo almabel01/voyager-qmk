@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_F5,          KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           HU_0,           MO(10),         
     LT(5, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(6, KC_P),    KC_B,                                           KC_J,           LT(6, KC_L),    KC_U,           HU_Y,           DUAL_FUNC_1,    KC_DELETE,      
     MT(MOD_LCTL, KC_ESCAPE),LT(3, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(3, KC_O),    MT(MOD_LCTL, KC_ENTER),
-    DUAL_FUNC_0,    MT(MOD_RALT, HU_Z),KC_X,           KC_C,           MEH_T(KC_D),    MT(MOD_LALT | MOD_LGUI, KC_V),                                MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    KC_COMMA,       LT(9, KC_DOT),  MT(MOD_RALT, HU_MINS),DUAL_FUNC_1,    
+    DUAL_FUNC_0,    MT(MOD_RALT, HU_Z),KC_X,           KC_C,           MEH_T(KC_D),    MT(MOD_LALT | MOD_LGUI, KC_V),                                MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    KC_COMMA,       LT(9, KC_DOT),  MT(MOD_RALT, HU_MINS),MT(MOD_RSFT, LGUI(KC_S)),    
                                                     LT(4, KC_SPACE),LT(1, KC_TAB),                                  QK_REPEAT_KEY,         LT(2, KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
@@ -803,7 +803,10 @@ void leader_end_user(void) {
   // mail
     } else if (leader_sequence_two_keys(KC_M, KC_G)) {
         // Leader, m, g => Mit frundlichen Grüßen
-        SEND_STRING("Mit freundlichen Grüßen");
+        SEND_STRING("Mit freundlichen Gr");
+        tap_code16(RALT(HU_UE));
+        tap_code16(HU_SS);
+        SEND_STRING("en,");
     } else if (leader_sequence_two_keys(KC_M, KC_D)) {
         // Leader, m, d => Ctrl+Shift+9 - mark as read and delete
         tap_code16(LCTL(LSFT(KC_9)));
