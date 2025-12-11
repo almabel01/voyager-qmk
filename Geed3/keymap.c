@@ -34,15 +34,15 @@ enum tap_dance_codes {
   DANCE_4,
 };
 
-#define DUAL_FUNC_0 LT(2, KC_F13)
-#define DUAL_FUNC_1 LT(15, KC_F12)
-#define DUAL_FUNC_2 LT(6, KC_B)
-#define DUAL_FUNC_3 LT(12, KC_3)
-#define DUAL_FUNC_4 LT(1, KC_H)
-#define DUAL_FUNC_5 LT(10, KC_7)
-#define DUAL_FUNC_6 LT(6, KC_F14)
-#define DUAL_FUNC_7 LT(12, KC_9)
-#define DUAL_FUNC_8 LT(10, KC_F15)
+#define DUAL_FUNC_0 LT(14, KC_Y)
+#define DUAL_FUNC_1 LT(3, KC_L)
+#define DUAL_FUNC_2 LT(5, KC_Y)
+#define DUAL_FUNC_3 LT(2, KC_W)
+#define DUAL_FUNC_4 LT(9, KC_F1)
+#define DUAL_FUNC_5 LT(15, KC_F17)
+#define DUAL_FUNC_6 LT(3, KC_F9)
+#define DUAL_FUNC_7 LT(9, KC_W)
+#define DUAL_FUNC_8 LT(12, KC_X)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [5] = LAYOUT_voyager(
     QK_LLCK,        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          MO(11),         
-    KC_TRANSPARENT, KC_NO,          DM_PLY1,        DM_PLY2,        KC_NO,          KC_NO,                                          LCTL(LSFT(HU_Z)),KC_PC_PASTE,    KC_PC_COPY,     KC_PC_CUT,      KC_PC_UNDO,     KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_NO,          DM_PLY1,        DM_PLY2,        KC_NO,          KC_NO,                                          LCTL(LSFT(HU_Z)),KC_PC_PASTE,    KC_PC_COPY,     LCTL(KC_X),     LCTL(KC_Z),     KC_TRANSPARENT, 
     KC_TRANSPARENT, LT(6, KC_ENTER),OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  OSM(MOD_LGUI),                                  KC_CAPS,        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       KC_TRANSPARENT, 
     KC_TRANSPARENT, OSM(MOD_RALT),  KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          ST_MACRO_1,     KC_HOME,        KC_PGDN,        KC_PAGE_UP,     KC_END,         KC_TRANSPARENT, 
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_F23,         KC_DELETE
