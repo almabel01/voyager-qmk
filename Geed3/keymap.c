@@ -801,6 +801,9 @@ void leader_end_user(void) {
         // Leader, temp => meeting template
         SEND_STRING("## Topics\n### \n## Action items");
   // mail
+    } else if (leader_sequence_two_keys(KC_M, KC_G)) {
+        // Leader, m, g => Mit frundlichen Grüßen
+        SEND_STRING("Mit freundlichen Grüßen");
     } else if (leader_sequence_two_keys(KC_M, KC_D)) {
         // Leader, m, d => Ctrl+Shift+9 - mark as read and delete
         tap_code16(LCTL(LSFT(KC_9)));
