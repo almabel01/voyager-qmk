@@ -811,10 +811,9 @@ void leader_end_user(void) {
   // mail
     } else if (leader_sequence_two_keys(KC_M, KC_G)) {
         // Leader, m, g => Mit frundlichen Grüßen
-        SEND_STRING("Mit freundlichen Gr");
-        tap_code16(RALT(HU_UE));
+        SEND_STRING("Mit freundlichen Gr"SS_DELAY(10)SS_RALT(SS_TAP(X_UE))SS_DELAY(10));
         tap_code16(HU_SS);
-        SEND_STRING("en,");
+        SEND_STRING(SS_DELAY(10)"en,");
     } else if (leader_sequence_two_keys(KC_M, KC_D)) {
         // Leader, m, d => Ctrl+Shift+9 - mark as read and delete
         tap_code16(LCTL(LSFT(KC_9)));
