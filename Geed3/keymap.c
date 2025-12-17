@@ -22,15 +22,15 @@ enum tap_dance_codes {
   DANCE_2,
 };
 
-#define DUAL_FUNC_0 LT(3, KC_3)
-#define DUAL_FUNC_1 LT(3, KC_F2)
-#define DUAL_FUNC_2 LT(11, KC_6)
-#define DUAL_FUNC_3 LT(14, KC_F21)
-#define DUAL_FUNC_4 LT(15, KC_F1)
-#define DUAL_FUNC_5 LT(12, KC_F9)
-#define DUAL_FUNC_6 LT(11, KC_F9)
-#define DUAL_FUNC_7 LT(10, KC_F9)
-#define DUAL_FUNC_8 LT(5, KC_F4)
+#define DUAL_FUNC_0 LT(2, KC_Y)
+#define DUAL_FUNC_1 LT(14, KC_F20)
+#define DUAL_FUNC_2 LT(12, KC_O)
+#define DUAL_FUNC_3 LT(10, KC_F11)
+#define DUAL_FUNC_4 LT(8, KC_9)
+#define DUAL_FUNC_5 LT(15, KC_K)
+#define DUAL_FUNC_6 LT(3, KC_N)
+#define DUAL_FUNC_7 LT(5, KC_F18)
+#define DUAL_FUNC_8 LT(9, KC_V)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LT(5, KC_TAB),  KC_Q,           KC_W,           KC_F,           LT(6, KC_P),    KC_B,                                           KC_J,           LT(6, KC_L),    KC_U,           HU_Y,           DUAL_FUNC_1,    KC_DELETE,      
     MT(MOD_LCTL, KC_ESCAPE),LT(3, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(3, KC_O),    MT(MOD_LCTL, KC_ENTER),
     DUAL_FUNC_0,    MT(MOD_RALT, HU_Z),KC_X,           KC_C,           MEH_T(KC_D),    MT(MOD_LALT | MOD_LGUI, KC_V),                                MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    KC_COMMA,       KC_DOT,         MT(MOD_RALT, HU_MINS),DUAL_FUNC_2,    
-                                                    LT(4, KC_SPACE),LT(3, KC_TAB),                                  KC_F24,         LT(1, KC_BSPC)
+                                                    LT(4, KC_SPACE),OSM(MOD_LSFT),                                  KC_F24,         LT(1, KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_NO,          QK_DYNAMIC_TAPPING_TERM_PRINT,QK_DYNAMIC_TAPPING_TERM_DOWN,QK_DYNAMIC_TAPPING_TERM_UP,KC_NO,                                          KC_MEDIA_PREV_TRACK,KC_MEDIA_STOP,  KC_MEDIA_PLAY_PAUSE,KC_MEDIA_NEXT_TRACK,KC_NO,          TO(0),          
