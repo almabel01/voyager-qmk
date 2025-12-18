@@ -636,6 +636,8 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_M, KC_T)) {
         // Leader, temp => meeting template
         SEND_STRING("## Topics\n### \n## Action items");
+    } else if (leader_sequence_two_keys(KC_H, KC_D)) {
+        SEND_STRING("HDEWP-");
   // mail
     } else if (leader_sequence_two_keys(KC_M, KC_G)) {
         // Leader, m, g => Mit freundlichen Grüßen
