@@ -25,15 +25,15 @@ enum tap_dance_codes {
   DANCE_2,
 };
 
-#define DUAL_FUNC_0 LT(4, KC_F23)
-#define DUAL_FUNC_1 LT(6, KC_C)
-#define DUAL_FUNC_2 LT(10, KC_F5)
-#define DUAL_FUNC_3 LT(8, KC_J)
-#define DUAL_FUNC_4 LT(15, KC_F18)
-#define DUAL_FUNC_5 LT(8, KC_2)
-#define DUAL_FUNC_6 LT(14, KC_U)
-#define DUAL_FUNC_7 LT(10, KC_F16)
-#define DUAL_FUNC_8 LT(15, KC_F21)
+#define DUAL_FUNC_0 LT(5, KC_6)
+#define DUAL_FUNC_1 LT(6, KC_F)
+#define DUAL_FUNC_2 LT(11, KC_2)
+#define DUAL_FUNC_3 LT(7, KC_Y)
+#define DUAL_FUNC_4 LT(10, KC_P)
+#define DUAL_FUNC_5 LT(4, KC_F8)
+#define DUAL_FUNC_6 LT(15, KC_F2)
+#define DUAL_FUNC_7 LT(11, KC_F23)
+#define DUAL_FUNC_8 LT(6, KC_6)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -115,9 +115,8 @@ const uint16_t PROGMEM combo2[] = { LT(7, KC_L), KC_U, COMBO_END};
 const uint16_t PROGMEM combo3[] = { MT(MOD_RCTL, KC_E), MT(MOD_LCTL, KC_S), COMBO_END};
 const uint16_t PROGMEM combo4[] = { KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM combo5[] = { MT(MOD_LALT, KC_I), MT(MOD_LALT, KC_R), COMBO_END};
-const uint16_t PROGMEM combo6[] = { KC_C, MEH_T(KC_D), COMBO_END};
-const uint16_t PROGMEM combo7[] = { KC_U, HU_Y, COMBO_END};
-const uint16_t PROGMEM combo8[] = { LT(1, KC_SPACE), LT(5, KC_SPACE), COMBO_END};
+const uint16_t PROGMEM combo6[] = { KC_U, HU_Y, COMBO_END};
+const uint16_t PROGMEM combo7[] = { LT(1, KC_SPACE), LT(5, KC_SPACE), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, CW_TOGG),
@@ -126,9 +125,8 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo3, KC_F24),
     COMBO(combo4, KC_TAB),
     COMBO(combo5, KC_ENTER),
-    COMBO(combo6, LALT(LCTL(LSFT(KC_C)))),
-    COMBO(combo7, OSL(8)),
-    COMBO(combo8, KC_ENTER),
+    COMBO(combo6, OSL(8)),
+    COMBO(combo7, KC_ENTER),
 };
 
 
