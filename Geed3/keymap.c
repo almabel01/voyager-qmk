@@ -28,15 +28,15 @@ enum tap_dance_codes {
   DANCE_2,
 };
 
-#define DUAL_FUNC_0 LT(13, KC_F5)
-#define DUAL_FUNC_1 LT(15, KC_F15)
-#define DUAL_FUNC_2 LT(3, KC_F5)
-#define DUAL_FUNC_3 LT(7, KC_F18)
-#define DUAL_FUNC_4 LT(7, KC_F5)
-#define DUAL_FUNC_5 LT(11, KC_O)
-#define DUAL_FUNC_6 LT(15, KC_7)
-#define DUAL_FUNC_7 LT(8, KC_F21)
-#define DUAL_FUNC_8 LT(12, KC_4)
+#define DUAL_FUNC_0 LT(4, KC_F23)
+#define DUAL_FUNC_1 LT(6, KC_C)
+#define DUAL_FUNC_2 LT(10, KC_F5)
+#define DUAL_FUNC_3 LT(8, KC_J)
+#define DUAL_FUNC_4 LT(15, KC_F18)
+#define DUAL_FUNC_5 LT(8, KC_2)
+#define DUAL_FUNC_6 LT(14, KC_U)
+#define DUAL_FUNC_7 LT(10, KC_F16)
+#define DUAL_FUNC_8 LT(15, KC_F21)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -44,11 +44,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     DUAL_FUNC_0,    KC_Q,           KC_W,           KC_F,           LT(7, KC_P),    KC_B,                                           KC_J,           LT(7, KC_L),    KC_U,           HU_Y,           DUAL_FUNC_2,    RALT(HU_OE),    
     MEH_T(KC_ESCAPE),LT(3, KC_A),    MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_M),MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_LALT, KC_I),LT(3, KC_O),    RALT(HU_UE),    
     DUAL_FUNC_1,    MT(MOD_RALT, HU_Z),KC_X,           KC_C,           MEH_T(KC_D),    MT(MOD_LALT | MOD_LGUI, KC_V),                                MT(MOD_LALT | MOD_LGUI, KC_K),MEH_T(KC_H),    KC_COMMA,       KC_DOT,         MT(MOD_RALT, HU_MINS),RGUI(KC_S),     
-                                                    LT(5, KC_SPACE),OSM(MOD_LSFT),                                  OSM(MOD_RSFT),  LT(1, KC_BSPC)
+                                                    LT(5, KC_SPACE),OSM(MOD_LSFT),                                  OSM(MOD_RSFT),  LT(1, KC_SPACE)
   ),
   [1] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_NO,          QK_DYNAMIC_TAPPING_TERM_PRINT,QK_DYNAMIC_TAPPING_TERM_DOWN,QK_DYNAMIC_TAPPING_TERM_UP,KC_NO,                                          KC_MEDIA_PREV_TRACK,KC_MEDIA_STOP,  KC_MEDIA_PLAY_PAUSE,KC_MEDIA_NEXT_TRACK,KC_NO,          TO(0),          
-    KC_NO,          KC_KP_MINUS,    KC_7,           KC_8,           KC_9,           TD(DANCE_0),                                    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_KP_MINUS,    KC_NO,          
+    KC_NO,          KC_KP_MINUS,    KC_7,           KC_8,           KC_9,           TD(DANCE_0),                                    KC_NO,          KC_BSPC,        KC_NO,          KC_DELETE,      KC_KP_MINUS,    KC_NO,          
     KC_NO,          KC_KP_PLUS,     KC_4,           KC_5,           KC_6,           KC_KP_ASTERISK,                                 OSM(MOD_LGUI),  OSM(MOD_LSFT),  OSM(MOD_LCTL),  OSM(MOD_LALT),  LSFT(KC_G),     KC_NO,          
     KC_NO,          KC_KP_EQUAL,    KC_1,           KC_2,           KC_3,           KC_KP_ENTER,                                    LALT(KC_LEFT_GUI),OSM(MOD_MEH),   OSL(2),         TD(DANCE_1),    OSM(MOD_RALT),  KC_NO,          
                                                     HU_0,           LSFT(KC_ENTER),                                 KC_TRANSPARENT, KC_TRANSPARENT
@@ -120,7 +120,7 @@ const uint16_t PROGMEM combo4[] = { KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM combo5[] = { MT(MOD_LALT, KC_I), MT(MOD_LALT, KC_R), COMBO_END};
 const uint16_t PROGMEM combo6[] = { KC_C, MEH_T(KC_D), COMBO_END};
 const uint16_t PROGMEM combo7[] = { KC_U, HU_Y, COMBO_END};
-const uint16_t PROGMEM combo8[] = { LT(1, KC_BSPC), LT(5, KC_SPACE), COMBO_END};
+const uint16_t PROGMEM combo8[] = { LT(1, KC_SPACE), LT(5, KC_SPACE), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, CW_TOGG),
@@ -158,7 +158,7 @@ void keyboard_post_init_user(void) {
 const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [0] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {131,65,234}, {131,65,234}, {131,65,234}, {131,65,234}, {0,0,255}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {189,218,204}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,255}, {131,65,234}, {131,65,234}, {131,65,234}, {131,65,234}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,255}, {0,0,255} },
 
-    [1] = { {0,0,0}, {0,0,0}, {0,0,255}, {31,245,245}, {31,245,245}, {0,0,0}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {192,218,204}, {0,0,0}, {131,255,255}, {131,255,255}, {131,255,255}, {131,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {2,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
+    [1] = { {0,0,0}, {0,0,0}, {0,0,255}, {31,245,245}, {31,245,245}, {0,0,0}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {0,0,0}, {0,0,255}, {192,218,204}, {192,218,204}, {192,218,204}, {0,0,255}, {192,218,204}, {0,0,0}, {131,255,255}, {131,255,255}, {131,255,255}, {131,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {2,218,204}, {0,0,0}, {2,218,204}, {0,0,255}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {2,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
 
     [2] = { {43,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {0,0,0}, {2,218,204}, {2,218,204}, {2,218,204}, {2,218,204}, {131,255,255}, {0,0,0}, {2,218,204}, {2,218,204}, {2,218,204}, {0,0,0}, {192,218,204}, {0,0,0}, {2,218,204}, {2,218,204}, {2,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {31,245,245}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
 
