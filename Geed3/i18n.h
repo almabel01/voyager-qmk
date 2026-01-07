@@ -20,6 +20,7 @@
 #define HU_AMPR ALGR(KC_C)
 #define HU_TILD ALGR(KC_1)
 #define HU_PLUS S(KC_3)
+#define HU_EURO ALGR(KC_U)
 #define HU_PERC S(KC_5)
 #define HU_CIRC ALGR(KC_3)
 #define HU_LCBR ALGR(KC_B)
