@@ -39,10 +39,3 @@
 #define KC_PC_PASTE LCTL(KC_V)
 #define KC_PC_CUT LCTL(KC_X)
 #define KC_PC_UNDO LCTL(KC_Z)
-#define HU_UU KC_RBRC
-#define HU_UEE KC_NUHS
-#define HU_AA KC_QUOT
-#define HU_EE KC_SCLN
-#define HU_II KC_NUBS
-#define HU_OO KC_EQL
-#define HU_OEE KC_LBRC
