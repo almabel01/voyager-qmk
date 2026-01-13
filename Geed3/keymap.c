@@ -633,7 +633,7 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_B, KC_G)) {
         // Leader, b, g => BG
         SEND_STRING(SS_LSFT("B")SS_DELAY(10)  SS_LSFT("G")SS_DELAY(10)  SS_TAP(X_ENTER)SS_DELAY(10)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(10)  "b" SS_DELAY(10)  "e" SS_DELAY(10)  SS_TAP(X_L));
-    } else if (leader_sequence_three_keys(KC_B, KC_R)) {
+    } else if (leader_sequence_two_keys(KC_B, KC_R)) {
         // Leader, b, r => Best regards,
       SEND_STRING("Best regards,");
     } else if (leader_sequence_two_keys(KC_M, KC_S)) {
