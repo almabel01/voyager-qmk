@@ -628,12 +628,13 @@ void leader_end_user(void) {
         // Leader, m, m => mark flag done and move mail
         tap_code16(LCTL(LSFT(KC_6)));
     } else if (leader_sequence_two_keys(KC_B, KC_B)) {
-        // Leader, b, r => BR, 
+        // Leader, b, b => BR, 
         SEND_STRING(SS_LSFT("B")SS_DELAY(10)  SS_LSFT("R")SS_DELAY(10)  SS_TAP(X_COMMA)SS_DELAY(10)  SS_TAP(X_ENTER)SS_DELAY(10)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(10)  "b" SS_DELAY(10)  "e" SS_DELAY(10)  SS_TAP(X_L));
     } else if (leader_sequence_two_keys(KC_B, KC_G)) {
         // Leader, b, g => BG
         SEND_STRING(SS_LSFT("B")SS_DELAY(10)  SS_LSFT("G")SS_DELAY(10)  SS_TAP(X_ENTER)SS_DELAY(10)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(10)  "b" SS_DELAY(10)  "e" SS_DELAY(10)  SS_TAP(X_L));
-    } else if (leader_sequence_three_keys(KC_M, KC_F, KC_B)) {
+    } else if (leader_sequence_three_keys(KC_B, KC_R)) {
+        // Leader, b, r => Best regards,
       SEND_STRING("Best regards,");
     } else if (leader_sequence_two_keys(KC_M, KC_S)) {
         // Leader, m, s => Sehr geehrte Damen und Herren,
@@ -721,5 +722,4 @@ const key_override_t *key_overrides[] = {
 	&delete_key_override,
 	&delete_key_override_lt,
 	NULL
-  // connent here for merging
 };
