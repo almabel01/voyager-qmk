@@ -385,11 +385,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_0:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(HU_GRV));
+      tap_code16(HU_GRV);
       wait_ms(50);
-      SEND_STRING(SS_TAP(HU_GRV));
+      tap_code16(HU_GRV);
       wait_ms(50);
-      SEND_STRING(SS_TAP(HU_GRV));
+      tap_code16(HU_GRV);
     }
     break;
     case ST_MACRO_1:
