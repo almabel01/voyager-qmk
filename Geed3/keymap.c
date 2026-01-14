@@ -386,9 +386,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_0:
     if (record->event.pressed) {
       tap_code16(HU_GRV);
-      wait_ms(50);
+      wait_ms(30);
       tap_code16(HU_GRV);
-      wait_ms(50);
+      wait_ms(30);
       tap_code16(HU_GRV);
     }
     break;
