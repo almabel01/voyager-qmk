@@ -31,13 +31,13 @@ enum tap_dance_codes {
   DANCE_9,
 };
 
-#define DUAL_FUNC_0 LT(4, KC_F6)
-#define DUAL_FUNC_1 LT(9, KC_E)
-#define DUAL_FUNC_2 LT(13, KC_E)
-#define DUAL_FUNC_3 LT(15, KC_F15)
-#define DUAL_FUNC_4 LT(5, KC_4)
-#define DUAL_FUNC_5 LT(10, KC_3)
-#define DUAL_FUNC_6 LT(14, KC_Q)
+#define DUAL_FUNC_0 LT(13, KC_6)
+#define DUAL_FUNC_1 LT(4, KC_N)
+#define DUAL_FUNC_2 LT(6, KC_Q)
+#define DUAL_FUNC_3 LT(8, KC_F23)
+#define DUAL_FUNC_4 LT(8, KC_F22)
+#define DUAL_FUNC_5 LT(14, KC_A)
+#define DUAL_FUNC_6 LT(15, KC_H)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -63,9 +63,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [3] = LAYOUT_voyager(
     QK_LLCK,        DM_RSTP,        DM_REC1,        DM_REC2,        KC_NO,          KC_NO,                                          KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  LCTL(LSFT(KC_M)),KC_AUDIO_VOL_UP,KC_NO,          TO(0),          
-    KC_NO,          KC_F5,          DM_PLY1,        DM_PLY2,        ST_MACRO_2,     ST_MACRO_3,                                     KC_PAGE_UP,     TD(DANCE_7),    KC_UP,          TD(DANCE_8),    KC_APPLICATION, LGUI(LSFT(KC_S)),
+    KC_NO,          KC_NO,          DM_PLY1,        DM_PLY2,        ST_MACRO_2,     ST_MACRO_3,                                     KC_PAGE_UP,     TD(DANCE_7),    KC_UP,          TD(DANCE_8),    KC_APPLICATION, LGUI(LSFT(KC_S)),
     KC_TRANSPARENT, OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  ST_MACRO_4,                                     KC_PGDN,        DUAL_FUNC_5,    KC_DOWN,        DUAL_FUNC_6,    KC_CAPS,        LSFT(KC_PSCR),  
-    MO(4),          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     LALT(LCTL(LSFT(KC_C))),KC_PC_PASTE,                                    KC_NO,          KC_PC_PASTE,    KC_TAB,         KC_PC_COPY,     KC_NO,          KC_MS_JIGGLER_TOGGLE,
+    MO(4),          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     LALT(LCTL(LSFT(KC_C))),KC_PC_PASTE,                                    LCTL(KC_F),     KC_PC_PASTE,    KC_TAB,         KC_PC_COPY,     LCTL(LSFT(KC_P)),KC_MS_JIGGLER_TOGGLE,
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_ENTER,       LCTL(KC_BSPC)
   ),
   [4] = LAYOUT_voyager(
