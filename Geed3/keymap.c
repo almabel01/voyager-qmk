@@ -34,13 +34,13 @@ enum tap_dance_codes {
   DANCE_9,
 };
 
-#define DUAL_FUNC_0 LT(6, KC_7)
-#define DUAL_FUNC_1 LT(9, KC_X)
-#define DUAL_FUNC_2 LT(4, KC_F15)
-#define DUAL_FUNC_3 LT(1, KC_F19)
-#define DUAL_FUNC_4 LT(14, KC_T)
-#define DUAL_FUNC_5 LT(6, KC_2)
-#define DUAL_FUNC_6 LT(11, KC_H)
+#define DUAL_FUNC_0 LT(4, KC_F6)
+#define DUAL_FUNC_1 LT(9, KC_E)
+#define DUAL_FUNC_2 LT(13, KC_E)
+#define DUAL_FUNC_3 LT(15, KC_F15)
+#define DUAL_FUNC_4 LT(5, KC_4)
+#define DUAL_FUNC_5 LT(10, KC_3)
+#define DUAL_FUNC_6 LT(14, KC_Q)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -363,30 +363,30 @@ void dance_4_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_4(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_KP_EQUAL);
-        tap_code16(KC_KP_EQUAL);
-        tap_code16(KC_KP_EQUAL);
+        tap_code16(HU_EQL);
+        tap_code16(HU_EQL);
+        tap_code16(HU_EQL);
     }
     if(state->count > 3) {
-        tap_code16(KC_KP_EQUAL);
+        tap_code16(HU_EQL);
     }
 }
 
 void dance_4_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[4].step = dance_step(state);
     switch (dance_state[4].step) {
-        case SINGLE_TAP: register_code16(KC_KP_EQUAL); break;
+        case SINGLE_TAP: register_code16(HU_EQL); break;
         case DOUBLE_TAP: register_code16(KC_DOT); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_KP_EQUAL); register_code16(KC_KP_EQUAL);
+        case DOUBLE_SINGLE_TAP: tap_code16(HU_EQL); register_code16(HU_EQL);
     }
 }
 
 void dance_4_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[4].step) {
-        case SINGLE_TAP: unregister_code16(KC_KP_EQUAL); break;
+        case SINGLE_TAP: unregister_code16(HU_EQL); break;
         case DOUBLE_TAP: unregister_code16(KC_DOT); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_KP_EQUAL); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(HU_EQL); break;
     }
     dance_state[4].step = 0;
 }
