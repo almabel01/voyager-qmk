@@ -37,13 +37,12 @@ enum tap_dance_codes {
   DANCE_12,
 };
 
-#define DUAL_FUNC_0 LT(4, KC_F13)
-#define DUAL_FUNC_1 LT(13, KC_K)
-#define DUAL_FUNC_2 LT(15, KC_Q)
-#define DUAL_FUNC_3 LT(7, KC_P)
-#define DUAL_FUNC_4 LT(15, KC_F19)
-#define DUAL_FUNC_5 LT(8, KC_F2)
-#define DUAL_FUNC_6 LT(14, KC_F4)
+#define DUAL_FUNC_0 LT(7, KC_5)
+#define DUAL_FUNC_1 LT(8, KC_G)
+#define DUAL_FUNC_2 LT(13, KC_D)
+#define DUAL_FUNC_3 LT(8, KC_H)
+#define DUAL_FUNC_4 LT(12, KC_0)
+#define DUAL_FUNC_5 LT(5, KC_6)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -69,9 +68,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [3] = LAYOUT_voyager(
     QK_LLCK,        DM_RSTP,        DM_REC1,        DM_REC2,        KC_NO,          KC_MS_JIGGLER_TOGGLE,                                KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  LCTL(LSFT(KC_M)),KC_AUDIO_VOL_UP,KC_NO,          TO(0),          
-    KC_NO,          KC_NO,          DM_PLY1,        DM_PLY2,        ST_MACRO_2,     ST_MACRO_3,                                     KC_PAGE_UP,     TD(DANCE_10),   KC_UP,          TD(DANCE_11),   KC_APPLICATION, LGUI(LSFT(KC_S)),
-    KC_ENTER,       OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  ST_MACRO_4,                                     KC_PGDN,        DUAL_FUNC_5,    KC_DOWN,        DUAL_FUNC_6,    KC_CAPS,        LSFT(KC_PSCR),  
-    MO(4),          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     LALT(LCTL(LSFT(KC_C))),KC_PC_PASTE,                                    LCTL(KC_F),     KC_PC_PASTE,    KC_TAB,         KC_PC_COPY,     LCTL(LSFT(KC_P)),KC_MS_JIGGLER_TOGGLE,
+    KC_NO,          LCTL(KC_A),     DM_PLY1,        DM_PLY2,        ST_MACRO_2,     ST_MACRO_3,                                     KC_PAGE_UP,     TD(DANCE_10),   KC_UP,          TD(DANCE_11),   KC_APPLICATION, LGUI(LSFT(KC_S)),
+    KC_ENTER,       OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  ST_MACRO_4,                                     KC_PGDN,        KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_CAPS,        LSFT(KC_PSCR),  
+    MO(4),          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     LALT(LCTL(LSFT(KC_C))),KC_PC_PASTE,                                    LCTL(KC_F),     KC_PC_PASTE,    DUAL_FUNC_5,    KC_PC_COPY,     LCTL(LSFT(KC_P)),KC_MS_JIGGLER_TOGGLE,
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, LCTL(KC_BSPC)
   ),
   [4] = LAYOUT_voyager(
@@ -809,30 +808,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DUAL_FUNC_5:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
-          register_code16(KC_LEFT);
+          register_code16(KC_TAB);
         } else {
-          unregister_code16(KC_LEFT);
+          unregister_code16(KC_TAB);
         }
       } else {
         if (record->event.pressed) {
-          register_code16(LCTL(KC_LEFT));
+          register_code16(LCTL(KC_A));
         } else {
-          unregister_code16(LCTL(KC_LEFT));
-        }  
-      }  
-      return false;
-    case DUAL_FUNC_6:
-      if (record->tap.count > 0) {
-        if (record->event.pressed) {
-          register_code16(KC_RIGHT);
-        } else {
-          unregister_code16(KC_RIGHT);
-        }
-      } else {
-        if (record->event.pressed) {
-          register_code16(LCTL(KC_RIGHT));
-        } else {
-          unregister_code16(LCTL(KC_RIGHT));
+          unregister_code16(LCTL(KC_A));
         }  
       }  
       return false;
