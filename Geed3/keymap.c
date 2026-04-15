@@ -34,12 +34,12 @@ enum tap_dance_codes {
   DANCE_9,
 };
 
-#define DUAL_FUNC_0 LT(7, KC_6)
-#define DUAL_FUNC_1 LT(7, KC_P)
-#define DUAL_FUNC_2 LT(12, KC_F7)
-#define DUAL_FUNC_3 LT(14, KC_F19)
-#define DUAL_FUNC_4 LT(5, KC_Y)
-#define DUAL_FUNC_5 LT(5, KC_F9)
+#define DUAL_FUNC_0 LT(4, KC_9)
+#define DUAL_FUNC_1 LT(4, KC_F8)
+#define DUAL_FUNC_2 LT(12, KC_R)
+#define DUAL_FUNC_3 LT(7, KC_B)
+#define DUAL_FUNC_4 LT(10, KC_P)
+#define DUAL_FUNC_5 LT(5, KC_L)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_F11,         KC_F12,         KC_F13,         KC_F14,         KC_F15,                                         KC_F16,         KC_F17,         KC_F18,         KC_F19,         KC_F20,         TO(0),          
     QK_DYNAMIC_TAPPING_TERM_PRINT,KC_KP_MINUS,    KC_7,           KC_8,           KC_9,           TD(DANCE_3),                                    RGB_VAI,        KC_F7,          KC_F8,          KC_F9,          KC_F10,         RGB_TOG,        
     QK_DYNAMIC_TAPPING_TERM_UP,MT(MOD_LGUI, KC_KP_PLUS),MT(MOD_LALT, KC_4),MT(MOD_LCTL, KC_5),MT(MOD_LSFT, KC_6),KC_KP_ASTERISK,                                 LSFT(KC_G),     MT(MOD_RSFT, KC_F4),MT(MOD_RCTL, KC_F5),MT(MOD_LALT, KC_F6),OSM(MOD_LGUI),  TOGGLE_LAYER_COLOR,
-    QK_DYNAMIC_TAPPING_TERM_DOWN,TD(DANCE_4),    KC_1,           KC_2,           KC_3,           TD(DANCE_5),                                    RGB_VAD,        KC_F1,          LT(5, KC_F2),   KC_F3,          OSM(MOD_RALT),  RGB_MODE_FORWARD,
+    QK_DYNAMIC_TAPPING_TERM_DOWN,TD(DANCE_4),    KC_1,           KC_2,           KC_3,           TD(DANCE_5),                                    RGB_VAD,        KC_F1,          KC_F2,          KC_F3,          OSM(MOD_RALT),  RGB_MODE_FORWARD,
                                                     HU_0,           TD(DANCE_6),                                    KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [2] = LAYOUT_voyager(
@@ -76,13 +76,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,          OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  ST_MACRO_5,                                     KC_MS_WH_DOWN,  KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    KC_CAPS,        LSFT(KC_PSCR),  
     KC_NO,          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     LALT(LCTL(LSFT(KC_C))),KC_PC_PASTE,                                    KC_MS_BTN3,     KC_PC_PASTE,    KC_TAB,         KC_PC_COPY,     KC_MS_BTN3,     KC_MS_JIGGLER_TOGGLE,
                                                     KC_MS_BTN1,     KC_MS_BTN2,                                     KC_MS_BTN1,     KC_MS_BTN2
-  ),
-  [5] = LAYOUT_voyager(
-    QK_LLCK,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TO(0),          
-    KC_NO,          KC_NO,          KC_HOME,        KC_UP,          KC_PAGE_UP,     KC_INSERT,                                      KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_KP_DOT,      KC_LEFT,        KC_NO,          KC_RIGHT,       KC_DELETE,                                      OSM(MOD_LGUI),  OSM(MOD_LSFT),  OSM(MOD_LCTL),  OSM(MOD_LALT),  KC_ENTER,       KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_DOT,         KC_END,         KC_DOWN,        KC_PGDN,        KC_COMMA,                                       LGUI(KC_LEFT_ALT),OSM(MOD_MEH),   KC_NO,          KC_NO,          OSM(MOD_RALT),  KC_NO,          
-                                                    KC_ENTER,       KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
 
@@ -140,8 +133,6 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
     [4] = { {43,255,255}, {0,0,0}, {0,0,157}, {0,0,157}, {0,0,157}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {31,218,204}, {31,218,204}, {0,0,0}, {31,218,204}, {31,218,204}, {31,218,204}, {0,0,0}, {0,0,0}, {31,245,245}, {31,245,245}, {43,255,255}, {31,245,245}, {0,0,0}, {0,0,255}, {31,245,245}, {43,255,255}, {43,255,255}, {43,255,255}, {0,0,0}, {0,0,255}, {31,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {31,218,204}, {0,0,0}, {31,218,204}, {31,218,204} },
 
-    [5] = { {43,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {192,240,161}, {192,240,161}, {192,240,161}, {0,0,255}, {0,0,0}, {0,0,255}, {192,240,161}, {0,0,0}, {192,240,161}, {0,0,255}, {0,0,0}, {0,0,0}, {192,240,161}, {192,240,161}, {192,240,161}, {0,0,0}, {192,240,161}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
-
 };
 
 void set_layer_color(int layer) {
@@ -180,9 +171,6 @@ bool rgb_matrix_indicators_user(void) {
         break;
       case 4:
         set_layer_color(4);
-        break;
-      case 5:
-        set_layer_color(5);
         break;
      default:
         if (rgb_matrix_get_flags() == LED_FLAG_NONE) {
