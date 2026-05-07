@@ -765,7 +765,7 @@ void leader_end_user(void) {
         tap_code16(HU_RBRC);
         tap_code16(KC_LEFT);
     } else if (leader_sequence_two_keys(KC_M, KC_T)) {
-        // Leader, temp => meeting template
+        // Leader, mt => meeting template
         SEND_STRING("## Topics\n### \n## Action items");
     } else if (leader_sequence_two_keys(KC_H, KC_D)) {
         SEND_STRING("HDEWP-");
@@ -779,18 +779,6 @@ void leader_end_user(void) {
         tap_code16(HU_SS);
         wait_ms(50);
         SEND_STRING("en");
-    } else if (leader_sequence_two_keys(KC_M, KC_D)) {
-        // Leader, m, d => Ctrl+Shift+9 - mark as read and delete
-        tap_code16(LCTL(LSFT(KC_9)));
-    } else if (leader_sequence_two_keys(KC_M, KC_F)) {
-        // Leader, m, f => Ctrl+Shift+7 mark as read and flag with no date
-        tap_code16(LCTL(LSFT(KC_7)));
-    } else if (leader_sequence_two_keys(KC_M, KC_L)) {
-        // Leader, m, s => Ctrl+Shift+8 - assign label
-        tap_code16(LCTL(LSFT(KC_8)));
-    } else if (leader_sequence_two_keys(KC_M, KC_M)) {
-        // Leader, m, m => mark flag done and move mail
-        tap_code16(LCTL(LSFT(KC_6)));
     } else if (leader_sequence_two_keys(KC_B, KC_B)) {
         // Leader, b, b => BR, 
         SEND_STRING(SS_LSFT("B")SS_DELAY(10)  SS_LSFT("R")SS_DELAY(10)  SS_TAP(X_COMMA)SS_DELAY(10)  SS_TAP(X_ENTER)SS_DELAY(10)  SS_RALT(SS_TAP(X_9)) SS_LSFT("A")SS_DELAY(10)  "b" SS_DELAY(10)  "e" SS_DELAY(10)  SS_TAP(X_L));
@@ -803,21 +791,6 @@ void leader_end_user(void) {
     } else if (leader_sequence_two_keys(KC_M, KC_S)) {
         // Leader, m, s => Sehr geehrte Damen und Herren,
       SEND_STRING("Sehr geehrte Damen und Herren,");
-    } else if (leader_sequence_three_keys(KC_M, KC_S, KC_E)) {
-        // Leader, m, s, e => Sehr geehrte Frau
-      SEND_STRING("Sehr geehrte Frau");
-    } else if (leader_sequence_three_keys(KC_M, KC_S, KC_R)) {
-        // Leader, m, s, r => Sehr geehrter Herr
-      SEND_STRING("Sehr geehrter Herr");
-    } else if (leader_sequence_three_keys(KC_M, KC_H, KC_E)) {
-        // Leader, m, h, e => Hallo Frau
-      SEND_STRING("Hallo Frau ");
-    } else if (leader_sequence_three_keys(KC_M, KC_H, KC_R)) {
-        // Leader, m, h, r => Hallo Herr
-      SEND_STRING("Hallo Herr ");
-    } else if (leader_sequence_two_keys(KC_M, KC_A)) {
-        // Leader, m, a => anbei 
-      SEND_STRING("anbei ");
     } else if (leader_sequence_two_keys(KC_M, KC_R)) {
         // Leader, m, r => machines uploaded
       SEND_STRING("die neuen Automaten sind nun verfügbar.");
