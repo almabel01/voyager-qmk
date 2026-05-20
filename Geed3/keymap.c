@@ -766,7 +766,34 @@ void leader_end_user(void) {
         tap_code16(KC_LEFT);
     } else if (leader_sequence_two_keys(KC_M, KC_T)) {
         // Leader, mt => meeting template
-        SEND_STRING("## Topics\n### \n## Action items");
+        SEND_STRING("## Topics\n### ");
+    } else if (leader_sequence_two_keys(KC_U, KC_T)) {
+        // Leader, mt => DB update template
+        SEND_STRING("## Request/Reason\n");
+        tap_code16(HU_MINS);
+        tap_code16(KC_SPACE);
+        tap_code16(KC_ENTER);
+        SEND_STRING("## Backup file(s)\n");
+        tap_code16(HU_MINS);
+        tap_code16(KC_SPACE);
+        tap_code16(KC_ENTER);
+        SEND_STRING("## Before & After\n");
+        tap_code16(HU_GRV);
+        tap_code16(HU_GRV);
+        tap_code16(HU_GRV);
+        tap_code16(KC_ENTER);
+        tap_code16(HU_GRV);
+        tap_code16(HU_GRV);
+        tap_code16(HU_GRV);
+        tap_code16(KC_ENTER);
+        SEND_STRING("## Update\n");
+        tap_code16(HU_GRV);
+        tap_code16(HU_GRV);
+        tap_code16(HU_GRV);
+        tap_code16(KC_ENTER);
+        tap_code16(HU_GRV);
+        tap_code16(HU_GRV);
+        tap_code16(HU_GRV);
     } else if (leader_sequence_two_keys(KC_H, KC_D)) {
         SEND_STRING("HDEWP-");
   // mail
