@@ -766,7 +766,7 @@ void leader_end_user(void) {
         tap_code16(KC_LEFT);
     } else if (leader_sequence_two_keys(KC_M, KC_T)) {
         // Leader, mt => meeting template
-        SEND_STRING("## Topics\n### ");
+        SEND_STRING("## topics\n### ");
     } else if (leader_sequence_two_keys(KC_U, KC_T)) {
         // Leader, mt => DB update template
         SEND_STRING("## Request/Reason");
