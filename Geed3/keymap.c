@@ -31,12 +31,12 @@ enum tap_dance_codes {
   DANCE_9,
 };
 
-#define DUAL_FUNC_0 LT(3, KC_F18)
-#define DUAL_FUNC_1 LT(15, KC_P)
-#define DUAL_FUNC_2 LT(5, KC_F11)
-#define DUAL_FUNC_3 LT(10, KC_F21)
-#define DUAL_FUNC_4 LT(11, KC_S)
-#define DUAL_FUNC_5 LT(2, KC_M)
+#define DUAL_FUNC_0 LT(1, KC_F20)
+#define DUAL_FUNC_1 LT(9, KC_F10)
+#define DUAL_FUNC_2 LT(9, KC_Z)
+#define DUAL_FUNC_3 LT(11, KC_I)
+#define DUAL_FUNC_4 LT(7, KC_C)
+#define DUAL_FUNC_5 LT(7, KC_3)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [4] = LAYOUT_voyager(
     QK_LLCK,        KC_NO,          KC_MS_ACCEL0,   KC_MS_ACCEL1,   KC_MS_ACCEL2,   KC_NO,                                          KC_NO,          KC_MS_BTN1,     KC_MS_BTN3,     KC_MS_BTN2,     KC_NO,          TO(0),          
-    KC_NO,          KC_NO,          LALT(LCTL(LSFT(KC_E))),LALT(LCTL(LSFT(KC_E))),KC_NO,          KC_NO,                                          KC_MS_WH_UP,    KC_MS_WH_LEFT,  KC_MS_UP,       KC_MS_WH_RIGHT, LALT(LCTL(LSFT(KC_E))),LGUI(LSFT(KC_S)),
+    KC_NO,          KC_NO,          LALT(LCTL(LSFT(KC_W))),LALT(LCTL(LSFT(KC_S))),KC_NO,          KC_NO,                                          KC_MS_WH_UP,    KC_MS_WH_LEFT,  KC_MS_UP,       KC_MS_WH_RIGHT, LALT(LCTL(LSFT(KC_S))),LGUI(LSFT(KC_S)),
     KC_NO,          OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  ST_MACRO_5,                                     KC_MS_WH_DOWN,  KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    KC_CAPS,        LSFT(KC_PSCR),  
     KC_NO,          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     LALT(LCTL(LSFT(KC_C))),KC_PC_PASTE,                                    KC_MS_BTN3,     KC_PC_PASTE,    KC_TAB,         KC_PC_COPY,     KC_MS_BTN3,     KC_MS_JIGGLER_TOGGLE,
                                                     KC_MS_BTN1,     KC_MS_BTN2,                                     KC_MS_BTN1,     KC_MS_BTN2
