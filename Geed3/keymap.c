@@ -818,7 +818,11 @@ void leader_end_user(void) {
       SEND_STRING("Sehr geehrte Damen und Herren,");
     } else if (leader_sequence_two_keys(KC_M, KC_R)) {
         // Leader, m, r => machines uploaded
-      SEND_STRING("die neuen Automaten sind nun verfügbar.");
+      SEND_STRING("die neuen Automaten sind nun verf");
+      wait_ms(50);
+      tap_code16(HU_UE);
+      wait_ms(50);
+      SEND_STRING("gbar.");
   // git
     } else if (leader_sequence_two_keys(KC_G, KC_S)) {
         // Leader, g, s => git status
