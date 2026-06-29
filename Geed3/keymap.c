@@ -34,12 +34,12 @@ enum tap_dance_codes {
   DANCE_9,
 };
 
-#define DUAL_FUNC_0 LT(9, KC_T)
-#define DUAL_FUNC_1 LT(7, KC_F22)
-#define DUAL_FUNC_2 LT(14, KC_D)
-#define DUAL_FUNC_3 LT(5, KC_H)
-#define DUAL_FUNC_4 LT(5, KC_F14)
-#define DUAL_FUNC_5 LT(14, KC_F14)
+#define DUAL_FUNC_0 LT(7, KC_F19)
+#define DUAL_FUNC_1 LT(14, KC_G)
+#define DUAL_FUNC_2 LT(15, KC_D)
+#define DUAL_FUNC_3 LT(15, KC_F22)
+#define DUAL_FUNC_4 LT(7, KC_2)
+#define DUAL_FUNC_5 LT(6, KC_F5)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -67,14 +67,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     QK_LLCK,        DM_RSTP,        DM_REC1,        DM_REC2,        KC_NO,          KC_MS_JIGGLER_TOGGLE,                                KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  LCTL(LSFT(KC_M)),KC_AUDIO_VOL_UP,KC_NO,          TO(0),          
     KC_NO,          KC_NO,          DM_PLY1,        DM_PLY2,        ST_MACRO_2,     ST_MACRO_3,                                     KC_PAGE_UP,     TD(DANCE_8),    KC_UP,          TD(DANCE_9),    KC_APPLICATION, LGUI(LSFT(KC_S)),
     KC_TRANSPARENT, OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  ST_MACRO_4,                                     KC_PGDN,        KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_CAPS,        LSFT(KC_PSCR),  
-    MO(4),          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     LALT(LCTL(LSFT(KC_C))),KC_PC_PASTE,                                    LCTL(KC_F),     KC_PC_PASTE,    DUAL_FUNC_5,    KC_PC_COPY,     LCTL(LSFT(KC_P)),KC_NO,          
+    MO(4),          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     LGUI(KC_V),     KC_PC_PASTE,                                    LCTL(KC_F),     KC_PC_PASTE,    DUAL_FUNC_5,    KC_PC_COPY,     LCTL(LSFT(KC_P)),KC_NO,          
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, LCTL(KC_BSPC)
   ),
   [4] = LAYOUT_voyager(
     QK_LLCK,        KC_NO,          KC_MS_ACCEL0,   KC_MS_ACCEL1,   KC_MS_ACCEL2,   KC_NO,                                          KC_NO,          KC_MS_BTN1,     KC_MS_BTN3,     KC_MS_BTN2,     KC_NO,          TO(0),          
     KC_NO,          KC_NO,          LALT(LCTL(LSFT(KC_W))),LALT(LCTL(LSFT(KC_S))),KC_NO,          KC_NO,                                          KC_MS_WH_UP,    KC_MS_WH_LEFT,  KC_MS_UP,       KC_MS_WH_RIGHT, LALT(LCTL(LSFT(KC_S))),LGUI(LSFT(KC_S)),
     KC_NO,          OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  ST_MACRO_5,                                     KC_MS_WH_DOWN,  KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    KC_CAPS,        LSFT(KC_PSCR),  
-    KC_NO,          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     LALT(LCTL(LSFT(KC_C))),KC_PC_PASTE,                                    KC_MS_BTN3,     KC_PC_PASTE,    KC_TAB,         KC_PC_COPY,     KC_MS_BTN3,     KC_MS_JIGGLER_TOGGLE,
+    KC_NO,          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     LGUI(KC_V),     KC_PC_PASTE,                                    KC_MS_BTN3,     KC_PC_PASTE,    KC_TAB,         KC_PC_COPY,     KC_MS_BTN3,     KC_MS_JIGGLER_TOGGLE,
                                                     KC_MS_BTN1,     KC_MS_BTN2,                                     KC_MS_BTN1,     KC_MS_BTN2
   ),
 };
