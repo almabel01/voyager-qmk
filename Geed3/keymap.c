@@ -33,12 +33,12 @@ enum tap_dance_codes {
   DANCE_11,
 };
 
-#define DUAL_FUNC_0 LT(5, KC_T)
-#define DUAL_FUNC_1 LT(8, KC_T)
-#define DUAL_FUNC_2 LT(1, KC_F5)
-#define DUAL_FUNC_3 LT(1, KC_F10)
-#define DUAL_FUNC_4 LT(7, KC_F16)
-#define DUAL_FUNC_5 LT(11, KC_R)
+#define DUAL_FUNC_0 LT(6, KC_1)
+#define DUAL_FUNC_1 LT(14, KC_F17)
+#define DUAL_FUNC_2 LT(10, KC_B)
+#define DUAL_FUNC_3 LT(1, KC_B)
+#define DUAL_FUNC_4 LT(12, KC_P)
+#define DUAL_FUNC_5 LT(12, KC_F22)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -67,11 +67,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          ST_MACRO_2,     ST_MACRO_3,                                     KC_PAGE_UP,     TD(DANCE_9),    KC_UP,          TD(DANCE_10),   KC_APPLICATION, LGUI(LSFT(KC_S)),
     KC_TRANSPARENT, OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  ST_MACRO_4,                                     KC_PGDN,        KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_CAPS,        LSFT(KC_PSCR),  
     MO(4),          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     TD(DANCE_8),    KC_PC_PASTE,                                    LCTL(KC_F),     KC_PC_PASTE,    DUAL_FUNC_5,    KC_PC_COPY,     LCTL(LSFT(KC_P)),KC_NO,          
-                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 LALT(KC_CAPS),  LCTL(KC_BSPC)
+                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 LGUI(LCTL(KC_W)),LCTL(KC_BSPC)
   ),
   [4] = LAYOUT_voyager(
     QK_LLCK,        KC_NO,          KC_MS_ACCEL0,   KC_MS_ACCEL1,   KC_MS_ACCEL2,   KC_NO,                                          KC_NO,          KC_MS_BTN1,     KC_MS_BTN3,     KC_MS_BTN2,     KC_NO,          TO(0),          
-    KC_NO,          KC_NO,          LALT(KC_CAPS),  KC_NO,          KC_NO,          KC_NO,                                          KC_MS_WH_UP,    KC_MS_WH_LEFT,  KC_MS_UP,       KC_MS_WH_RIGHT, KC_APPLICATION, LGUI(LSFT(KC_S)),
+    KC_NO,          KC_NO,          LGUI(LCTL(KC_W)),KC_NO,          KC_NO,          KC_NO,                                          KC_MS_WH_UP,    KC_MS_WH_LEFT,  KC_MS_UP,       KC_MS_WH_RIGHT, KC_APPLICATION, LGUI(LSFT(KC_S)),
     KC_NO,          OSM(MOD_LGUI),  OSM(MOD_LALT),  OSM(MOD_LCTL),  OSM(MOD_LSFT),  ST_MACRO_5,                                     KC_MS_WH_DOWN,  KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    KC_CAPS,        LSFT(KC_PSCR),  
     KC_NO,          KC_PC_UNDO,     KC_PC_CUT,      KC_PC_COPY,     TD(DANCE_11),   KC_PC_PASTE,                                    KC_MS_BTN3,     KC_PC_PASTE,    KC_TAB,         KC_PC_COPY,     KC_MS_BTN3,     KC_MS_JIGGLER_TOGGLE,
                                                     KC_MS_BTN1,     KC_MS_BTN2,                                     KC_MS_BTN1,     KC_MS_BTN2
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, LALT(LCTL(LSFT(KC_P))),LALT(LCTL(LSFT(KC_F))),LALT(LCTL(LSFT(KC_E))),LALT(LCTL(LSFT(KC_B))),                                KC_TRANSPARENT, KC_TRANSPARENT, KC_UP,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, LALT(LCTL(LSFT(KC_A))),LALT(LCTL(LSFT(KC_S))),LALT(LCTL(LSFT(KC_O))),LALT(LCTL(LSFT(KC_T))),LALT(LCTL(LSFT(KC_G))),                                KC_TRANSPARENT, KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_ENTER,       KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, LALT(LCTL(LSFT(KC_N))),LALT(LCTL(LSFT(KC_C))),LALT(LCTL(LSFT(KC_D))),LALT(LCTL(LSFT(KC_V))),                                KC_TRANSPARENT, KC_TRANSPARENT, LGUI(LCTL(KC_A)),KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-                                                    LALT(KC_CAPS),  LGUI(KC_CAPS),                                  KC_TRANSPARENT, KC_TRANSPARENT
+                                                    LGUI(LCTL(KC_W)),LGUI(LCTL(KC_S)),                                KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
 
@@ -107,8 +107,8 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo2, KC_ENTER),
     COMBO(combo3, KC_TAB),
     COMBO(combo4, LSFT(KC_TAB)),
-    COMBO(combo5, LALT(KC_CAPS)),
-    COMBO(combo6, LGUI(KC_CAPS)),
+    COMBO(combo5, LGUI(LCTL(KC_W))),
+    COMBO(combo6, LGUI(LCTL(KC_S))),
 };
 
 
