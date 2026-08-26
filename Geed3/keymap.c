@@ -34,12 +34,12 @@ enum tap_dance_codes {
   DANCE_12,
 };
 
-#define DUAL_FUNC_0 LT(1, KC_F6)
-#define DUAL_FUNC_1 LT(13, KC_F3)
-#define DUAL_FUNC_2 LT(11, KC_F20)
-#define DUAL_FUNC_3 LT(8, KC_6)
-#define DUAL_FUNC_4 LT(10, KC_F9)
-#define DUAL_FUNC_5 LT(1, KC_T)
+#define DUAL_FUNC_0 LT(11, KC_P)
+#define DUAL_FUNC_1 LT(6, KC_F3)
+#define DUAL_FUNC_2 LT(13, KC_L)
+#define DUAL_FUNC_3 LT(8, KC_7)
+#define DUAL_FUNC_4 LT(11, KC_C)
+#define DUAL_FUNC_5 LT(3, KC_C)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -535,7 +535,7 @@ void dance_9_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[9].step = dance_step(state);
     switch (dance_state[9].step) {
         case SINGLE_TAP: register_code16(LGUI(KC_V)); break;
-        case DOUBLE_TAP: register_code16(LGUI(KC_CAPS)); break;
+        case DOUBLE_TAP: register_code16(LCTL(LGUI(KC_S))); break;
         case DOUBLE_SINGLE_TAP: tap_code16(LGUI(KC_V)); register_code16(LGUI(KC_V));
     }
 }
@@ -544,7 +544,7 @@ void dance_9_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[9].step) {
         case SINGLE_TAP: unregister_code16(LGUI(KC_V)); break;
-        case DOUBLE_TAP: unregister_code16(LGUI(KC_CAPS)); break;
+        case DOUBLE_TAP: unregister_code16(LCTL(LGUI(KC_S))); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(LGUI(KC_V)); break;
     }
     dance_state[9].step = 0;
@@ -638,7 +638,7 @@ void dance_12_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[12].step = dance_step(state);
     switch (dance_state[12].step) {
         case SINGLE_TAP: register_code16(LGUI(KC_V)); break;
-        case DOUBLE_TAP: register_code16(LGUI(KC_CAPS)); break;
+        case DOUBLE_TAP: register_code16(LCTL(LGUI(KC_S))); break;
         case DOUBLE_SINGLE_TAP: tap_code16(LGUI(KC_V)); register_code16(LGUI(KC_V));
     }
 }
@@ -647,7 +647,7 @@ void dance_12_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[12].step) {
         case SINGLE_TAP: unregister_code16(LGUI(KC_V)); break;
-        case DOUBLE_TAP: unregister_code16(LGUI(KC_CAPS)); break;
+        case DOUBLE_TAP: unregister_code16(LCTL(LGUI(KC_S))); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(LGUI(KC_V)); break;
     }
     dance_state[12].step = 0;
