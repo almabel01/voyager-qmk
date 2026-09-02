@@ -3,14 +3,14 @@
 // #define HU_0 KC_GRV
 // #define HU_Y KC_Z
 // #define HU_QUOT S(KC_1)
-// #define HU_OE KC_0
-// #define HU_UE KC_MINS
+#define HU_OE KC_0
+#define HU_UE KC_MINS
 // #define HU_MINS KC_SLSH
 // #define HU_COLN S(KC_DOT)
 // #define HU_EQL S(KC_7)
 // #define HU_GRV ALGR(KC_7)
-// #define HU_LESS ALGR(KC_NUBS)
-// #define HU_MORE ALGR(KC_Z)
+#define HU_LESS ALGR(KC_NUBS)
+#define HU_MORE ALGR(KC_Z)
 // #define HU_UNDS S(KC_SLSH)
 // #define HU_PIPE ALGR(KC_W)
 // #define HU_EXLM S(KC_4)
@@ -35,9 +35,9 @@
 // #define HU_AT ALGR(KC_V)
 // #define HU_LBRC ALGR(KC_F)
 // #define HU_RBRC ALGR(KC_G)
-// #define KC_PC_UNDO LCTL(KC_Z)
-// #define KC_PC_CUT LCTL(KC_X)
-// #define KC_PC_COPY LCTL(KC_C)
-// #define KC_PC_PASTE LCTL(KC_V)
+#define KC_PC_UNDO LCTL(KC_Z)
+#define KC_PC_CUT LCTL(KC_X)
+#define KC_PC_COPY LCTL(KC_C)
+#define KC_PC_PASTE LCTL(KC_V)
 // #define KC_PC_COPY LCTL(KC_C)
 // #define KC_PC_PASTE LCTL(KC_V)
