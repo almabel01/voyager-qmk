@@ -31,7 +31,7 @@
 // #define HU_LPRN S(KC_8)
 // #define HU_RPRN S(KC_9)
 // #define HU_SCLN ALGR(KC_COMM)
-// #define HU_DQOT S(KC_2)
+#define HU_DQOT S(KC_2)
 // #define HU_AT ALGR(KC_V)
 // #define HU_LBRC ALGR(KC_F)
 // #define HU_RBRC ALGR(KC_G)
