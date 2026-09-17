@@ -35,12 +35,12 @@ enum tap_dance_codes {
   DANCE_10,
 };
 
-#define DUAL_FUNC_0 LT(15, KC_Q)
-#define DUAL_FUNC_1 LT(4, KC_3)
-#define DUAL_FUNC_2 LT(1, KC_F14)
-#define DUAL_FUNC_3 LT(7, KC_F6)
-#define DUAL_FUNC_4 LT(11, KC_F20)
-#define DUAL_FUNC_5 LT(13, KC_S)
+#define DUAL_FUNC_0 LT(7, KC_F21)
+#define DUAL_FUNC_1 LT(15, KC_F11)
+#define DUAL_FUNC_2 LT(5, KC_X)
+#define DUAL_FUNC_3 LT(5, KC_F12)
+#define DUAL_FUNC_4 LT(9, KC_F9)
+#define DUAL_FUNC_5 LT(14, KC_F24)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
