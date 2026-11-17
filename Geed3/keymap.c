@@ -32,12 +32,12 @@ enum tap_dance_codes {
   DANCE_10,
 };
 
-#define DUAL_FUNC_0 LT(7, KC_F6)
-#define DUAL_FUNC_1 LT(13, KC_B)
-#define DUAL_FUNC_2 LT(2, KC_3)
-#define DUAL_FUNC_3 LT(4, KC_O)
-#define DUAL_FUNC_4 LT(8, KC_G)
-#define DUAL_FUNC_5 LT(13, KC_F6)
+#define DUAL_FUNC_0 LT(2, KC_B)
+#define DUAL_FUNC_1 LT(1, KC_2)
+#define DUAL_FUNC_2 LT(5, KC_W)
+#define DUAL_FUNC_3 LT(7, KC_F19)
+#define DUAL_FUNC_4 LT(14, KC_J)
+#define DUAL_FUNC_5 LT(5, KC_V)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -187,7 +187,7 @@ bool rgb_matrix_indicators_user(void) {
   if (capslock_active && biton32(layer_state) == 3) {
     RGB rgb = hsv_to_rgb_with_value((HSV) { 2, 218, 204 });
     rgb_matrix_set_color( 42, rgb.r, rgb.g, rgb.b );
-  } 
+  }
   return true;
 }
 
